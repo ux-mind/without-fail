@@ -1,5 +1,8 @@
 .text {
 	&_white {
 		color: $white;
+		&::before {
+			background: $white;
+		}
 	}
 }

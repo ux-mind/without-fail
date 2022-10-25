@@ -22,4 +22,9 @@
 			border-color: $light-100;
 		}
 	}
+	&_transparent {
+		background: transparent;
+		color: $black-900;
+		border-color: rgba($black-900, 0.2);
+	}
 }

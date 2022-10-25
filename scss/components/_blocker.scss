@@ -1,0 +1,16 @@
+.blocker {
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	left: 0;
+	top: 0;
+	background: #35353566;
+	backdrop-filter: blur(25px);
+	pointer-events: none;
+	opacity: 0;
+	transition: opacity 0.3s;
+	&_opened {
+		pointer-events: auto;
+		opacity: 1;
+	}
+}

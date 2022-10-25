@@ -1,0 +1,8 @@
+.arrow {
+	&_left,
+	&_right {
+		&:hover svg path {
+			fill: $green-light-300;
+		}
+	}
+}
