@@ -3,8 +3,8 @@
 // Import abstracts
 @import './abstracts/functions', './abstracts/mixins', './abstracts/variables';
 // Import base
-@import './base/default', './base/fonts';
+@import './base/base', './base/default', './base/fonts';
 // Import Layout
-@import './layout/header', './layout/hero';
+@import './layout/header', './layout/hero', './layout/footer';
 // Import Components
-@import './components/button', './components/title';
+@import './components/button', './components/title', './components/text';

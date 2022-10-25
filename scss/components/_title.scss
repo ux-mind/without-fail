@@ -1,2 +1,20 @@
 .title {
+	margin: 0;
+	font-weight: 700;
+	color: $black-900;
+	&_size {
+		&-l {
+			@include font(4rem, calc(48 / 40));
+			letter-spacing: 0.005em;
+		}
+		&-m {
+			@include font(3.8rem, calc(42 / 38));
+		}
+		&-s {
+			@include font(3.4rem, calc(41 / 34));
+		}
+		&-xs {
+			@include font(2.6rem, calc(34 / 26));
+		}
+	}
 }

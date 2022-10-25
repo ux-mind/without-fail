@@ -1,9 +1,230 @@
+:root {
+  font-size: 62.5%;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+html.is-locked {
+  overflow: hidden;
+}
+html.is-locked body {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+html.is-locked .header .lang__link {
+  background: #fff;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+b,
+strong {
+  font-weight: bold;
+}
+
+body {
+  font-family: "RandomGrotesqueStandard", Arial, sans-serif;
+  font-weight: 400;
+  color: #1e1e1e;
+  font-size: 1.6rem;
+  height: 100%;
+  background: #fff;
+}
+
+button, textarea, input, select {
+  font-family: "RandomGrotesqueStandard", Arial, sans-serif;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  outline-style: none;
+  outline-color: transparent;
+  box-shadow: none;
+  border-radius: 0;
+  color: #1e1e1e;
+}
+
+input {
+  cursor: text;
+  padding: 0 15px;
+}
+
+textarea {
+  cursor: text;
+  resize: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+::-webkit-input-placeholder {
+  font-size: 1.6rem;
+  color: #1e1e1e;
+}
+
+::-moz-placeholder {
+  font-size: 1.6rem;
+  color: #1e1e1e;
+  opacity: 1;
+}
+
+:-moz-placeholder {
+  font-size: 1.6rem;
+  color: #1e1e1e;
+  opacity: 1;
+}
+
+:-ms-input-placeholder {
+  font-size: 1.6rem;
+  color: #1e1e1e;
+}
+
+:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+:focus::-moz-placeholder {
+  color: transparent;
+}
+
+:focus:-moz-placeholder {
+  color: transparent;
+}
+
+:focus::-ms-input-placeholder {
+  color: transparent;
+}
+
 @font-face {
-  font-family: "AbrilFatface";
-  src: url("../fonts/AbrilFatface-Regular.woff2") format("woff2");
+  font-family: "RandomGrotesqueStandard";
+  src: url("../assets/fonts/RG-StandardBook.woff") format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
+}
+@font-face {
+  font-family: "RandomGrotesqueStandard";
+  src: url("../assets/fonts/RG-StandardBookItalic.woff") format("woff");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "RandomGrotesqueStandard";
+  src: url("../assets/fonts/RG-StandardMedium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "RandomGrotesqueStandard";
+  src: url("../assets/fonts/RG-StandardMediumItalic.woff") format("woff");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "RandomGrotesqueStandard";
+  src: url("../assets/fonts/RG-StandardSemibold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "RandomGrotesqueStandard";
+  src: url("../assets/fonts/RG-StandardSemiboldItalic.woff") format("woff");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "RandomGrotesqueStandard";
+  src: url("../assets/fonts/RG-StandardBold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "RandomGrotesqueStandard";
+  src: url("../assets/fonts/RG-StandardBoldItalic.woff") format("woff");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+.btn {
+  text-align: center;
+  font-size: 1.6rem;
+  line-height: 1.25;
+  font-weight: 700;
+  background: #f9f4ea;
+  color: #1e1e1e;
+  padding: 1.4375em 3.625em 1.5625em;
+  border: 1px solid #f9f4ea;
+  border-radius: 66px;
+}
+.btn:hover {
+  color: #fff;
+  background: #1e1e1e;
+  border-color: rgba(255, 255, 255, 0.2);
+}
+.btn_black {
+  color: #fff;
+  background: #1e1e1e;
+  border-color: rgba(255, 255, 255, 0.2);
+}
+.btn_black:hover {
+  background: #f9f4ea;
+  color: #1e1e1e;
+  border-color: #f9f4ea;
+}
+
+.title {
+  margin: 0;
+  font-weight: 700;
+  color: #1e1e1e;
+}
+.title_size-l {
+  font-size: 4rem;
+  line-height: 1.2;
+  letter-spacing: 0.005em;
+}
+.title_size-m {
+  font-size: 3.8rem;
+  line-height: 1.1052631579;
+}
+.title_size-s {
+  font-size: 3.4rem;
+  line-height: 1.2058823529;
+}
+.title_size-xs {
+  font-size: 2.6rem;
+  line-height: 1.3076923077;
+}
+
+.text_white {
+  color: #fff;
 }
 
 /*# sourceMappingURL=style.css.map */

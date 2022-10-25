@@ -1,2 +1,25 @@
 .btn {
+	text-align: center;
+	@include font(1.6rem, calc(20 / 16));
+	font-weight: 700;
+	background: $light-100;
+	color: $black-900;
+	padding: 1.4375em 3.625em 1.5625em;
+	border: 1px solid $light-100;
+	border-radius: 66px;
+	&:hover {
+		color: $white;
+		background: $black-900;
+		border-color: rgba($white, 0.2);
+	}
+	&_black {
+		color: $white;
+		background: $black-900;
+		border-color: rgba($white, 0.2);
+		&:hover {
+			background: $light-100;
+			color: $black-900;
+			border-color: $light-100;
+		}
+	}
 }
