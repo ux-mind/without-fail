@@ -1,0 +1,10 @@
+// Make sure you have Sass installed glabaly
+// Run ==> sass --watch scss/main.scss css/style.css
+// Import abstracts
+@import './abstracts/functions', './abstracts/mixins', './abstracts/variables';
+// Import base
+@import './base/default', './base/fonts';
+// Import Layout
+@import './layout/header', './layout/hero';
+// Import Components
+@import './components/button', './components/title';
