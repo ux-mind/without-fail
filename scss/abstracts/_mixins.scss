@@ -14,3 +14,23 @@
 	font-size: $size;
 	line-height: $lineheight;
 }
+
+@mixin before($left, $width, $height) {
+	content: '';
+	position: absolute;
+	left: $left;
+	top: 50%;
+	width: $width;
+	height: $height;
+	transform: translateY(-50%);
+}
+
+@mixin after($right, $width, $height) {
+	content: '';
+	position: absolute;
+	right: $right;
+	top: 50%;
+	width: $width;
+	height: $height;
+	transform: translateY(-50%);
+}

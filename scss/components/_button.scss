@@ -7,10 +7,17 @@
 	padding: 1.4375em 3.625em 1.5625em;
 	border: 1px solid $light-100;
 	border-radius: 66px;
+	display: inline-block;
 	&:hover {
 		color: $white;
 		background: $black-900;
 		border-color: rgba($white, 0.2);
+	}
+	&_classic {
+		display: inline-block;
+		background: transparent;
+		border: none;
+		padding: 0;
 	}
 	&_black {
 		color: $white;

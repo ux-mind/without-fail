@@ -4,7 +4,12 @@
 @import './abstracts/functions', './abstracts/mixins', './abstracts/variables';
 // Import base
 @import './base/base', './base/default', './base/fonts';
+// Import Components
+@import './components/button', './components/title', './components/text', './components/arrow', './components/container',
+	'./components/social-icon', './components/link';
 // Import Layout
 @import './layout/header', './layout/hero', './layout/footer';
+// Import Pages
+@import './pages/home';
 // Import Components
-@import './components/button', './components/title', './components/text', './components/arrow', './components/blocker';
+@import './components/blocker', './components/table', './components/catalog', './components/hamburger';

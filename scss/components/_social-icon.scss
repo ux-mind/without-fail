@@ -1,0 +1,19 @@
+.social-icon {
+	width: 24px;
+	height: 24px;
+	background: rgba($white, 0.1);
+	display: inline-block;
+	border-radius: 50%;
+	&.vk {
+		background: rgba($white, 0.1) icon('VK.svg') no-repeat 50%;
+	}
+	&.whatsapp {
+		background: rgba($white, 0.1) icon('WhatsApp.svg') no-repeat 50%;
+	}
+	&.telegram {
+		background: rgba($white, 0.1) icon('Telegram.svg') no-repeat 50%;
+	}
+	&.email {
+		background: rgba($white, 0.1) icon('Email.svg') no-repeat 50%;
+	}
+}
