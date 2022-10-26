@@ -1,0 +1,14 @@
+.dropdown {
+	&-btn {
+		color: $white;
+		padding-right: 11px;
+		text-transform: uppercase;
+		@include font(1.6rem, calc(22 / 16));
+		position: relative;
+		font-weight: 500;
+		&::after {
+			@include after(0, 5px, 3px);
+			background: icon('drop.svg') no-repeat 50%;
+		}
+	}
+}

@@ -241,6 +241,9 @@ table {
 .text_white::before {
   background: #fff;
 }
+.text_uppercase {
+  text-transform: uppercase;
+}
 
 .arrow_left:hover svg path, .arrow_right:hover svg path {
   fill: #b7d2a2;
@@ -319,8 +322,26 @@ table {
   content: none;
 }
 
+.modal {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+  z-index: 15;
+}
+.modal.opened {
+  opacity: 1;
+  pointer-events: auto;
+}
+.modal-wrapper {
+  border-radius: 10px;
+}
+
 .header {
-  margin-top: 30px;
+  position: fixed;
+  top: 30px;
+  left: 0;
+  width: 100%;
 }
 .header-wrapper {
   display: grid;
@@ -328,6 +349,7 @@ table {
   background: #1e1e1e;
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 10px;
+  position: relative;
 }
 .header__logo {
   padding: 26px 25px 37px 29px;
@@ -342,7 +364,7 @@ table {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: no-wrap;
+  flex-wrap: nowrap;
   padding: 13px 39px 15px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
@@ -385,7 +407,7 @@ table {
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  flex-wrap: no-wrap;
+  flex-wrap: nowrap;
   color: #afafaf;
 }
 .header-top__el.vk .social-icon {
@@ -397,7 +419,7 @@ table {
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  flex-wrap: no-wrap;
+  flex-wrap: nowrap;
   color: #afafaf;
 }
 .header-top__el.connect .social-icon {
@@ -425,8 +447,17 @@ table {
 }
 .header-nav {
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
+  flex-wrap: nowrap;
   padding: 18px 39px 24px;
+}
+.header-nav__item {
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-decoration: none;
 }
 
 .blocker {
@@ -440,10 +471,132 @@ table {
   pointer-events: none;
   opacity: 0;
   transition: opacity 0.3s;
+  z-index: 5;
 }
 .blocker_opened {
   pointer-events: auto;
   opacity: 1;
+}
+
+.catalog-btn {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  font-size: 1.6rem;
+  line-height: 1.375;
+}
+.catalog-btn div {
+  position: relative;
+  margin-right: 19px;
+  width: 32px;
+  height: 16px;
+}
+.catalog-btn div span {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #fff;
+  transform: translateY(-50%);
+}
+.catalog-btn div span:first-child {
+  transform: translateY(calc(-50% - 8px));
+}
+.catalog-btn div span:last-child {
+  transform: translateY(calc(-50% + 8px));
+}
+.catalog-btn:hover {
+  color: #c6ff26;
+}
+.catalog-btn:hover span {
+  background: #c6ff26;
+}
+.catalog-modal {
+  position: absolute;
+  top: calc(100% + 7px);
+  left: 0;
+  top: calc(100% + 7px);
+  width: 100%;
+}
+.catalog-modal-wrapper {
+  background: rgba(30, 30, 30, 0.9);
+  backdrop-filter: blur(17px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 52px 60px 46px;
+}
+.catalog-modal-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-column-gap: 35px;
+  grid-row-gap: 30px;
+}
+.catalog-item {
+  box-sizing: border-box;
+}
+.catalog-item:hover .catalog-item__round {
+  background: #c6ff26;
+}
+.catalog-item:hover .catalog-item__note p {
+  color: #fff;
+}
+.catalog-item__link {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  text-decoration: none;
+}
+.catalog-item__round {
+  margin-bottom: 10px;
+  position: relative;
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+}
+.catalog-item__round img {
+  position: absolute;
+  bottom: -1px;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: calc(100% + 10px);
+}
+.catalog-item__note p {
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 500;
+  text-align: center;
+  font-size: 1.4rem;
+  line-height: 1;
+  text-decoration: none;
+  margin: 0;
+}
+
+.dropdown-btn {
+  color: #fff;
+  padding-right: 11px;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  line-height: 1.375;
+  position: relative;
+  font-weight: 500;
+}
+.dropdown-btn::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 5px;
+  height: 3px;
+  transform: translateY(-50%);
+  background: url("../assets/icons/drop.svg") no-repeat 50%;
 }
 
 /*# sourceMappingURL=style.css.map */

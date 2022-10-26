@@ -47,33 +47,140 @@
 					</div>
 				</div>
 				<nav class="nav header-nav">
-					<button class="btn-classic catalog-btn">
+					<button id="catalog-btn" class="header-nav__item btn-classic catalog-btn">
 						<div class="hamburger">
-							<span></span><span></span><span></span>
+							<span></span>
+							<span></span>
+							<span></span>
 						</div>
 						Каталог растений
 					</button>
-					<div class="dropdown">
+					<div class="header-nav__item dropdown">
 						<button class="btn-classic dropdown-btn">
 							Услуги
 						</button>
 						<div class="dropdown-list"></div>
 					</div>
-					<a href="news.html"></a>
-					<div class="dropdown">
+					<a class="link header-nav__item" href="news.html">Новости</a>
+					<div class="dropdown header-nav__item">
 						<button class="btn-classic dropdown-btn">
 							Наши работы
 						</button>
 						<div class="dropdown-list"></div>
 					</div>
-					<div class="dropdown">
+					<div class="dropdown header-nav__item">
 						<button class="btn-classic dropdown-btn">
 							Партнерам
 						</button>
 						<div class="dropdown-list"></div>
 					</div>
-					<a href="contacts.html">Контакты</a>
+					<a class="link header-nav__item" href="contacts.html">Контакты</a>
 				</nav>
+				<div id="catalog-modal" class="modal opened catalog-modal">
+					<div class="modal-wrapper catalog-modal-wrapper">
+						<ul class="catalog-modal-list">
+							<li class="catalog-item">
+								<a class="catalog-item__link" href="#">
+									<div class="catalog-item__round">
+										<img width="59" height="98" src="./assets/images/pngwing1.png"
+											srcset="./assets/images/pngwing1.png 1x, ./assets/images/pngwing1@2x.png 2x" alt="" />
+									</div>
+									<div class="catalog-item__note">
+										<p>Лиственные деревья</p>
+									</div>
+								</a>
+							</li>
+							<li class="catalog-item">
+								<a class="catalog-item__link" href="#">
+									<div class="catalog-item__round">
+										<img width="78" height="78" src="./assets/images/pngwing2.png"
+											srcset="./assets/images/pngwing2.png 1x, ./assets/images/pngwing2@2x.png 2x" alt="" />
+									</div>
+									<div class="catalog-item__note">
+										<p>Лиственные кустарники</p>
+									</div>
+								</a>
+							</li>
+							<li class="catalog-item">
+								<a class="catalog-item__link" href="#">
+									<div class="catalog-item__round">
+										<img width="92" height="95" src="./assets/images/pngwing3.png"
+											srcset="./assets/images/pngwing3.png 1x, ./assets/images/pngwing3@2x.png 2x" alt="" />
+									</div>
+									<div class="catalog-item__note">
+										<p>Плодовые деревья/кустарники</p>
+									</div>
+								</a>
+							</li>
+							<li class="catalog-item">
+								<a class="catalog-item__link" href="#">
+									<div class="catalog-item__round">
+										<img width="67" height="98" src="./assets/images/pngwing4.png"
+											srcset="./assets/images/pngwing4.png 1x, ./assets/images/pngwing4@2x.png 2x" alt="" />
+									</div>
+									<div class="catalog-item__note">
+										<p>Хвойные растения</p>
+									</div>
+								</a>
+							</li>
+							<li class="catalog-item">
+								<a class="catalog-item__link" href="#">
+									<div class="catalog-item__round">
+										<img width="84" height="95" src="./assets/images/pngwing5.png"
+											srcset="./assets/images/pngwing5.png 1x, ./assets/images/pngwing5@2x.png 2x" alt="" />
+									</div>
+									<div class="catalog-item__note">
+										<p>Многолетники</p>
+									</div>
+								</a>
+							</li>
+							<li class="catalog-item">
+								<a class="catalog-item__link" href="#">
+									<div class="catalog-item__round">
+										<img width="95" height="84" src="./assets/images/pngwing6.png"
+											srcset="./assets/images/pngwing6.png 1x, ./assets/images/pngwing6@2x.png 2x" alt="" />
+									</div>
+									<div class="catalog-item__note">
+										<p>Розы</p>
+									</div>
+								</a>
+							</li>
+							<li class="catalog-item">
+								<a class="catalog-item__link" href="#">
+									<div class="catalog-item__round">
+										<img width="88" height="88" src="./assets/images/pngwing7.png"
+											srcset="./assets/images/pngwing7.png 1x, ./assets/images/pngwing7@2x.png 2x" alt="" />
+									</div>
+									<div class="catalog-item__note">
+										<p>Семена</p>
+									</div>
+								</a>
+							</li>
+							<li class="catalog-item">
+								<a class="catalog-item__link" href="#">
+									<div class="catalog-item__round">
+										<img width="95" height="95" src="./assets/images/pngwing8.png"
+											srcset="./assets/images/pngwing8.png 1x, ./assets/images/pngwing8@2x.png 2x" alt="" />
+									</div>
+									<div class="catalog-item__note">
+										<p>Эксклюзивные растения</p>
+									</div>
+								</a>
+							</li>
+							<li class="catalog-item">
+								<a class="catalog-item__link" href="#">
+									<div class="catalog-item__round">
+										<img width="105" height="75" src="./assets/images/pngwing9.png"
+											srcset="./assets/images/pngwing9.png 1x, ./assets/images/pngwing9@2x.png 2x" alt="" />
+									</div>
+									<div class="catalog-item__note">
+										<p>Сопутствующие товары</p>
+									</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
 			</div>
 		</div>
 	</header>
@@ -83,6 +190,10 @@
 	<footer class="footer">
 		<!-- Footer -->
 	</footer>
+	<!-- Modal windows -->
+
+	<!-- Modal windows -->
+	<div class="blocker"></div>
 </body>
 
 </html>

@@ -1,0 +1,14 @@
+.modal {
+	position: absolute;
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity 0.3s;
+	z-index: 15;
+	&.opened {
+		opacity: 1;
+		pointer-events: auto;
+	}
+	&-wrapper {
+		border-radius: 10px;
+	}
+}

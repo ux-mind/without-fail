@@ -1,11 +1,15 @@
 .header {
-	margin-top: 30px;
+	position: fixed;
+	top: 30px;
+	left: 0;
+	width: 100%;
 	&-wrapper {
 		display: grid;
 		grid-template-columns: calc((224 / 1170) * 100%) calc((946 / 1170) * 100%);
 		background: $black-900;
 		border: 1px solid $border-light-color;
 		border-radius: 10px;
+		position: relative;
 	}
 	&__logo {
 		padding: 26px 25px 37px 29px;
@@ -78,8 +82,13 @@
 		}
 	}
 	&-nav {
-		display: flex;
-		align-items: center;
+		@include flex(row, center, space-between);
 		padding: 18px 39px 24px;
+		&__item {
+			color: $white;
+			text-transform: uppercase;
+			font-weight: 500;
+			text-decoration: none;
+		}
 	}
 }
