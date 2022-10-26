@@ -1,0 +1,29 @@
+.hero {
+	background: $black-900;
+	&-wrapper {
+		padding-top: 224px;
+		padding-bottom: 110px;
+		@include flex(row, center, space-between);
+		grid-gap: 100px;
+	}
+	&-content {
+		max-width: calc((468 / 1172) * 100%);
+		margin-right: 60px;
+		&__img {
+			margin-bottom: 30px;
+		}
+		&__note {
+			margin-bottom: 59px;
+			& p {
+				@include font(1.8rem, calc(22.5 / 18));
+				color: $white;
+			}
+		}
+	}
+	&-img {
+		max-width: calc((569 / 1172) * 100%);
+	}
+	&-title {
+		margin-bottom: 35px;
+	}
+}

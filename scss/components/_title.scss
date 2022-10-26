@@ -2,6 +2,7 @@
 	margin: 0;
 	font-weight: 700;
 	color: $black-900;
+	text-transform: uppercase;
 	&_size {
 		&-l {
 			@include font(4rem, calc(48 / 40));

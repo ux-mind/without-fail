@@ -184,6 +184,7 @@ table {
   border: 1px solid #f9f4ea;
   border-radius: 66px;
   display: inline-block;
+  text-decoration: none;
 }
 .btn:hover {
   color: #fff;
@@ -216,6 +217,7 @@ table {
   margin: 0;
   font-weight: 700;
   color: #1e1e1e;
+  text-transform: uppercase;
 }
 .title_size-l {
   font-size: 4rem;
@@ -470,6 +472,41 @@ table {
   text-transform: uppercase;
   font-weight: 500;
   text-decoration: none;
+}
+
+.hero {
+  background: #1e1e1e;
+}
+.hero-wrapper {
+  padding-top: 224px;
+  padding-bottom: 110px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  grid-gap: 100px;
+}
+.hero-content {
+  max-width: 39.9317406143%;
+  margin-right: 60px;
+}
+.hero-content__img {
+  margin-bottom: 30px;
+}
+.hero-content__note {
+  margin-bottom: 59px;
+}
+.hero-content__note p {
+  font-size: 1.8rem;
+  line-height: 1.25;
+  color: #fff;
+}
+.hero-img {
+  max-width: 48.5494880546%;
+}
+.hero-title {
+  margin-bottom: 35px;
 }
 
 .blocker {
