@@ -3,6 +3,17 @@
 	top: 30px;
 	left: 0;
 	width: 100%;
+	&-small {
+		& .header-top {
+			display: none;
+		}
+		& .header-wrapper {
+			grid-template-rows: 1fr;
+		}
+		& .header__logo {
+			padding: 10px 40px 15px;
+		}
+	}
 	&-wrapper {
 		display: grid;
 		grid-template-columns: calc((224 / 1170) * 100%) calc((946 / 1170) * 100%);

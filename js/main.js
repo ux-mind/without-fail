@@ -26,5 +26,22 @@ function headerDropdownsHandler() {
   });
 }
 
+function toggleHeaderHeight() {
+  const headerElement = document.querySelector('#header');
+
+  window.addEventListener('scroll', () => {
+    const isHeaderSmall = headerElement.classList.contains('header-small');
+
+    if (window.scrollY > 0 && !isHeaderSmall) {
+      headerElement.classList.add('header-small');
+    }
+
+    if (window.scrollY === 0 && isHeaderSmall) {
+      headerElement.classList.remove('header-small');
+    }
+  });
+}
+
 catalogModalHandler();
 headerDropdownsHandler();
+toggleHeaderHeight();

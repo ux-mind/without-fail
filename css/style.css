@@ -343,6 +343,15 @@ table {
   left: 0;
   width: 100%;
 }
+.header-small .header-top {
+  display: none;
+}
+.header-small .header-wrapper {
+  grid-template-rows: 1fr;
+}
+.header-small .header__logo {
+  padding: 10px 40px 15px;
+}
 .header-wrapper {
   display: grid;
   grid-template-columns: 19.1452991453% 80.8547008547%;
