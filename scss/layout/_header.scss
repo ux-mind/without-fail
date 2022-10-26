@@ -19,6 +19,11 @@
 			margin: 0 auto;
 		}
 	}
+	&-link {
+		&:hover {
+			color: $green-light-900;
+		}
+	}
 	&-top {
 		@include flex(row, center, space-between);
 		padding: 13px 39px 15px;
