@@ -17,3 +17,10 @@
 		background: rgba($white, 0.1) icon('Email.svg') no-repeat 50%;
 	}
 }
+
+@media screen and (max-width: 991px) {
+	.social-icon {
+		width: 28px;
+		height: 28px;
+	}
+}

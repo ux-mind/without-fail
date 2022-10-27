@@ -36,3 +36,10 @@
 		border-color: rgba($black-900, 0.2);
 	}
 }
+
+@media screen and (max-width: 991px) {
+	.btn {
+		@include font(1.4rem, calc(17.5 / 14));
+		padding: 1.142857em 2.64em 1.357em;
+	}
+}

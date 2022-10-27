@@ -39,6 +39,7 @@ body {
   font-size: 1.6rem;
   height: 100%;
   background: #fff;
+  margin: 0;
 }
 
 button, textarea, input, select {
@@ -213,6 +214,13 @@ table {
   border-color: rgba(30, 30, 30, 0.2);
 }
 
+@media screen and (max-width: 991px) {
+  .btn {
+    font-size: 1.4rem;
+    line-height: 1.25;
+    padding: 1.142857em 2.64em 1.357em;
+  }
+}
 .title {
   margin: 0;
   font-weight: 700;
@@ -237,6 +245,12 @@ table {
   line-height: 1.3076923077;
 }
 
+@media screen and (max-width: 991px) {
+  .title_size-l {
+    font-size: 3rem;
+    line-height: 1.3;
+  }
+}
 .text_white {
   color: #fff;
 }
@@ -273,7 +287,7 @@ table {
 }
 @media screen and (max-width: 576px) {
   .container {
-    max-width: calc(100% - 48px);
+    max-width: calc(100% - 40px);
     width: 100%;
   }
 }
@@ -297,6 +311,12 @@ table {
   background: rgba(255, 255, 255, 0.1) url("../assets/icons/Email.svg") no-repeat 50%;
 }
 
+@media screen and (max-width: 991px) {
+  .social-icon {
+    width: 28px;
+    height: 28px;
+  }
+}
 .link {
   text-decoration: none;
   position: relative;
@@ -366,9 +386,14 @@ table {
   padding: 26px 25px 37px 29px;
   border-right: 1px solid rgba(255, 255, 255, 0.2);
   grid-row: 1/3;
+  display: grid;
+  place-items: center;
 }
 .header__logo img {
   margin: 0 auto;
+}
+.header-mobile-top {
+  display: none;
 }
 .header-link:hover {
   color: #c6ff26;
@@ -442,6 +467,9 @@ table {
 .header-top__el.connect .social-icon:first-of-type {
   margin-left: 9px;
 }
+.header-top__el.connect .social-icon.vk {
+  display: none;
+}
 .header-top__el.order-a-call {
   font-size: 1.4rem;
   line-height: 1.25;
@@ -474,6 +502,83 @@ table {
   text-decoration: none;
 }
 
+@media screen and (max-width: 1220px) {
+  .header-wrapper {
+    grid-template-columns: 17.094017094% 1fr;
+  }
+  .header-top {
+    padding: 13px 34px 15px;
+  }
+  .header-top__el.vk {
+    display: none;
+  }
+  .header-top__el.connect .social-icon.vk {
+    display: block;
+  }
+  .header-nav {
+    padding: 18px 34px 24px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .header {
+    background: #1e1e1e;
+    top: 0;
+  }
+  .header-small .header__logo {
+    padding: 10px 0 14px;
+  }
+  .header-top {
+    display: none;
+  }
+  .header-top__el .social-icon {
+    margin-right: 5.5px;
+  }
+  .header-top__el .social-icon:last-child {
+    margin-right: 0;
+  }
+  .header-nav {
+    display: none;
+  }
+  .header__logo {
+    width: 100%;
+    padding: 10px 0 13px;
+    border: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    grid-row: 1/2;
+    order: 1;
+  }
+  .header__logo img {
+    max-width: 138px;
+  }
+  .header-mobile-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    order: -1;
+    width: 100%;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  .header-mobile-top a {
+    font-weight: 500;
+  }
+  .header-wrapper {
+    border: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    border-radius: 0;
+  }
+}
 .hero {
   background: #1e1e1e;
 }
@@ -501,14 +606,43 @@ table {
   font-size: 1.8rem;
   line-height: 1.25;
   color: #fff;
+  margin: 0;
 }
 .hero-img {
   max-width: 48.5494880546%;
+}
+@media screen and (max-width: 991px) {
+  .hero-img {
+    display: none;
+  }
 }
 .hero-title {
   margin-bottom: 35px;
 }
 
+@media screen and (max-width: 991px) {
+  .hero-wrapper {
+    padding-top: 153px;
+    padding-bottom: 90px;
+  }
+  .hero-content {
+    max-width: 100%;
+    margin: 0;
+  }
+  .hero-content__img {
+    margin-bottom: 20px;
+  }
+  .hero-content__note {
+    margin-bottom: 20px;
+  }
+  .hero-content__note p {
+    font-size: 1.4rem;
+    line-height: 1.25;
+  }
+  .hero-title {
+    margin-bottom: 20px;
+  }
+}
 .blocker {
   width: 100vw;
   height: 100vh;
@@ -628,6 +762,36 @@ table {
   margin: 0;
 }
 
+.hamburger {
+  display: none;
+  width: 48px;
+  height: 25px;
+  position: relative;
+}
+.hamburger span {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #fff;
+  transform: translateY(-50%);
+}
+.hamburger span:first-child {
+  transform: translateY(calc(-50% - 8px));
+}
+.hamburger span:last-child {
+  transform: translateY(calc(-50% + 8px));
+  max-width: 58.33%;
+  right: 0;
+  left: auto;
+}
+
+@media screen and (max-width: 991px) {
+  .hamburger {
+    display: inline-block;
+  }
+}
 .dropdown {
   position: relative;
 }

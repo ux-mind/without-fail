@@ -19,3 +19,13 @@
 		}
 	}
 }
+
+@media screen and(max-width: 991px) {
+	.title {
+		&_size {
+			&-l {
+				@include font(3rem, calc(39 / 30));
+			}
+		}
+	}
+}
