@@ -82,6 +82,12 @@ table {
 	width: 100%;
 	border-collapse: collapse;
 }
+ul,
+ol {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
 ::-webkit-input-placeholder {
 	font-size: 1.6rem;
 	color: $black-900;

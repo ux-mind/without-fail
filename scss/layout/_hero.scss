@@ -1,5 +1,7 @@
 .hero {
 	background: $black-900;
+	position: relative;
+	z-index: 1;
 	&-wrapper {
 		padding-top: 224px;
 		padding-bottom: 110px;

@@ -8,9 +8,9 @@
 @import './components/button', './components/title', './components/text', './components/arrow', './components/container',
 	'./components/social-icon', './components/link', './components/modal';
 // Import Layout
-@import './layout/header', './layout/hero', './layout/footer';
+@import './layout/header', './layout/hero', './layout/footer', './layout/main';
 // Import Pages
 @import './pages/home';
 // Import Components
 @import './components/blocker', './components/table', './components/catalog', './components/hamburger',
-	'./components/dropdown.scss';
+	'./components/dropdown.scss', './components/home-catalog';

@@ -1,5 +1,6 @@
 .header {
 	position: fixed;
+	z-index: 2;
 	top: 30px;
 	left: 0;
 	width: 100%;
@@ -30,6 +31,9 @@
 		place-items: center;
 		& img {
 			margin: 0 auto;
+		}
+		& .hamburger {
+			display: none;
 		}
 	}
 	&-mobile-top {

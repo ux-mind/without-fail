@@ -16,6 +16,9 @@
 	&:hover {
 		font-style: italic;
 	}
+	&_black {
+		color: $black-900;
+	}
 	&_shrink {
 		font-weight: 500;
 		&::before {
