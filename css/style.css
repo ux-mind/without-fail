@@ -1543,6 +1543,7 @@ p {
 @media screen and (max-width: 991px) {
   .works-wrapper {
     grid-template-columns: 100%;
+    padding-bottom: 90px;
   }
   .works-additionals-top {
     margin-bottom: 10px;
