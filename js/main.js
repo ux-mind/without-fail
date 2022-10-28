@@ -3,7 +3,7 @@
 const swiper = new Swiper('.bestsellers-swiper', {
   loop: true,
   slidesPerView: 2,
-  spaceBetween: 29,
+  spaceBetween: 16,
   navigation: {
     nextEl: '.bestsellers-next',
     prevEl: '.bestsellers-prev',
@@ -11,6 +11,7 @@ const swiper = new Swiper('.bestsellers-swiper', {
   breakpoints: {
     991: {
       slidesPerView: 3,
+      spaceBetween: 29,
     },
   },
 });

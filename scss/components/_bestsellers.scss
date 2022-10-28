@@ -77,3 +77,62 @@
 		}
 	}
 }
+
+@media screen and(max-width: 991px) {
+	.bestsellers {
+		&-swiper {
+			padding-top: 30px;
+		}
+		&-wrapper {
+			padding-bottom: 90px;
+		}
+		&-top {
+			flex-wrap: wrap;
+			margin-bottom: 0;
+		}
+		&-title {
+			margin-right: auto;
+		}
+		&-control {
+			margin: 0;
+		}
+		&-redirect {
+			width: 100%;
+			margin-top: 6px;
+			& .link {
+				@include font(1.4rem, calc(18 / 14));
+				font-weight: 600;
+				&::before {
+					bottom: 0;
+				}
+			}
+		}
+		&-item {
+			& .hit {
+				top: -45px;
+				left: -22px;
+			}
+			&__info {
+				padding-bottom: 10px;
+				flex-direction: column;
+				& p {
+					max-width: none;
+					margin-bottom: 3px;
+					@include font(1.4rem, calc(18 / 14));
+				}
+			}
+			&__price {
+				flex-direction: row;
+				& span {
+					@include font(1.2rem, calc(16 / 12));
+				}
+				& .price-sale {
+					margin-left: 10px;
+				}
+			}
+			&__image {
+				margin-bottom: 11px;
+			}
+		}
+	}
+}

@@ -17,3 +17,12 @@
 		transform: translate(-50%, -50%);
 	}
 }
+
+@media screen and (max-width: 991px) {
+	.hit {
+		max-width: 90px;
+		& span {
+			@include font(1.4rem, calc(18 / 14));
+		}
+	}
+}
