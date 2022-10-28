@@ -21,6 +21,8 @@
 	&-control {
 		@include flex(row, center);
 		& div {
+			display: grid;
+			place-items: center;
 			cursor: pointer;
 			&:first-child {
 				margin-right: 20px;
@@ -30,6 +32,9 @@
 					stroke: #b7d2a2;
 				}
 			}
+			& svg {
+				max-width: 100%;
+			}
 		}
 	}
 }
@@ -37,5 +42,15 @@
 @media screen and (max-width: 991px) {
 	.d-lg {
 		display: none;
+	}
+	.swiper {
+		&-control {
+			& div {
+				max-width: 27px;
+				&:first-child {
+					margin-right: 13px;
+				}
+			}
+		}
 	}
 }

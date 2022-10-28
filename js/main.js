@@ -19,12 +19,22 @@ const bestsellerSwiper = new Swiper('.bestsellers-swiper', {
 
 const worksSwiperAdditional = new Swiper('.works-swiper-additional', {
   loop: true,
-  slidesPerView: 2,
-  spaceBetween: 31,
-  initialSlide: 1,
+  slidesPerView: 1,
+  spaceBetween: 16,
   navigation: {
     nextEl: '.works-btn-next',
     prevEl: '.works-btn-prev',
+  },
+  breakpoints: {
+    991: {
+      slidesPerView: 2,
+      spaceBetween: 31,
+      initialSlide: 1,
+    },
+    767: {
+      slidesPerView: 2,
+      spaceBetween: 31,
+    },
   },
 });
 

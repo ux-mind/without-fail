@@ -160,6 +160,8 @@ p {
   flex-wrap: nowrap;
 }
 .swiper-control div {
+  display: grid;
+  place-items: center;
   cursor: pointer;
 }
 .swiper-control div:first-child {
@@ -168,10 +170,20 @@ p {
 .swiper-control div:hover svg path {
   stroke: #b7d2a2;
 }
+.swiper-control div svg {
+  max-width: 100%;
+}
 
 @media screen and (max-width: 991px) {
   .d-lg {
     display: none;
+  }
+
+  .swiper-control div {
+    max-width: 27px;
+  }
+  .swiper-control div:first-child {
+    margin-right: 13px;
   }
 }
 @font-face {
@@ -731,6 +743,34 @@ p {
 }
 .main {
   background: #f9f4ea;
+}
+
+.home .works {
+  background: transparent;
+}
+.home .works-wrapper {
+  padding-bottom: 0;
+}
+.home .works .title, .home .works .link, .home .works p {
+  color: #1e1e1e;
+}
+.home .works .title::before, .home .works .link::before, .home .works p::before {
+  background: #1e1e1e;
+}
+.home .works-additionals__control svg path {
+  stroke: #1e1e1e;
+}
+.home .works-item:hover .works-item-info {
+  border-color: #1e1e1e;
+}
+.home .works-item-info {
+  border-color: rgba(30, 30, 30, 0.2);
+}
+.home .works-item-info::after {
+  background: url("../assets/icons/arrow-right.svg") no-repeat 50%/cover;
+}
+.home .works-item-info p {
+  color: #2e2e2eb2;
 }
 
 .text_white {
@@ -1426,12 +1466,12 @@ p {
   background: #1e1e1e;
 }
 .works-wrapper {
-  padding-bottom: 150px;
   display: grid;
   align-items: stretch;
   grid-template-columns: 40.1709401709% 48.7179487179%;
   grid-gap: 60px;
   justify-content: space-between;
+  padding-bottom: 150px;
 }
 .works-item {
   text-decoration: none;
@@ -1463,6 +1503,8 @@ p {
 .works-item-info p {
   color: rgba(255, 255, 255, 0.7);
   margin-top: 6px;
+  font-size: 1.4rem;
+  line-height: 1.2857142857;
 }
 .works-additionals {
   display: flex;
@@ -1486,8 +1528,38 @@ p {
 .works-additionals-bottom {
   max-width: 100%;
 }
+.works-additionals-bottom > .link {
+  font-size: 1.4rem;
+  line-height: 1.2857142857;
+}
+.works-additionals .works-item-info::after {
+  max-width: 37px;
+  max-height: 18px;
+}
 .works-swiper-additional {
   padding-top: 28px;
+}
+
+@media screen and (max-width: 991px) {
+  .works-wrapper {
+    grid-template-columns: 100%;
+  }
+  .works-additionals-top {
+    margin-bottom: 10px;
+  }
+  .works-additionals-bottom > .link::before {
+    bottom: 0;
+  }
+  .works-additionals .works-item-info::after {
+    top: 16px;
+  }
+  .works-item__img {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .works-swiper-additional {
+    padding-top: 30px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
