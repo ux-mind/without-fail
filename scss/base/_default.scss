@@ -13,6 +13,27 @@
 	}
 }
 
+.wrapper {
+	position: relative;
+}
+
+.swiper {
+	&-control {
+		@include flex(row, center);
+		& div {
+			cursor: pointer;
+			&:first-child {
+				margin-right: 20px;
+			}
+			&:hover {
+				& svg path {
+					stroke: #b7d2a2;
+				}
+			}
+		}
+	}
+}
+
 @media screen and (max-width: 991px) {
 	.d-lg {
 		display: none;

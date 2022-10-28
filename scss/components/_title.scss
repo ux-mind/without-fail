@@ -17,6 +17,9 @@
 		&-xs {
 			@include font(2.6rem, calc(34 / 26));
 		}
+		&-xxs {
+			@include font(2rem, calc(26 / 20));
+		}
 	}
 }
 
@@ -31,6 +34,9 @@
 			}
 			&-xs {
 				@include font(3rem, calc(36 / 30));
+			}
+			&-xxs {
+				@include font(1.8, calc(24 / 18));
 			}
 		}
 	}

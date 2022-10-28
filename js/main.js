@@ -1,6 +1,7 @@
 'use strict';
 
-const swiper = new Swiper('.bestsellers-swiper', {
+// Bestsellers swiper
+const bestsellerSwiper = new Swiper('.bestsellers-swiper', {
   loop: true,
   slidesPerView: 2,
   spaceBetween: 16,
@@ -15,6 +16,25 @@ const swiper = new Swiper('.bestsellers-swiper', {
     },
   },
 });
+
+const worksSwiperAdditional = new Swiper('.works-swiper-additional', {
+  loop: true,
+  slidesPerView: 2,
+  spaceBetween: 31,
+  initialSlide: 1,
+  navigation: {
+    nextEl: '.works-btn-next',
+    prevEl: '.works-btn-prev',
+  },
+});
+
+const worksSwiperMain = new Swiper('.works-swiper-main', {
+  loop: true,
+  spaceBetween: 20,
+});
+
+worksSwiperMain.controller.control = worksSwiperAdditional;
+worksSwiperAdditional.controller.control = worksSwiperMain;
 
 const blocker = document.querySelector('#blocker');
 

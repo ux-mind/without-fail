@@ -1,0 +1,53 @@
+.works {
+	background: $black-900;
+	&-wrapper {
+		padding-bottom: 150px;
+		display: grid;
+		align-items: stretch;
+		grid-template-columns: calc((470 / 1170) * 100%) calc((570 / 1170) * 100%);
+		grid-gap: 60px;
+		justify-content: space-between;
+	}
+	&-item {
+		text-decoration: none;
+		&:hover .works-item-info {
+			border-color: $white;
+		}
+		&__img {
+			margin-bottom: 27px;
+		}
+		&-info {
+			padding-bottom: 20px;
+			position: relative;
+			padding-right: 56px;
+			border-bottom: 1px solid $border-light-color;
+			&::after {
+				@include after(0, 52px, 26px);
+				top: 10px;
+				transform: none;
+				background: icon('arrow-right-white.svg') no-repeat 50% / cover;
+			}
+			& p {
+				color: rgba($white, 0.7);
+				margin-top: 6px;
+			}
+		}
+	}
+	&-additionals {
+		@include flex(column);
+		&-top {
+			width: 100%;
+			@include flex(row, center);
+			margin-bottom: auto;
+		}
+		&__control {
+			margin-left: auto;
+		}
+		&-bottom {
+			max-width: 100%;
+		}
+	}
+	&-swiper-additional {
+		padding-top: 28px;
+	}
+}
