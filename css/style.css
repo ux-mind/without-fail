@@ -911,8 +911,9 @@ ol {
   position: absolute;
   max-width: 370px;
   display: flex;
-  top: -1px;
+  top: 0;
   left: calc(50% + 15px);
+  z-index: 1;
 }
 .home-catalog-img-2 {
   position: absolute;
@@ -921,6 +922,7 @@ ol {
   bottom: 42px;
   right: -19px;
   transform: rotate(15deg);
+  z-index: 1;
 }
 .home-catalog__item {
   border-top: 1px solid rgba(30, 30, 30, 0.2);

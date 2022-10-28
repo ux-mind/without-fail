@@ -20,8 +20,9 @@
 		position: absolute;
 		max-width: 370px;
 		display: flex;
-		top: -1px;
+		top: 0;
 		left: calc(50% + 15px);
+		z-index: 1;
 	}
 	&-img-2 {
 		position: absolute;
@@ -30,6 +31,7 @@
 		bottom: 42px;
 		right: -19px;
 		transform: rotate(15deg);
+		z-index: 1;
 	}
 	&__item {
 		border-top: 1px solid rgba($black-900, 0.2);
