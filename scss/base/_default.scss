@@ -2,6 +2,17 @@
 	pointer-events: none;
 }
 
+.price {
+	&-old {
+		position: relative;
+		&::after {
+			@include after(50%, 105%, 2px);
+			transform: translateX(50%) rotate(-10deg);
+			background: $yellow-dark-300;
+		}
+	}
+}
+
 @media screen and (max-width: 991px) {
 	.d-lg {
 		display: none;

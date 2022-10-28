@@ -1,5 +1,20 @@
 'use strict';
 
+const swiper = new Swiper('.bestsellers-swiper', {
+  loop: true,
+  slidesPerView: 2,
+  spaceBetween: 29,
+  navigation: {
+    nextEl: '.bestsellers-next',
+    prevEl: '.bestsellers-prev',
+  },
+  breakpoints: {
+    991: {
+      slidesPerView: 3,
+    },
+  },
+});
+
 const blocker = document.querySelector('#blocker');
 
 function catalogModalHandler() {

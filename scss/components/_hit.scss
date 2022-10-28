@@ -1,0 +1,19 @@
+.hit {
+	position: absolute;
+	transform: rotate(-25deg);
+	& > div {
+		display: flex;
+		position: relative;
+	}
+	& span {
+		font-style: italic;
+		font-weight: 700;
+		@include font(2rem, calc(26 / 20));
+		color: $light-100;
+		text-transform: uppercase;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+}
