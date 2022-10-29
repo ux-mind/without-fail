@@ -1,0 +1,13 @@
+.parallax {
+	position: relative;
+	background: image('img_16.jpg') no-repeat 50% / cover;
+	height: 479px;
+	width: 100%;
+}
+
+@media screen and(max-width: 767px) {
+	.parallax {
+		max-height: 332px;
+		background: image('img_16_mobile.jpg') no-repeat 50% / cover;
+	}
+}

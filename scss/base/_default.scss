@@ -1,5 +1,6 @@
 .blur {
 	pointer-events: none;
+	position: absolute;
 }
 
 .price {
@@ -15,6 +16,18 @@
 
 .wrapper {
 	position: relative;
+	&-works-news {
+		overflow: hidden;
+		& .blur {
+			top: 450px;
+			left: 50%;
+			transform: translateX(calc(-50% + 454px)) rotate(-37deg);
+			filter: blur(160px);
+			& svg:last-child {
+				display: none;
+			}
+		}
+	}
 }
 
 .swiper {
@@ -50,6 +63,22 @@
 				&:first-child {
 					margin-right: 13px;
 				}
+			}
+		}
+	}
+	.wrapper {
+		&-works-news {
+			overflow: hidden;
+			& .blur {
+				& svg:first-child {
+					display: none;
+				}
+				& svg:last-child {
+					display: block;
+				}
+				top: 610px;
+				transform: translateX(calc(-50% + 70px)) rotate(61deg);
+				filter: blur(100px);
 			}
 		}
 	}

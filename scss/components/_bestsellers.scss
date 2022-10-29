@@ -1,5 +1,7 @@
 .bestsellers {
 	background: $black-900;
+	position: relative;
+	z-index: 1;
 	&-wrapper {
 		padding-bottom: 150px;
 	}

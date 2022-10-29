@@ -1,4 +1,5 @@
 .news {
+	position: relative;
 	&-wrapper {
 		padding-bottom: 150px;
 		@include flex(row, stretch, space-between);
