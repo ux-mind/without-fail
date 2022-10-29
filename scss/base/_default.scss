@@ -41,7 +41,7 @@
 
 @media screen and (max-width: 991px) {
 	.d-lg {
-		display: none;
+		display: none !important;
 	}
 	.swiper {
 		&-control {
