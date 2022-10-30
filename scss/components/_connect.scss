@@ -1,0 +1,149 @@
+.connect {
+	&-wrapper {
+		display: grid;
+		grid-template-columns: 7fr 7.85fr;
+		grid-gap: 130px;
+	}
+	&-ways {
+		padding: 150px 0;
+		padding-right: calc((100vw - 1170px) / 2);
+		&__title {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-gap: 30px;
+			align-items: center;
+			margin-bottom: 88px;
+			& .btn {
+				padding: 1.5em 2.375em 1.625em;
+				max-width: 192px;
+			}
+		}
+		&__addresses {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-gap: 30px;
+		}
+		&-address {
+			@include flex(column);
+			&_big {
+				grid-area: 1 / 2 / 3/ 3;
+			}
+			&__title {
+				width: 100%;
+				padding-bottom: 3px;
+				@include font(1.8rem, calc(26 / 18));
+				border-bottom: 1px solid rgba($black, 0.2);
+				margin-bottom: 10px;
+				font-weight: 600;
+			}
+			&__link {
+				color: $black-900;
+				font-weight: 400;
+				text-decoration: none;
+				line-height: calc(23 / 16);
+			}
+			&__time {
+				margin-top: 14px;
+				@include flex(column);
+				& p {
+					font-weight: 500;
+					line-height: calc(23 / 16);
+					margin-bottom: 2px;
+				}
+				& span {
+					font-weight: 400;
+					line-height: calc(23 / 16);
+					margin-bottom: 2px;
+					&:last-child {
+						margin-bottom: 0;
+					}
+				}
+				& .note {
+					font-weight: 400;
+					@include font(1.4rem, calc(16 / 14));
+					color: $dark-800;
+					max-width: 228px;
+				}
+			}
+			&__scheme {
+				margin-top: auto;
+				& a {
+					text-transform: none;
+					text-decoration: none;
+					color: $black-900;
+				}
+			}
+		}
+	}
+	& .map {
+		border-right: 1px solid rgba($black-900, 0.2);
+	}
+}
+
+@media screen and (max-width: 1220px) {
+	.connect {
+		&-ways {
+			padding-right: calc((100vw - 950px) / 2);
+		}
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.connect {
+		&-wrapper {
+			padding-top: 90px;
+			@include flex(column);
+			gap: 40px;
+			& .map {
+				order: 1;
+				width: 100%;
+				& iframe {
+					height: 400px;
+				}
+			}
+		}
+		&-ways {
+			width: 100%;
+			max-width: 720px;
+			padding: 0;
+			margin: 0 auto;
+			&__title {
+				@include flex(column);
+				gap: 20px;
+				margin-bottom: 30px;
+			}
+			&__addresses {
+				grid-column-gap: 15px;
+			}
+			&-address {
+				&__scheme {
+					grid-column: 1 / 3;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.connect {
+		&-ways {
+			max-width: 528px;
+			&__title {
+				& .btn {
+					width: 100%;
+					max-width: none;
+					padding: 17px 2em 18px;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.connect {
+		&-ways {
+			max-width: calc(100% - 40px);
+			width: 100%;
+		}
+	}
+}
