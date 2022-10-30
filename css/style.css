@@ -1735,9 +1735,6 @@ p {
   z-index: 1;
   background: #1e1e1e;
 }
-.info-wrapper {
-  padding-bottom: 85px;
-}
 .info-top {
   position: relative;
   top: -65px;
@@ -1745,7 +1742,7 @@ p {
   align-items: stretch;
   grid-template-columns: 4.7fr 5.71fr;
   grid-gap: 131px;
-  color: #fff;
+  color: #f9f4ea;
   padding-bottom: 150px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
@@ -1759,6 +1756,7 @@ p {
 .info-top-left__title {
   margin-bottom: 60px;
   max-width: 360px;
+  color: #f9f4ea;
 }
 .info-top-left__note {
   margin-bottom: 25px;
@@ -1768,6 +1766,35 @@ p {
 }
 .info-top-right__btn {
   margin-top: 77px;
+}
+.info-top-right__btn .btn {
+  color: #f9f4ea;
+}
+.info-bottom {
+  position: relative;
+  display: grid;
+  grid-template-columns: 4.64fr 5.82fr;
+  grid-gap: 119px;
+  color: #f9f4ea;
+  padding-top: 85px;
+  padding-bottom: 150px;
+}
+.info-bottom-about__img {
+  margin: 59px 0;
+}
+.info-bottom-about__title {
+  color: #f9f4ea;
+  margin-bottom: 26px;
+}
+.info-bottom-about__note {
+  margin-bottom: 15px;
+}
+.info-bottom-about__note:last-child {
+  margin-bottom: 0;
+}
+.info-bottom-about__note p {
+  font-size: 1.8rem;
+  line-height: 1.4444444444;
 }
 
 @media screen and (max-width: 991px) {
@@ -1813,6 +1840,49 @@ p {
   }
   .info-top-right img {
     width: 100%;
+  }
+  .info-bottom {
+    grid-template-columns: 100%;
+    grid-gap: 0;
+    padding-bottom: 90px;
+    padding-top: 90px;
+  }
+  .info-bottom-left__title {
+    margin-bottom: 20px;
+  }
+  .info-bottom-left__note {
+    max-width: 400px;
+    margin-bottom: 10px;
+  }
+  .info-bottom-left__note p {
+    font-size: 1.4rem;
+    line-height: 1.4285714286;
+  }
+  .info-bottom-about {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+  }
+  .info-bottom-about__note {
+    max-width: 500px;
+    margin: 0;
+    margin-bottom: 10px;
+  }
+  .info-bottom-about__note p {
+    font-size: 1.4rem;
+    line-height: 1.4285714286;
+  }
+  .info-bottom-about__title {
+    margin-bottom: 20px;
+  }
+  .info-bottom-about__btn {
+    margin-top: 30px;
+  }
+  .info-bottom-about__img {
+    width: 100%;
+    margin: 20px 0;
   }
 }
 
