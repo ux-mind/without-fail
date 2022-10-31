@@ -1,4 +1,16 @@
 .connect {
+	position: relative;
+	overflow: hidden;
+	& .blur {
+		position: absolute;
+		bottom: -209px;
+		left: 50%;
+		transform: translateX(calc(-50% + 127px)) rotate(152deg);
+		filter: blur(160px);
+		& svg:last-child {
+			display: none;
+		}
+	}
 	&-wrapper {
 		display: grid;
 		grid-template-columns: 7fr 7.85fr;
@@ -77,6 +89,8 @@
 	}
 	& .map {
 		border-right: 1px solid rgba($black-900, 0.2);
+		position: relative;
+		z-index: 1;
 	}
 }
 
@@ -90,6 +104,15 @@
 
 @media screen and (max-width: 991px) {
 	.connect {
+		& .blur {
+			filter: blur(60px);
+			bottom: auto;
+			top: 205px;
+			transform: translateX(calc(-50% + 120px)) rotate(30deg);
+			& svg:last-child {
+				display: block;
+			}
+		}
 		&-wrapper {
 			padding-top: 90px;
 			@include flex(column);

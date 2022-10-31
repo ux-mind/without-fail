@@ -791,6 +791,7 @@ p {
 .footer {
   background: #1e1e1e;
   color: #cbcbcb;
+  position: relative;
 }
 .footer-wrapper {
   padding: 60px 0;
@@ -2107,6 +2108,20 @@ p {
     margin: 20px 0;
   }
 }
+.connect {
+  position: relative;
+  overflow: hidden;
+}
+.connect .blur {
+  position: absolute;
+  bottom: -209px;
+  left: 50%;
+  transform: translateX(calc(-50% + 127px)) rotate(152deg);
+  filter: blur(160px);
+}
+.connect .blur svg:last-child {
+  display: none;
+}
 .connect-wrapper {
   display: grid;
   grid-template-columns: 7fr 7.85fr;
@@ -2195,6 +2210,8 @@ p {
 }
 .connect .map {
   border-right: 1px solid rgba(30, 30, 30, 0.2);
+  position: relative;
+  z-index: 1;
 }
 
 @media screen and (max-width: 1220px) {
@@ -2203,6 +2220,15 @@ p {
   }
 }
 @media screen and (max-width: 991px) {
+  .connect .blur {
+    filter: blur(60px);
+    bottom: auto;
+    top: 205px;
+    transform: translateX(calc(-50% + 120px)) rotate(30deg);
+  }
+  .connect .blur svg:last-child {
+    display: block;
+  }
   .connect-wrapper {
     padding-top: 90px;
     display: flex;
