@@ -46,7 +46,7 @@ const worksSwiperMain = new Swiper('.works-swiper-main', {
 worksSwiperMain.controller.control = worksSwiperAdditional;
 worksSwiperAdditional.controller.control = worksSwiperMain;
 
-const blocker = document.querySelector('#blocker');
+const blocker = document.querySelector('.blocker');
 
 function catalogModalHandler() {
   const modal = document.querySelector('#catalog-modal');

@@ -29,6 +29,9 @@
 			&-l {
 				@include font(3rem, calc(39 / 30));
 			}
+			&-m {
+				@include font(2.6rem, calc(28.5 / 26));
+			}
 			&-s {
 				@include font(3rem, calc(36 / 30));
 			}

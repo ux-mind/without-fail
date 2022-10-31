@@ -1,9 +1,14 @@
 .header {
 	position: fixed;
-	z-index: 2;
+	z-index: 6;
 	top: 30px;
 	left: 0;
 	width: 100%;
+	&_light {
+		& .header-wrapper {
+			background: rgba($black-900, 0.9);
+		}
+	}
 	&-small {
 		& .header-top {
 			display: none;
@@ -99,6 +104,9 @@
 			&.order-a-call {
 				@include font(1.4rem, calc(17.5 / 14));
 				font-weight: 700;
+				&::before {
+					content: none;
+				}
 			}
 			&.languages {
 				& button {

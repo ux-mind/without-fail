@@ -30,6 +30,11 @@
 				background: $green-light-900;
 			}
 		}
+		& .hamburger {
+			& span:last-child {
+				max-width: none;
+			}
+		}
 	}
 	&-modal {
 		position: absolute;

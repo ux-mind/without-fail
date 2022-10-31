@@ -2,7 +2,6 @@
 	// cursor: image('cursor.svg'), auto;
 	overflow: hidden;
 	&-wrapper {
-		padding-top: 152px;
 		position: relative;
 		& .blur {
 			position: absolute;
@@ -72,7 +71,6 @@
 @media screen and (max-width: 991px) {
 	.home-catalog {
 		&-wrapper {
-			padding-top: 90px;
 			& .blur {
 				bottom: -105px;
 				top: auto;
