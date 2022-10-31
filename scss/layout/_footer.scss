@@ -1,2 +1,195 @@
 .footer {
+	background: $black-900;
+	color: $dark-200;
+	&-wrapper {
+		padding: 60px 0;
+		display: grid;
+		grid-template-columns: calc((301 / 1170) * 100%) calc((285 / 1170) * 100%) calc((242 / 1170) * 100%) calc(
+				(342 / 1170) * 100%
+			);
+	}
+	&__top {
+		&-btn {
+			display: none;
+		}
+	}
+	&-logo {
+		@include flex(column, flex-start, space-between);
+		&__text {
+			max-width: 233px;
+			@include font(1.4rem, calc(22 / 14));
+		}
+	}
+	&-title {
+		@include font(1.4rem, calc(20 / 14));
+		margin-bottom: 24px;
+	}
+	&-list {
+		&__item {
+			margin-bottom: 10px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+		&__link {
+			color: inherit;
+			text-decoration: none;
+			&:hover {
+				color: $white;
+				font-style: italic;
+			}
+		}
+	}
+	&-contacts {
+		padding-right: 57px;
+		& .connect-ways-address {
+			&__title {
+				font-style: italic;
+				color: $white;
+				@include font(1.4rem, calc(20 / 14));
+				border: none;
+				padding: 0;
+				margin-bottom: 11px;
+			}
+			&__link {
+				color: $dark-200;
+				margin-bottom: 3px;
+				@include font(1.4rem, calc(20 / 14));
+				&:hover {
+					color: $white;
+					font-style: italic;
+				}
+			}
+		}
+	}
+	&-social {
+		margin-top: auto;
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-column-gap: 10px;
+		grid-row-gap: 13px;
+		&__link {
+			width: 20px;
+			height: 20px;
+
+			display: grid;
+			place-items: center;
+			background: rgba($white, 0.1);
+			border-radius: 50%;
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+	}
+	&-bottom {
+		background: #181818;
+		&__text {
+			display: none;
+		}
+		& p {
+			text-align: center;
+			color: $white;
+			@include font(1.4rem, calc(19 / 14));
+			padding: 5px 0 7px;
+		}
+	}
+}
+
+@media screen and (max-width: 1220px) {
+	.footer {
+		&-contacts {
+			padding-right: 0;
+		}
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.footer {
+		&-wrapper {
+			grid-template-columns: 100%;
+			padding-top: 40px;
+			padding-bottom: 0;
+		}
+		&-logo {
+			@include flex(row, center, space-between);
+			padding-bottom: 40px;
+			// border-bottom: 1px solid $border-light-color;
+		}
+		&__top {
+			&-btn {
+				display: inline-block;
+				padding: 0 10px;
+			}
+		}
+		&-list {
+			display: none;
+			padding-bottom: 20px;
+			&__link {
+				@include font(1.4rem, calc(19 / 14));
+			}
+		}
+		&-contacts {
+			border-bottom: 1px solid $border-light-color;
+			& .connect-ways__addresses {
+				display: none;
+				grid-row-gap: 20px;
+				padding-bottom: 20px;
+			}
+			& .connect-ways-address__title {
+				@include font(1.2rem, calc(17 / 12));
+			}
+			& .connect-ways-address__time {
+				margin-top: 10px;
+				& p,
+				& span {
+					@include font(1.4rem, calc(20 / 14));
+				}
+			}
+		}
+		&-title {
+			margin: 0;
+			padding: 20px 0;
+			position: relative;
+			border-top: 1px solid $border-light-color;
+			@include font(1.4rem, calc(20 / 14));
+			&::after {
+				@include after(0, 12px, 1px);
+				transform: translateY(-50%);
+				background: $white;
+			}
+			&::before {
+				@include after(0, 1px, 12px);
+				transform: translate(calc(-50% - 5px), -50%);
+				background: $white;
+			}
+			&_opened {
+				&::before {
+					content: none;
+				}
+				& + .footer-list {
+					display: block;
+				}
+				& + .connect-ways__addresses {
+					display: grid;
+				}
+			}
+		}
+		&-bottom {
+			& p {
+				padding: 6px 0;
+				@include font(1.4rem, calc(19 / 14));
+			}
+			&__text {
+				background: $black-900;
+				display: block;
+				padding-top: 20px;
+				padding-bottom: 30px;
+				& p {
+					text-align: left;
+					color: $dark-200;
+					padding: 0;
+				}
+			}
+		}
+	}
 }

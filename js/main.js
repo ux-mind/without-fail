@@ -88,6 +88,28 @@ function toggleHeaderHeight() {
   });
 }
 
+// Footer dropdown handler
+function footerDropdownHandler() {
+  const footerTitlesList = document.querySelectorAll('.footer-title');
+
+  footerTitlesList.forEach((el) => {
+    el.onclick = () => {
+      el.classList.toggle('footer-title_opened');
+    };
+  });
+}
+
+// Function for "up" button in footer
+function footerScrollTop() {
+  const btn = document.querySelector('.footer__top-btn');
+
+  btn.onclick = () => {
+    window.scrollTo(0, 0);
+  };
+}
+
 catalogModalHandler();
 headerDropdownsHandler();
 toggleHeaderHeight();
+footerDropdownHandler();
+footerScrollTop();

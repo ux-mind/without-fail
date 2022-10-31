@@ -38,6 +38,12 @@
 	}
 	&-mobile-top {
 		display: none;
+		& a {
+			text-decoration: none;
+			&::before {
+				content: none;
+			}
+		}
 	}
 	&-link {
 		&:hover {
@@ -178,6 +184,18 @@
 			order: 1;
 			& img {
 				max-width: 138px;
+			}
+			& .hamburger {
+				display: block;
+				& span {
+					height: 2px;
+					&:first-child {
+						transform: translateY(calc(-50% - 9px));
+					}
+					&:last-child {
+						transform: translateY(calc(-50% + 9px));
+					}
+				}
 			}
 		}
 		&-mobile-top {
