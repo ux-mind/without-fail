@@ -1,7 +1,30 @@
 .catalog-page {
 	position: relative;
 	overflow: hidden;
+	& .blur {
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		filter: blur(150px);
+		&:first-of-type {
+			top: -28px;
+			transform: translateX(calc(-50% + 470px)) rotate(34deg);
+		}
+		&:nth-of-type(2) {
+			top: 1570px;
+			transform: translateX(calc(-50% - 1000px)) rotate(-37deg);
+		}
+		&:nth-of-type(3) {
+			top: 2200px;
+			transform: translateX(calc(-50% + 300px)) rotate(34deg);
+		}
+		&:nth-of-type(4) {
+			bottom: 499px;
+			transform: translateX(calc(-50% - 308px)) rotate(180deg);
+		}
+	}
 	&-content {
+		position: relative;
 		padding-top: 161px;
 		padding-bottom: 150px;
 	}
@@ -93,6 +116,24 @@
 
 @media screen and (max-width: 991px) {
 	.catalog-page {
+		& .blur {
+			filter: blur(90px);
+			& svg {
+				max-width: 542px;
+			}
+			&:nth-of-type(2),
+			&:nth-of-type(3) {
+				display: none;
+			}
+			&:first-of-type {
+				top: 134px;
+				transform: translateX(calc(-50% + 81px)) rotate(144deg);
+			}
+			&:nth-of-type(4) {
+				bottom: 1922px;
+				transform: translateX(calc(-50% + 20px)) rotate(144deg);
+			}
+		}
 		&-wrapper {
 			padding-top: 30px;
 		}
