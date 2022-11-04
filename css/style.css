@@ -1297,6 +1297,15 @@ p {
   color: #000;
   text-decoration: none;
 }
+.breadcrumbs_light .breadcrumbs__item::before {
+  background: #fff;
+}
+.breadcrumbs_light a {
+  color: #fff;
+}
+.breadcrumbs_light span {
+  color: rgba(255, 255, 255, 0.8);
+}
 
 .catalog-btn {
   position: relative;
@@ -2583,6 +2592,174 @@ p {
 .catalog-aside-item__item a:hover {
   font-style: italic;
   color: #1e1e1e;
+}
+
+.catalog-chapter-header {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  background: url("../assets/images/catalog-section-img_01.png") no-repeat 50%/cover;
+  padding: 112px 50px 40px 50px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  margin-bottom: 30px;
+}
+.catalog-chapter-header::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translateY(-50%);
+  top: 0;
+  pointer-events: none;
+  transform: none;
+  background: rgba(0, 0, 0, 0.4);
+}
+.catalog-chapter-header__title {
+  color: #fff;
+  font-size: 3rem;
+  line-height: 1;
+  position: relative;
+}
+.catalog-chapter-header__btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: nowrap;
+  position: relative;
+}
+.catalog-chapter-header__btn button, .catalog-chapter-header__btn select, .catalog-chapter-header__btn input, .catalog-chapter-header__btn textarea {
+  background: transparent;
+  color: #fff;
+}
+.catalog-chapter-header__btn button:hover, .catalog-chapter-header__btn select:hover, .catalog-chapter-header__btn input:hover, .catalog-chapter-header__btn textarea:hover {
+  background: #fff;
+  color: #1e1e1e;
+}
+.catalog-chapter-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 30px;
+}
+.catalog-chapter-list__item {
+  display: flex;
+}
+.catalog-chapter-item {
+  text-decoration: none;
+  position: relative;
+}
+.catalog-chapter-item:hover .catalog-chapter-item__info {
+  border-color: #1e1e1e;
+}
+.catalog-chapter-item .hit {
+  top: -5px;
+  left: -35px;
+}
+.catalog-chapter-item__image {
+  margin-bottom: 15px;
+}
+.catalog-chapter-item__info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(30, 30, 30, 0.2);
+}
+.catalog-chapter-item__info p {
+  text-transform: uppercase;
+  color: #1e1e1e;
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: 1.3333333333;
+  max-width: 150px;
+}
+.catalog-chapter-item__price {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+}
+.catalog-chapter-item__price span {
+  font-style: italic;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #1e1e1e;
+  font-size: 1.8rem;
+  line-height: 1.3333333333;
+}
+.catalog-chapter-item__price .price-sale {
+  color: #ceaf27;
+  font-style: italic;
+}
+
+@media screen and (max-width: 991px) {
+  .catalog-chapter-item .hit {
+    top: -45px;
+    left: -22px;
+  }
+  .catalog-chapter-item__info {
+    padding-bottom: 10px;
+    flex-direction: column;
+  }
+  .catalog-chapter-item__info p {
+    max-width: none;
+    margin-bottom: 3px;
+    font-size: 1.4rem;
+    line-height: 1.2857142857;
+  }
+  .catalog-chapter-item__price {
+    flex-direction: row;
+  }
+  .catalog-chapter-item__price span {
+    font-size: 1.2rem;
+    line-height: 1.3333333333;
+  }
+  .catalog-chapter-item__price .price-sale {
+    margin-left: 10px;
+  }
+  .catalog-chapter-item__image {
+    margin-bottom: 11px;
+  }
+}
+.tabs {
+  margin: 0 auto;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.tabs .btn {
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.3125;
+  color: #1e1e1e;
+  width: 24px;
+  height: 24px;
+  display: grid;
+  place-items: center;
+  border-radius: 0;
+}
+.tabs .btn.active {
+  font-weight: 600;
+  border: 1px solid rgba(30, 30, 30, 0.2);
+}
+.tabs .btn:hover {
+  background: transparent;
+  opacity: 0.7;
+}
+.tabs span {
+  display: inline-block;
+  margin: 0 10px;
+  font-size: 1.6rem;
+  line-height: 1.3125;
 }
 
 /*# sourceMappingURL=style.css.map */

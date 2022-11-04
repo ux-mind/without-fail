@@ -26,4 +26,15 @@
 		color: $black;
 		text-decoration: none;
 	}
+	&_light {
+		& .breadcrumbs__item::before {
+			background: $white;
+		}
+		& a {
+			color: $white;
+		}
+		& span {
+			color: rgba($white, 0.8);
+		}
+	}
 }
