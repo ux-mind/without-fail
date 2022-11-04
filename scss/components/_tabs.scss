@@ -26,3 +26,11 @@
 		@include font(1.6rem, calc(21 / 16));
 	}
 }
+
+@media screen and (max-width: 991px) {
+	.tabs {
+		& button {
+			padding: 0;
+		}
+	}
+}

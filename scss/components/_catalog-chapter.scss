@@ -85,6 +85,14 @@
 	}
 }
 
+@media screen and (max-width: 1220px) {
+	.catalog-chapter {
+		&-header {
+			grid-template-columns: 60% 40%;
+		}
+	}
+}
+
 @media screen and (max-width: 991px) {
 	.catalog-chapter {
 		&-item {
@@ -113,6 +121,15 @@
 			&__image {
 				margin-bottom: 11px;
 			}
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.catalog-chapter {
+		&-list {
+			grid-template-columns: 1fr 1fr;
+			grid-column-gap: 16px;
 		}
 	}
 }
