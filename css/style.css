@@ -1756,6 +1756,10 @@ p {
 .bestsellers-prev {
   margin-right: 20px;
 }
+.bestsellers-swiper {
+  padding-left: 18px;
+  margin-left: -18px;
+}
 .bestsellers-prev, .bestsellers-next {
   position: static;
   z-index: 0;
@@ -1823,6 +1827,8 @@ p {
 @media screen and (max-width: 991px) {
   .bestsellers-swiper {
     padding-top: 30px;
+    padding-left: 10px;
+    margin-left: -10px;
   }
   .bestsellers-wrapper {
     padding-bottom: 90px;
