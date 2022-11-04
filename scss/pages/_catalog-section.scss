@@ -1,0 +1,12 @@
+.catalog-section {
+	&-wrapper {
+		padding-top: 171px;
+		overflow: hidden;
+		padding-bottom: 151px;
+	}
+	&-content {
+		display: grid;
+		grid-template-columns: 2.7fr 8.71fr;
+		grid-gap: 30px;
+	}
+}

@@ -10,10 +10,10 @@
 // Import Layout
 @import './layout/section', './layout/header', './layout/hero', './layout/footer', './layout/main';
 // Import Pages
-@import './pages/home', './pages/catalog';
+@import './pages/home', './pages/catalog', './pages/catalog-section';
 // Import Components
 @import './components/text', './components/blocker', './components/hit.scss', './components/table',
-	'./components/catalog', './components/hamburger', './components/dropdown.scss', './components/home-catalog',
-	'./components/about', './components/home-about', './components/bestsellers', './components/works',
-	'./components/news', './components/parallax', './components/info', './components/connect',
-	'./components/breadcrumbs';
+	'./components/breadcrumbs', './components/catalog', './components/hamburger', './components/dropdown.scss',
+	'./components/home-catalog', './components/about', './components/home-about', './components/bestsellers',
+	'./components/works', './components/news', './components/parallax', './components/info', './components/connect',
+	'./components/catalog-aside';

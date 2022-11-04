@@ -108,8 +108,29 @@ function footerScrollTop() {
   };
 }
 
+// Function for handling catalog aside list at catalog-section page
+function catalogAsideHandler() {
+  const catalogAsideList = document.querySelector('.catalog-aside-list');
+
+  catalogAsideList.addEventListener('click', (e) => {
+    const target = e.target;
+
+    if (
+      target.matches('.catalog-aside__item-drop') ||
+      target.closest('.catalog-aside__item-drop')
+    ) {
+      const catalogAsideItem = target.closest('.catalog-aside__item');
+
+      if (catalogAsideItem) {
+        catalogAsideItem.classList.toggle('opened');
+      }
+    }
+  });
+}
+
 catalogModalHandler();
 headerDropdownsHandler();
 toggleHeaderHeight();
 footerDropdownHandler();
 footerScrollTop();
+catalogAsideHandler();
