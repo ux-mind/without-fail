@@ -1849,6 +1849,13 @@ p {
 }
 .bestsellers-title {
   margin-right: 34px;
+  color: #f9f4ea;
+}
+.bestsellers-redirect a {
+  color: #f9f4ea;
+}
+.bestsellers-redirect a::before {
+  background: #f9f4ea;
 }
 .bestsellers-control {
   display: flex;
@@ -2834,6 +2841,7 @@ p {
 }
 .product {
   padding-top: 20px;
+  padding-bottom: 150px;
 }
 .product-tag {
   display: inline-block;
@@ -2922,6 +2930,11 @@ p {
   height: auto;
 }
 
+@media screen and (max-width: 991px) {
+  .product {
+    padding-bottom: 90px;
+  }
+}
 .product-content__title {
   font-size: 3rem;
   line-height: 1;
@@ -2932,6 +2945,9 @@ p {
 }
 .product-content__submit {
   margin-top: 50px;
+}
+.product-content__submit .btn:hover {
+  border: 1px solid #1e1e1e;
 }
 .product-content__about {
   margin-bottom: 50px;
@@ -3045,6 +3061,65 @@ p {
 }
 .product-parameters__more.opened::after {
   transform: translateY(-50%) rotate(180deg);
+}
+
+.product-info {
+  grid-column: 1/3;
+}
+.product-info__header {
+  display: grid;
+  grid-template-columns: 207fr 271fr 218fr 329fr 145fr;
+  margin-bottom: 20px;
+  border-bottom: 1px solid rgba(30, 30, 30, 0.2);
+}
+.product-info__tab {
+  text-align: center;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  padding-bottom: 9px;
+  position: relative;
+}
+.product-info__tab:first-child {
+  text-align: left;
+}
+.product-info__tab:last-child {
+  text-align: right;
+}
+.product-info__tab:hover {
+  font-style: italic;
+  font-weight: 600;
+}
+.product-info__tab.active {
+  font-style: italic;
+  font-weight: 600;
+}
+.product-info__tab.active::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  height: 4px;
+  transform: translateY(-50%);
+  transform: none;
+  top: auto;
+  bottom: -1px;
+  background: #b5d053;
+  z-index: 1;
+}
+.product-info__parameters {
+  display: none;
+}
+.product-info__parameters.active {
+  display: block;
+}
+.product-info__parameters .product-parameters__row {
+  padding: 10px 0;
+  grid-template-columns: 5fr 6.7fr;
+}
+.product-info__parameters .product-parameters__row:first-child {
+  border-top: none;
 }
 
 /*# sourceMappingURL=style.css.map */

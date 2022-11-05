@@ -1,5 +1,6 @@
 .product {
 	padding-top: 20px;
+	padding-bottom: 150px;
 	&-tag {
 		display: inline-block;
 		border: 1px solid $border-dark-color;
@@ -80,5 +81,11 @@
 				height: auto;
 			}
 		}
+	}
+}
+
+@media screen and(max-width: 991px) {
+	.product {
+		padding-bottom: 90px;
 	}
 }

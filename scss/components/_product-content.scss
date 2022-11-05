@@ -8,6 +8,9 @@
 	}
 	&__submit {
 		margin-top: 50px;
+		& .btn:hover {
+			border: 1px solid $black-900;
+		}
 	}
 	&__about {
 		margin-bottom: 50px;

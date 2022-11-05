@@ -1,0 +1,51 @@
+.product-info {
+	grid-column: 1 / 3;
+	&__header {
+		display: grid;
+		grid-template-columns: 207fr 271fr 218fr 329fr 145fr;
+		margin-bottom: 20px;
+		border-bottom: 1px solid $border-dark-color;
+	}
+	&__tab {
+		text-align: center;
+		font-weight: 400;
+		@include font(1.6rem, calc(24 / 16));
+		padding-bottom: 9px;
+		position: relative;
+		&:first-child {
+			text-align: left;
+		}
+		&:last-child {
+			text-align: right;
+		}
+		&:hover {
+			font-style: italic;
+			font-weight: 600;
+		}
+		&.active {
+			font-style: italic;
+			font-weight: 600;
+			&::before {
+				@include before(0, 100%, 4px);
+				transform: none;
+				top: auto;
+				bottom: -1px;
+				background: $green-600;
+				z-index: 1;
+			}
+		}
+	}
+	&__parameters {
+		display: none;
+		&.active {
+			display: block;
+		}
+		& .product-parameters__row {
+			padding: 10px 0;
+			grid-template-columns: 5fr 6.7fr;
+			&:first-child {
+				border-top: none;
+			}
+		}
+	}
+}

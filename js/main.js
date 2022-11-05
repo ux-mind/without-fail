@@ -191,6 +191,31 @@ function handleProductTable() {
   }
 }
 
+function handleProductInfoTabs() {
+  const tabs = document.querySelectorAll('.product-info__tab');
+  const infoBlocks = document.querySelectorAll('.product-info__parameters');
+
+  tabs.forEach((tab) => {
+    if (tab) {
+      const id = tab.id;
+
+      const infoBlock = document.querySelector(
+        `.product-info__parameters#${id}`
+      );
+
+      if (infoBlock) {
+        tab.onclick = () => {
+          infoBlocks.forEach((block) => block.classList.remove('active'));
+          tabs.forEach((tab) => tab.classList.remove('active'));
+
+          tab.classList.add('active');
+          infoBlock.classList.add('active');
+        };
+      }
+    }
+  });
+}
+
 catalogModalHandler();
 headerDropdownsHandler();
 toggleHeaderHeight();
@@ -199,3 +224,4 @@ footerScrollTop();
 catalogAsideHandler();
 handleProductInfoDrop();
 handleProductTable();
+handleProductInfoTabs();

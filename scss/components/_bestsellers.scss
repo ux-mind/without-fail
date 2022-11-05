@@ -12,6 +12,13 @@
 	}
 	&-title {
 		margin-right: 34px;
+		color: $light-100;
+	}
+	&-redirect a {
+		color: $light-100;
+		&::before {
+			background: $light-100;
+		}
 	}
 	&-control {
 		@include flex(row, center);
