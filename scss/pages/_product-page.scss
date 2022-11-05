@@ -1,0 +1,15 @@
+.product-page {
+	&-wrapper {
+		position: relative;
+		overflow: hidden;
+		padding-top: 161px;
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.product-page {
+		&-wrapper {
+			padding-top: 125px;
+		}
+	}
+}

@@ -1,0 +1,84 @@
+.product {
+	padding-top: 20px;
+	&-tag {
+		display: inline-block;
+		border: 1px solid $border-dark-color;
+		border-radius: 3px;
+		padding: 3px 12px 5px 28px;
+		position: relative;
+		text-transform: uppercase;
+		@include font(1.2rem, calc(16 / 12));
+		font-weight: 400;
+		color: $black-900;
+		&_in-stock {
+			&::before {
+				@include before(12px, 9.5px, 8px);
+				background: icon('approve.svg') no-repeat 50% / cover;
+			}
+		}
+	}
+	&-wrapper {
+		display: grid;
+		grid-template-columns: calc((470 / 1170) * 100%) calc((570 / 1170) * 100%);
+		grid-column-gap: 130px;
+		grid-row-gap: 113px;
+	}
+	&-images {
+		max-width: 100%;
+		&__slide {
+			height: 100%;
+			@include flex(row, center);
+			& img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+	}
+	&-swiper {
+		&-main {
+			margin-bottom: 30px;
+			& .swiper-wrapper {
+				align-items: stretch;
+			}
+			& .swiper-slide {
+				height: auto;
+			}
+		}
+		&-additional {
+			&-wrapper {
+				position: relative;
+			}
+			&-prev {
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+				width: 24px;
+				height: 24px;
+				display: grid;
+				place-items: center;
+				right: calc(100% + 10px);
+				cursor: pointer;
+			}
+			&-next {
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+				width: 24px;
+				height: 24px;
+				display: grid;
+				place-items: center;
+				left: calc(100% + 10px);
+				cursor: pointer;
+			}
+			& .swiper-wrapper {
+				align-items: stretch;
+			}
+			& .swiper-slide {
+				max-width: 100px;
+				max-height: 100px;
+				height: auto;
+			}
+		}
+	}
+}

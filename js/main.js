@@ -17,8 +17,10 @@ const bestsellerSwiper = new Swiper('.bestsellers-swiper', {
   },
 });
 
+// Works swiper
 const worksSwiperAdditional = new Swiper('.works-swiper-additional', {
   loop: true,
+  loopedSlides: 3,
   slidesPerView: 1,
   spaceBetween: 16,
   navigation: {
@@ -40,11 +42,35 @@ const worksSwiperAdditional = new Swiper('.works-swiper-additional', {
 
 const worksSwiperMain = new Swiper('.works-swiper-main', {
   loop: true,
+  loopedSlides: 3,
   spaceBetween: 20,
 });
 
 worksSwiperMain.controller.control = worksSwiperAdditional;
 worksSwiperAdditional.controller.control = worksSwiperMain;
+
+// Product swiper
+const productSwiper = new Swiper('.product-swiper-main', {
+  spaceBetween: 20,
+  loop: true,
+  loopedSlides: 5,
+});
+
+const productSwiperAdditional = new Swiper('.product-swiper-additional', {
+  loop: true,
+  loopedSlides: 5,
+  slidesPerView: 4,
+  spaceBetween: 23,
+  slideToClickedSlide: true,
+  loop: true,
+  navigation: {
+    prevEl: '.product-swiper-additional-prev',
+    nextEl: '.product-swiper-additional-next',
+  },
+});
+
+productSwiperAdditional.controller.control = productSwiper;
+productSwiper.controller.control = productSwiperAdditional;
 
 const blocker = document.querySelector('.blocker');
 
@@ -112,20 +138,57 @@ function footerScrollTop() {
 function catalogAsideHandler() {
   const catalogAsideList = document.querySelector('.catalog-aside-list');
 
-  catalogAsideList.addEventListener('click', (e) => {
-    const target = e.target;
+  if (catalogAsideList) {
+    catalogAsideList.addEventListener('click', (e) => {
+      const target = e.target;
 
-    if (
-      target.matches('.catalog-aside__item-drop') ||
-      target.closest('.catalog-aside__item-drop')
-    ) {
-      const catalogAsideItem = target.closest('.catalog-aside__item');
+      if (
+        target.matches('.catalog-aside__item-drop') ||
+        target.closest('.catalog-aside__item-drop')
+      ) {
+        const catalogAsideItem = target.closest('.catalog-aside__item');
 
-      if (catalogAsideItem) {
-        catalogAsideItem.classList.toggle('opened');
+        if (catalogAsideItem) {
+          catalogAsideItem.classList.toggle('opened');
+        }
       }
-    }
-  });
+    });
+  }
+}
+
+function handleProductInfoDrop() {
+  const btn = document.querySelector('.product-content__about-more');
+  let additionalInfoBlock = btn.previousSibling;
+
+  while (additionalInfoBlock && additionalInfoBlock.nodeType != 1) {
+    additionalInfoBlock = additionalInfoBlock.previousSibling;
+  }
+
+  if (
+    btn &&
+    additionalInfoBlock.matches('.product-content__about_additional')
+  ) {
+    btn.addEventListener('click', () => {
+      btn.classList.toggle('opened');
+      additionalInfoBlock.classList.toggle('opened');
+    });
+  }
+}
+
+function handleProductTable() {
+  const btn = document.querySelector('.product-parameters__more');
+  let additionalInfoBlock = btn.previousSibling;
+
+  while (additionalInfoBlock && additionalInfoBlock.nodeType != 1) {
+    additionalInfoBlock = additionalInfoBlock.previousSibling;
+  }
+
+  if (btn && additionalInfoBlock.matches('.product-parameters_additional')) {
+    btn.addEventListener('click', () => {
+      btn.classList.toggle('opened');
+      additionalInfoBlock.classList.toggle('opened');
+    });
+  }
 }
 
 catalogModalHandler();
@@ -134,3 +197,5 @@ toggleHeaderHeight();
 footerDropdownHandler();
 footerScrollTop();
 catalogAsideHandler();
+handleProductInfoDrop();
+handleProductTable();
