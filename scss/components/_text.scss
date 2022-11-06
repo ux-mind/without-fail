@@ -5,6 +5,12 @@
 			background: $white;
 		}
 	}
+	&_light {
+		color: $light-100;
+		&::before {
+			background: $light-100;
+		}
+	}
 	&_uppercase {
 		text-transform: uppercase;
 	}

@@ -1,0 +1,25 @@
+.stars {
+	@include flex(row, center);
+}
+
+.star {
+	width: 12px;
+	height: 12px;
+	display: inline-block;
+	margin-right: 2px;
+	background: icon('star-dark.svg') no-repeat 50% / cover;
+	&:last-of-type {
+		margin-right: 0;
+	}
+	&_active {
+		background: icon('star-green.svg') no-repeat 50% / cover;
+	}
+	&-btn {
+		width: 20px;
+		height: 20px;
+		margin-right: 3px;
+		&:last-of-type {
+			margin-right: 0;
+		}
+	}
+}

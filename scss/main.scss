@@ -6,7 +6,8 @@
 @import './base/base', './base/default', './base/fonts';
 // Import Components
 @import './components/button', './components/title', './components/arrow', './components/container',
-	'./components/social-icon', './components/link', './components/modal';
+	'./components/social-icon', './components/link', './components/modal', './components/modal-fixed',
+	'./components/input';
 // Import Layout
 @import './layout/section', './layout/header', './layout/hero', './layout/footer', './layout/main';
 // Import Pages
@@ -17,4 +18,6 @@
 	'./components/home-catalog', './components/about', './components/home-about', './components/bestsellers',
 	'./components/works', './components/news', './components/parallax', './components/info', './components/connect',
 	'./components/catalog-aside', './components/catalog-chapter', './components/tabs', './components/product',
-	'./components/product-content', './components/product-parameters', './components/product-info';
+	'./components/product-content', './components/product-parameters', './components/product-info',
+	'./components/product-deliver', './components/product-testimonial', './components/star',
+	'./components/testimonial-modal';

@@ -39,7 +39,6 @@
 			&::before {
 				@include before(0, 35px, 35px);
 				content: attr(data-number);
-				background: attr(data-color);
 				border-radius: 50%;
 				display: grid;
 				place-items: center;

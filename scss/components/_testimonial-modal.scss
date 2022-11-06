@@ -1,0 +1,64 @@
+.testimonial-modal {
+	&-wrapper {
+		position: relative;
+		background: $black-900;
+		color: $light-100;
+		border-radius: 10px;
+	}
+	&__header {
+		padding: 40px 50px;
+		border-bottom: 1px solid $border-light-color;
+	}
+	&__title {
+		color: $light-100;
+		text-align: center;
+	}
+	&-form {
+		padding: 40px 50px;
+		&__stars {
+			margin-bottom: 40px;
+		}
+		&__name {
+			margin-bottom: 20px;
+		}
+		&__text {
+			margin-bottom: 20px;
+		}
+		&__check {
+			margin-bottom: 30px;
+			display: block;
+			& label {
+				padding-left: 35px;
+				position: relative;
+				@include font(1.6rem, calc(24 / 16));
+				font-weight: 400;
+				& a {
+					font-style: italic;
+					color: $white;
+					text-decoration: none;
+					position: relative;
+					&:hover {
+						opacity: 0.7;
+					}
+					&::before {
+						@include before(0, 100%, 1px);
+						bottom: 1px;
+						top: auto;
+						transform: none;
+						background: $white;
+					}
+				}
+				&::before {
+					@include before(0, 20px, 20px);
+					border: 1px solid $border-light-color;
+					border-radius: 3px;
+				}
+			}
+			& input:checked + label {
+				&::before {
+					background: icon('check.svg') no-repeat 50%;
+				}
+			}
+		}
+	}
+}

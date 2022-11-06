@@ -47,5 +47,21 @@
 				border-top: none;
 			}
 		}
+		& p {
+			@include font(1.4rem, calc(21 / 14));
+			font-weight: 400;
+			color: $black-900;
+			margin-bottom: 15px;
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+		}
+		&-wrapper {
+			&.product-deliver {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				grid-gap: 30px;
+			}
+		}
 	}
 }

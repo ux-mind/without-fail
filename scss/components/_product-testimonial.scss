@@ -1,0 +1,90 @@
+.product-testimonials {
+	&__pass {
+		text-align: right;
+		margin-bottom: 30px;
+		&-btn {
+			color: $black-900;
+			font-weight: 700;
+			@include font(1.4rem, calc(18 / 14));
+			&::before {
+				bottom: 1px;
+			}
+		}
+	}
+	&__more {
+		margin-top: 30px;
+		text-align: center;
+		&-btn {
+			color: $black-900;
+			font-weight: 700;
+			@include font(1.4rem, calc(18 / 14));
+			&::before {
+				bottom: 1px;
+			}
+		}
+	}
+	&-container {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 30px;
+	}
+}
+
+.product-testimonial {
+	background: $black-900;
+	border-radius: 5px;
+	padding: 30px;
+	&-content {
+		& p {
+			color: $white;
+		}
+		&__btn {
+			margin-top: 30px;
+		}
+	}
+	&-top {
+		margin-bottom: 20px;
+		@include flex(row, center, space-between);
+		&__date {
+			& p {
+				color: $white;
+				@include font(1.4rem, calc(21 / 14));
+			}
+		}
+	}
+	&-info {
+		@include flex(row, center);
+		&__icon {
+			width: 50px;
+			height: 50px;
+			display: grid;
+			place-items: center;
+			@include font(2.4rem, calc(36 / 24));
+			color: $white;
+			font-weight: 600;
+			border-radius: 50%;
+			margin-right: 20px;
+			padding-bottom: 2px;
+			&.color-1 {
+				background: $green-700;
+			}
+			&.color-2 {
+				background: $green-400;
+			}
+			&.color-3 {
+				background: $yellow-dark-300;
+			}
+			&.color-4 {
+				background: $brown-200;
+			}
+		}
+		&__person {
+			& h4 {
+				margin: 0;
+				margin-bottom: 4px;
+				color: $white;
+				@include font(1.6rem, calc(24 / 16));
+			}
+		}
+	}
+}
