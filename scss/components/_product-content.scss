@@ -60,3 +60,20 @@
 		}
 	}
 }
+
+@media screen and (max-width: 991px) {
+	.product-content {
+		&__title {
+			margin-bottom: 10px;
+		}
+		&__tag {
+			margin-bottom: 0;
+		}
+		&__about {
+			margin-bottom: 40px;
+		}
+		&__submit {
+			margin-top: 40px;
+		}
+	}
+}

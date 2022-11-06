@@ -60,12 +60,22 @@ const productSwiperAdditional = new Swiper('.product-swiper-additional', {
   loop: true,
   loopedSlides: 5,
   slidesPerView: 4,
-  spaceBetween: 23,
+  spaceBetween: 15,
   slideToClickedSlide: true,
   loop: true,
   navigation: {
     prevEl: '.product-swiper-additional-prev',
     nextEl: '.product-swiper-additional-next',
+  },
+  breakpoints: {
+    992: {
+      slidesPerView: 4,
+      spaceBetween: 23,
+    },
+    768: {
+      slidesPerView: 'auto',
+      spaceBetween: 25,
+    },
   },
 });
 
@@ -291,6 +301,14 @@ function handleTestimonialModalSumbit() {
   }
 }
 
+function handleProductParametersMobile() {
+  const productButtons = document.querySelectorAll('.product-info-mobile__btn');
+
+  productButtons.forEach((btn) => {
+    btn.onclick = () => btn.classList.toggle('active');
+  });
+}
+
 catalogModalHandler();
 headerDropdownsHandler();
 toggleHeaderHeight();
@@ -304,3 +322,4 @@ handleTestimonialsStars();
 handleFixedModalClose();
 handleTestimonialModalOpen();
 handleTestimonialModalSumbit();
+handleProductParametersMobile();

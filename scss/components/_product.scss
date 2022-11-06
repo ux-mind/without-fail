@@ -1,6 +1,10 @@
 .product {
 	padding-top: 20px;
 	padding-bottom: 150px;
+	&-mobile-title {
+		display: none;
+		margin-bottom: 30px;
+	}
 	&-tag {
 		display: inline-block;
 		border: 1px solid $border-dark-color;
@@ -84,8 +88,24 @@
 	}
 }
 
+@media screen and(max-width: 1220px) {
+	.product {
+		&-wrapper {
+			grid-column-gap: 90px;
+		}
+	}
+}
+
 @media screen and(max-width: 991px) {
 	.product {
+		padding-top: 0;
 		padding-bottom: 90px;
+		&-mobile-title {
+			display: block;
+		}
+		&-wrapper {
+			grid-template-columns: 100%;
+			grid-row-gap: 40px;
+		}
 	}
 }

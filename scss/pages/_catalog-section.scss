@@ -9,6 +9,7 @@
 		}
 		& .catalog-mobile-title {
 			margin-bottom: 20px;
+			display: none;
 		}
 		& .blur {
 			top: 493px;
@@ -31,6 +32,9 @@
 			padding-bottom: 90px;
 			& .catalog-mobile-breadcrumbs {
 				display: flex;
+			}
+			& .catalog-mobile-title {
+				display: block;
 			}
 			& .blur {
 				top: 560px;
