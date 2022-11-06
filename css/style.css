@@ -3472,4 +3472,39 @@ p {
   background: url("../assets/icons/check.svg") no-repeat 50%;
 }
 
+.testimonial-success {
+  max-width: 672px;
+}
+.testimonial-success-wrapper {
+  position: relative;
+  background: #1e1e1e;
+  color: #f9f4ea;
+  border-radius: 10px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 2.3fr 4.42fr;
+}
+.testimonial-success-content {
+  padding: 40px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+}
+.testimonial-success-content__title {
+  margin-bottom: 10px;
+}
+.testimonial-success-content__subtitle {
+  margin-bottom: auto;
+  font-size: 1.6rem;
+  line-height: 1.3125;
+}
+.testimonial-success-content__text {
+  font-size: 1.6rem;
+  line-height: 1.3125;
+  font-style: italic;
+  font-weight: 400;
+}
+
 /*# sourceMappingURL=style.css.map */

@@ -216,6 +216,81 @@ function handleProductInfoTabs() {
   });
 }
 
+// For handle form input depends on stars count to correctly submit it
+function handleTestimonialsStars() {
+  const starsBlock = document.querySelector(
+    '.testimonial-modal-form__stars .stars'
+  );
+
+  const starsInput = document.querySelector('#stars-input');
+
+  if (starsBlock && starsInput) {
+    starsBlock.addEventListener('click', (e) => {
+      const targetStar = e.target.closest('.star-btn');
+
+      if (targetStar) {
+        let starsCount = 1;
+
+        for (const star of starsBlock.children) {
+          star.classList.remove('star_active');
+        }
+
+        for (const star of starsBlock.children) {
+          if (star === targetStar) {
+            star.classList.add('star_active');
+            break;
+          }
+
+          starsCount += 1;
+          star.classList.add('star_active');
+        }
+
+        starsInput.value = starsCount;
+      }
+    });
+  }
+}
+
+function handleFixedModalClose() {
+  const modals = document.querySelectorAll('.modal-fixed');
+
+  modals.forEach((el) => {
+    const closeBtn = el.querySelector('.modal-close__btn');
+
+    closeBtn.addEventListener('click', () => {
+      el.classList.remove('opened');
+      blocker.classList.remove('blocker_opened');
+    });
+  });
+}
+
+function handleTestimonialModalOpen() {
+  const modal = document.querySelector('#testimonial-modal');
+  const btn = document.querySelector('.product-testimonials__pass-btn');
+
+  if (modal && btn) {
+    btn.addEventListener('click', () => {
+      modal.classList.add('opened');
+      blocker.classList.add('blocker_opened');
+    });
+  }
+}
+
+function handleTestimonialModalSumbit() {
+  const modal = document.querySelector('#testimonial-modal');
+  const successModal = document.querySelector('#testimonial-modal-success');
+  const testimonialForm = modal.querySelector('.testimonial-modal-form');
+
+  if (testimonialForm && successModal) {
+    testimonialForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      modal.classList.remove('opened');
+      successModal.classList.add('opened');
+    });
+  }
+}
+
 catalogModalHandler();
 headerDropdownsHandler();
 toggleHeaderHeight();
@@ -225,3 +300,7 @@ catalogAsideHandler();
 handleProductInfoDrop();
 handleProductTable();
 handleProductInfoTabs();
+handleTestimonialsStars();
+handleFixedModalClose();
+handleTestimonialModalOpen();
+handleTestimonialModalSumbit();

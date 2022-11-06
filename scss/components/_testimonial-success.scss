@@ -1,0 +1,28 @@
+.testimonial-success {
+	max-width: 672px;
+	&-wrapper {
+		position: relative;
+		background: $black-900;
+		color: $light-100;
+		border-radius: 10px;
+		overflow: hidden;
+		display: grid;
+		grid-template-columns: 2.3fr 4.42fr;
+	}
+	&-content {
+		padding: 40px 30px;
+		@include flex(column);
+		&__title {
+			margin-bottom: 10px;
+		}
+		&__subtitle {
+			margin-bottom: auto;
+			@include font(1.6rem, calc(21 / 16));
+		}
+		&__text {
+			@include font(1.6rem, calc(21 / 16));
+			font-style: italic;
+			font-weight: 400;
+		}
+	}
+}
