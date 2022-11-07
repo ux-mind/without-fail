@@ -14,5 +14,17 @@
 		display: none;
 	}
 	&_dark {
+		border-color: $border-dark-color;
+		color: $black-900;
+		&::placeholder {
+			color: $dark-590;
+		}
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.input {
+		@include font(1.4rem, calc(21 / 14));
+		padding: 12px 20px 15px;
 	}
 }
