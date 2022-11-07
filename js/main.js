@@ -332,18 +332,58 @@ function handleTestimonialContent() {
   });
 }
 
-catalogModalHandler();
-headerDropdownsHandler();
+function handleApplicationModal() {
+  const btn = document.querySelector('#application-modal-btn');
+  const modal = document.querySelector('#application-modal');
+
+  if (btn && modal) {
+    btn.onclick = () => {
+      modal.classList.add('opened');
+      blocker.classList.add('blocker_opened');
+    };
+  }
+}
+
+function handleApplicationModalSumbit() {
+  const modal = document.querySelector('#application-modal');
+  const successModal = document.querySelector('#application-modal-success');
+  const testimonialForm = modal.querySelector('.application-modal-form');
+
+  if (testimonialForm && successModal) {
+    testimonialForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      modal.classList.remove('opened');
+      successModal.classList.add('opened');
+    });
+  }
+}
+
+// Function for calling all modal handlers
+function callModalHandlers() {
+  catalogModalHandler();
+  handleFixedModalClose();
+  handleTestimonialModalOpen();
+  handleTestimonialModalSumbit();
+  handleApplicationModal();
+  handleApplicationModalSumbit();
+}
+
+// Function for calling all dropdown handlers
+function callDropdownHandlers() {
+  headerDropdownsHandler();
+  footerDropdownHandler();
+  handleProductInfoDrop();
+}
+
 toggleHeaderHeight();
-footerDropdownHandler();
 footerScrollTop();
 catalogAsideHandler();
-handleProductInfoDrop();
 handleProductTable();
 handleProductInfoTabs();
 handleTestimonialsStars();
-handleFixedModalClose();
-handleTestimonialModalOpen();
-handleTestimonialModalSumbit();
 handleProductParametersMobile();
 handleTestimonialContent();
+
+callModalHandlers();
+callDropdownHandlers();

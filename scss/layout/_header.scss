@@ -62,6 +62,7 @@
 		&__el {
 			display: inline-flex;
 			&.tel {
+				font-weight: 500;
 				padding-left: 21px;
 				position: relative;
 				&::before {
