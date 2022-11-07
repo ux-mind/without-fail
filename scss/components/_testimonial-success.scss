@@ -26,3 +26,30 @@
 		}
 	}
 }
+
+@media screen and (max-width: 991px) {
+	.testimonial-success {
+		max-width: 336px;
+		&-wrapper {
+			grid-template-columns: 100%;
+		}
+		&-content {
+			padding: 30px;
+			align-items: center;
+			&__title {
+				margin-bottom: 5px;
+				@include font(2rem, calc(26 / 20));
+			}
+			&__subtitle {
+				margin-bottom: 55px;
+				& p {
+					@include font(1.6rem, calc(21 / 16));
+				}
+			}
+			&__text {
+				align-self: flex-end;
+				text-align: right;
+			}
+		}
+	}
+}

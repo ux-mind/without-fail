@@ -11,6 +11,8 @@
 	overflow-y: auto;
 	width: calc(100% - 40px);
 	max-width: 671px;
+	background: $black-900;
+	border-radius: 10px;
 	&.opened {
 		opacity: 1;
 		pointer-events: auto;

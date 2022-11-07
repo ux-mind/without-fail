@@ -21,11 +21,13 @@
 			color: $black-900;
 			font-weight: 600;
 			font-style: italic;
+			margin: 0;
 		}
 		& p:last-of-type {
 			@include font(1.4rem, calc(21 / 14));
 			color: $dark-590;
 			font-weight: 400;
+			margin: 0;
 		}
 	}
 	&__more {
@@ -80,10 +82,12 @@
 			& p:first-of-type {
 				font-weight: 500;
 				@include font(1.6rem, calc(19.2 / 16));
+				margin: 0;
 			}
 			& p:last-of-type {
 				font-weight: 400;
 				@include font(1.6rem, calc(19.2 / 16));
+				margin: 0;
 			}
 		}
 	}

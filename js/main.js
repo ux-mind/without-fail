@@ -276,14 +276,16 @@ function handleFixedModalClose() {
 
 function handleTestimonialModalOpen() {
   const modal = document.querySelector('#testimonial-modal');
-  const btn = document.querySelector('.product-testimonials__pass-btn');
+  const btns = document.querySelectorAll('.product-testimonials__pass-btn');
 
-  if (modal && btn) {
-    btn.addEventListener('click', () => {
-      modal.classList.add('opened');
-      blocker.classList.add('blocker_opened');
-    });
-  }
+  btns.forEach((btn) => {
+    if (modal && btn) {
+      btn.addEventListener('click', () => {
+        modal.classList.add('opened');
+        blocker.classList.add('blocker_opened');
+      });
+    }
+  });
 }
 
 function handleTestimonialModalSumbit() {
@@ -309,6 +311,27 @@ function handleProductParametersMobile() {
   });
 }
 
+function handleTestimonialContent() {
+  const showMoreBtns = document.querySelectorAll(
+    '.product-testimonial-content__btn'
+  );
+
+  showMoreBtns.forEach((btn) => {
+    let textContainer = btn.previousSibling;
+
+    while (textContainer && textContainer.nodeType != 1) {
+      textContainer = textContainer.previousSibling;
+    }
+
+    if (textContainer.matches('.product-testimonial-content__wrapper')) {
+      btn.onclick = () => {
+        textContainer.classList.add('opened');
+        btn.style.display = 'none';
+      };
+    }
+  });
+}
+
 catalogModalHandler();
 headerDropdownsHandler();
 toggleHeaderHeight();
@@ -323,3 +346,4 @@ handleFixedModalClose();
 handleTestimonialModalOpen();
 handleTestimonialModalSumbit();
 handleProductParametersMobile();
+handleTestimonialContent();

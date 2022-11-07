@@ -120,6 +120,27 @@
 		&-mobile {
 			display: block;
 			padding-top: 50px;
+			&__parameters {
+				padding-bottom: 30px;
+				& .product-parameters__row:last-child {
+					padding-bottom: 0;
+				}
+				& p {
+					@include font(1.4rem, calc(21 / 14));
+					margin-bottom: 15px;
+					&:last-child {
+						margin-bottom: 0;
+					}
+				}
+			}
+		}
+		&__parameters {
+			&-wrapper {
+				&.product-deliver {
+					@include flex(column);
+					grid-gap: 15px;
+				}
+			}
 		}
 	}
 }

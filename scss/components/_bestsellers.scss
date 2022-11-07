@@ -151,3 +151,11 @@
 		}
 	}
 }
+
+@media screen and(max-width: 576px) {
+	.bestsellers {
+		&-title {
+			max-width: calc(100% - 100px);
+		}
+	}
+}

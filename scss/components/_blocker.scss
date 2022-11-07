@@ -9,7 +9,7 @@
 	pointer-events: none;
 	opacity: 0;
 	transition: opacity 0.3s;
-	z-index: 5;
+	z-index: 7;
 	&_opened {
 		pointer-events: auto;
 		opacity: 1;

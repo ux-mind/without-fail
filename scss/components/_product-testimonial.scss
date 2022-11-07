@@ -35,6 +35,21 @@
 	border-radius: 5px;
 	padding: 30px;
 	&-content {
+		&__wrapper {
+			overflow: hidden;
+			text-overflow: ellipsis;
+			display: -moz-box;
+			-moz-box-orient: vertical;
+			display: -webkit-box;
+			-webkit-line-clamp: 4;
+			-webkit-box-orient: vertical;
+			line-clamp: 4;
+			box-orient: vertical;
+			&.opened {
+				line-clamp: initial;
+				-webkit-line-clamp: initial;
+			}
+		}
 		& p {
 			color: $white;
 		}
@@ -84,6 +99,30 @@
 				margin-bottom: 4px;
 				color: $white;
 				@include font(1.6rem, calc(24 / 16));
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.product-testimonials {
+		&__pass {
+			margin-bottom: 20px;
+		}
+		&-container {
+			grid-template-columns: 100%;
+			grid-gap: 15px;
+		}
+		&__more {
+			text-align: left;
+		}
+	}
+
+	.product-testimonial {
+		&-content {
+			&__btn {
+				margin-top: 20px;
+				@include font(1.4rem, calc(21 / 14));
 			}
 		}
 	}
