@@ -4,6 +4,9 @@
 	filter: blur(150px);
 	@media screen and (max-width: 991px) {
 		filter: blur(95px);
+		& svg {
+			max-width: 542px;
+		}
 	}
 }
 

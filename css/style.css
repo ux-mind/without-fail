@@ -139,6 +139,9 @@ p {
   .blur {
     filter: blur(95px);
   }
+  .blur svg {
+    max-width: 542px;
+  }
 }
 
 .price-old {
@@ -2952,6 +2955,12 @@ p {
   padding-top: 20px;
   padding-bottom: 150px;
   position: relative;
+  overflow: hidden;
+}
+.product .blur {
+  top: 250px;
+  left: 50%;
+  transform: translateX(calc(-50% - 104px)) rotate(34deg);
 }
 .product-mobile-title {
   display: none;
@@ -2980,6 +2989,7 @@ p {
   background: url("../assets/icons/approve.svg") no-repeat 50%/cover;
 }
 .product-wrapper {
+  position: relative;
   display: grid;
   grid-template-columns: 40.1709401709% 48.7179487179%;
   grid-column-gap: 130px;
@@ -3053,6 +3063,11 @@ p {
   .product {
     padding-top: 0;
     padding-bottom: 90px;
+  }
+  .product .blur {
+    top: 900px;
+    left: 50%;
+    transform: translateX(calc(-50% + 137px)) rotate(144deg);
   }
   .product-mobile-title {
     display: block;
@@ -3829,8 +3844,15 @@ p {
 }
 .questions {
   position: relative;
+  overflow: hidden;
+}
+.questions .blur {
+  top: -86px;
+  left: 50%;
+  transform: translateX(calc(-50% - 250px)) rotate(-35deg);
 }
 .questions-wrapper {
+  position: relative;
   display: grid;
   grid-template-columns: auto 1fr;
   grid-gap: 130px;
@@ -3882,6 +3904,10 @@ p {
   }
 }
 @media screen and (max-width: 991px) {
+  .questions .blur {
+    top: -77px;
+    transform: translateX(calc(-50% + 114px)) rotate(144deg);
+  }
   .questions-img {
     display: none;
   }

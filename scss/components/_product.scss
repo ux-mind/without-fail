@@ -2,7 +2,11 @@
 	padding-top: 20px;
 	padding-bottom: 150px;
 	position: relative;
+	overflow: hidden;
 	& .blur {
+		top: 250px;
+		left: 50%;
+		transform: translateX(calc(-50% - 104px)) rotate(34deg);
 	}
 	&-mobile-title {
 		display: none;
@@ -26,6 +30,7 @@
 		}
 	}
 	&-wrapper {
+		position: relative;
 		display: grid;
 		grid-template-columns: calc((470 / 1170) * 100%) calc((570 / 1170) * 100%);
 		grid-column-gap: 130px;
@@ -103,6 +108,11 @@
 	.product {
 		padding-top: 0;
 		padding-bottom: 90px;
+		& .blur {
+			top: 900px;
+			left: 50%;
+			transform: translateX(calc(-50% + 137px)) rotate(144deg);
+		}
 		&-mobile-title {
 			display: block;
 		}
