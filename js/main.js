@@ -85,6 +85,19 @@ productSwiper.controller.control = productSwiperAdditional;
 const blocker = document.querySelector('.blocker');
 const blockerHeader = document.querySelector('.blocker-header');
 
+function handleMobileMenu() {
+  const btn = document.querySelector('.header__logo .hamburger');
+  const menu = document.querySelector('.m-menu');
+
+  if (btn && menu) {
+    btn.addEventListener('click', () => {
+      btn.classList.toggle('close');
+      menu.classList.toggle('m-menu_opened');
+      document.documentElement.classList.toggle('is-locked');
+    });
+  }
+}
+
 function catalogModalHandler() {
   const modal = document.querySelector('#catalog-modal');
   const button = document.querySelector('#catalog-btn');
@@ -388,6 +401,8 @@ function callDropdownHandlers() {
   footerDropdownHandler();
   handleProductInfoDrop();
 }
+
+handleMobileMenu();
 
 toggleHeaderHeight();
 footerScrollTop();

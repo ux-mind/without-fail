@@ -1,0 +1,75 @@
+.m-menu {
+	position: fixed;
+	z-index: 5;
+	bottom: 0;
+	left: 0;
+	height: 100vh;
+	width: 100vw;
+	pointer-events: none;
+	background: $black-900;
+	transform: translateX(100%);
+	transition: transform 0.3s;
+	display: none;
+	&_opened {
+		pointer-events: auto;
+		transform: none;
+	}
+	&-wrapper {
+		padding-top: 113px;
+		overflow-y: auto;
+	}
+	&-buttons {
+		position: relative;
+		padding: 1px;
+		background: $border-light-color;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 1px;
+		&__btn {
+			display: block;
+			text-align: center;
+			text-decoration: none;
+			color: $white;
+			background: $black-900;
+			position: relative;
+			@include font(1.4rem, calc(18 / 14));
+			padding: 11px 1em 15px;
+			&:hover {
+				opacity: 0.8;
+			}
+			&.vk {
+				color: $dark-300;
+				& span {
+					position: relative;
+					padding-right: 32px;
+					display: inline-block;
+					&::after {
+						@include after(0, 24px, 24px);
+						border-radius: 50%;
+						background: rgba($white, 0.1) icon('vk.svg') no-repeat 50%;
+						background-position: 4px 8px;
+					}
+				}
+			}
+			&.price {
+				color: $white;
+				& span {
+					position: relative;
+					padding-left: 22px;
+					display: inline-block;
+					&::before {
+						@include before(0, 24px, 24px);
+						top: calc(50% + 1px);
+						background: icon('download.svg') no-repeat 50%;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.m-menu {
+		display: block;
+	}
+}
