@@ -83,6 +83,7 @@ productSwiperAdditional.controller.control = productSwiper;
 productSwiper.controller.control = productSwiperAdditional;
 
 const blocker = document.querySelector('.blocker');
+const blockerHeader = document.querySelector('.blocker-header');
 
 function catalogModalHandler() {
   const modal = document.querySelector('#catalog-modal');
@@ -90,7 +91,7 @@ function catalogModalHandler() {
 
   button.addEventListener('click', () => {
     modal.classList.toggle('opened');
-    blocker.classList.toggle('blocker_opened');
+    blockerHeader.classList.toggle('blocker_opened');
   });
 }
 
@@ -168,36 +169,42 @@ function catalogAsideHandler() {
 
 function handleProductInfoDrop() {
   const btn = document.querySelector('.product-content__about-more');
-  let additionalInfoBlock = btn.previousSibling;
 
-  while (additionalInfoBlock && additionalInfoBlock.nodeType != 1) {
-    additionalInfoBlock = additionalInfoBlock.previousSibling;
-  }
+  if (btn) {
+    let additionalInfoBlock = btn.previousSibling;
 
-  if (
-    btn &&
-    additionalInfoBlock.matches('.product-content__about_additional')
-  ) {
-    btn.addEventListener('click', () => {
-      btn.classList.toggle('opened');
-      additionalInfoBlock.classList.toggle('opened');
-    });
+    while (additionalInfoBlock && additionalInfoBlock.nodeType != 1) {
+      additionalInfoBlock = additionalInfoBlock.previousSibling;
+    }
+
+    if (
+      btn &&
+      additionalInfoBlock.matches('.product-content__about_additional')
+    ) {
+      btn.addEventListener('click', () => {
+        btn.classList.toggle('opened');
+        additionalInfoBlock.classList.toggle('opened');
+      });
+    }
   }
 }
 
 function handleProductTable() {
   const btn = document.querySelector('.product-parameters__more');
-  let additionalInfoBlock = btn.previousSibling;
 
-  while (additionalInfoBlock && additionalInfoBlock.nodeType != 1) {
-    additionalInfoBlock = additionalInfoBlock.previousSibling;
-  }
+  if (btn) {
+    let additionalInfoBlock = btn.previousSibling;
 
-  if (btn && additionalInfoBlock.matches('.product-parameters_additional')) {
-    btn.addEventListener('click', () => {
-      btn.classList.toggle('opened');
-      additionalInfoBlock.classList.toggle('opened');
-    });
+    while (additionalInfoBlock && additionalInfoBlock.nodeType != 1) {
+      additionalInfoBlock = additionalInfoBlock.previousSibling;
+    }
+
+    if (btn && additionalInfoBlock.matches('.product-parameters_additional')) {
+      btn.addEventListener('click', () => {
+        btn.classList.toggle('opened');
+        additionalInfoBlock.classList.toggle('opened');
+      });
+    }
   }
 }
 
@@ -291,15 +298,18 @@ function handleTestimonialModalOpen() {
 function handleTestimonialModalSumbit() {
   const modal = document.querySelector('#testimonial-modal');
   const successModal = document.querySelector('#testimonial-modal-success');
-  const testimonialForm = modal.querySelector('.testimonial-modal-form');
 
-  if (testimonialForm && successModal) {
-    testimonialForm.addEventListener('submit', (e) => {
-      e.preventDefault();
+  if (modal) {
+    const testimonialForm = modal.querySelector('.testimonial-modal-form');
 
-      modal.classList.remove('opened');
-      successModal.classList.add('opened');
-    });
+    if (testimonialForm && successModal) {
+      testimonialForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        modal.classList.remove('opened');
+        successModal.classList.add('opened');
+      });
+    }
   }
 }
 
@@ -347,15 +357,18 @@ function handleApplicationModal() {
 function handleApplicationModalSumbit() {
   const modal = document.querySelector('#application-modal');
   const successModal = document.querySelector('#application-modal-success');
-  const testimonialForm = modal.querySelector('.application-modal-form');
 
-  if (testimonialForm && successModal) {
-    testimonialForm.addEventListener('submit', (e) => {
-      e.preventDefault();
+  if (modal) {
+    const testimonialForm = modal.querySelector('.application-modal-form');
 
-      modal.classList.remove('opened');
-      successModal.classList.add('opened');
-    });
+    if (testimonialForm && successModal) {
+      testimonialForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        modal.classList.remove('opened');
+        successModal.classList.add('opened');
+      });
+    }
   }
 }
 

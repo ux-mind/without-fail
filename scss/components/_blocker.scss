@@ -10,6 +10,9 @@
 	opacity: 0;
 	transition: opacity 0.3s;
 	z-index: 7;
+	&-header {
+		z-index: 5;
+	}
 	&_opened {
 		pointer-events: auto;
 		opacity: 1;
