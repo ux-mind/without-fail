@@ -48,6 +48,7 @@
 			font-weight: 400;
 			padding: 24px 0;
 			@include flex(row, center);
+			cursor: pointer;
 		}
 		&:hover {
 			border-top: 1px solid $black-900;
@@ -56,6 +57,16 @@
 			}
 			& + li {
 				border-top: 1px solid $black-900;
+			}
+			& span {
+				position: relative;
+				&::before {
+					@include before(calc(100% + 52px), 140px, 140px);
+					background: icon('redirect-black-round.svg') 50% / cover;
+					pointer-events: none;
+					z-index: 1;
+					animation: rotate 8s infinite linear;
+				}
 			}
 		}
 	}
@@ -111,7 +122,12 @@
 				@include font(1.8rem, 1);
 				&::after {
 					@include after(0, 20px, 11px);
-					background: icon('arrow-right.svg') no-repeat 50%;
+					background: icon('arrow-right.svg') no-repeat 50% / cover;
+				}
+			}
+			&:hover {
+				& span::before {
+					content: none;
 				}
 			}
 		}
@@ -129,5 +145,17 @@
 				max-width: 182px;
 			}
 		}
+	}
+}
+
+@keyframes rotate {
+	0% {
+		transform: translateY(-50%) rotate(0deg);
+	}
+	50% {
+		transform: translateY(-50%) rotate(180deg);
+	}
+	100% {
+		transform: translateY(-50%) rotate(360deg);
 	}
 }
