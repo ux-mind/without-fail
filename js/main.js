@@ -385,6 +385,29 @@ function handleApplicationModalSumbit() {
   }
 }
 
+function handleMobileMenuCatalog() {
+  const btn = document.querySelector('.m-menu-catalog__btn');
+  const list = document.querySelector('.m-menu-catalog-list');
+
+  if (btn && list) {
+    btn.addEventListener('click', () => {
+      btn.classList.toggle('active');
+    });
+  }
+}
+
+function handleMobileMenuDropdowns() {
+  const dropdownButtons = document.querySelectorAll('.m-menu-dropdown__btn');
+
+  dropdownButtons.forEach((btn) => {
+    const dropdown = btn.nextElementSibling;
+
+    if (dropdown.matches('.m-menu-dropdown-list')) {
+      btn.addEventListener('click', () => btn.classList.toggle('active'));
+    }
+  });
+}
+
 // Function for calling all modal handlers
 function callModalHandlers() {
   catalogModalHandler();
@@ -402,7 +425,12 @@ function callDropdownHandlers() {
   handleProductInfoDrop();
 }
 
-handleMobileMenu();
+// Function for calling mobile menu handlers
+function callMobileMenuHandlers() {
+  handleMobileMenu();
+  handleMobileMenuCatalog();
+  handleMobileMenuDropdowns();
+}
 
 toggleHeaderHeight();
 footerScrollTop();
@@ -415,3 +443,4 @@ handleTestimonialContent();
 
 callModalHandlers();
 callDropdownHandlers();
+callMobileMenuHandlers();

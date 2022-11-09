@@ -1698,6 +1698,7 @@ p {
   transform: translateX(100%);
   transition: transform 0.3s;
   display: none;
+  overflow-y: auto;
 }
 .m-menu_opened {
   pointer-events: auto;
@@ -1705,7 +1706,9 @@ p {
 }
 .m-menu-wrapper {
   padding-top: 113px;
-  overflow-y: auto;
+  position: relative;
+  padding-bottom: 165px;
+  overflow: hidden;
 }
 .m-menu-buttons {
   position: relative;
@@ -1768,10 +1771,168 @@ p {
   top: calc(50% + 1px);
   background: url("../assets/icons/download.svg") no-repeat 50%;
 }
+.m-menu-catalog__btn {
+  display: block;
+  padding: 19px 0;
+  color: #fff;
+  font-size: 1.6rem;
+  line-height: 1.375;
+  text-transform: uppercase;
+  font-weight: 500;
+  width: 100%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.m-menu-catalog__btn span {
+  position: relative;
+  display: flex;
+  max-width: max-content;
+  padding-right: 24px;
+}
+.m-menu-catalog__btn span::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 14px;
+  height: 7px;
+  transform: translateY(-50%);
+  background: url("../assets/icons/arrow-right-white.svg") no-repeat 50%/cover;
+}
+.m-menu-catalog__btn.active {
+  border-bottom: none;
+}
+.m-menu-catalog__btn.active + ul {
+  display: block;
+}
+.m-menu-catalog__btn.active span {
+  max-width: none;
+  width: 100%;
+}
+.m-menu-catalog__btn.active span::after {
+  width: 21px;
+  height: 11px;
+}
+.m-menu-catalog-list {
+  display: none;
+}
+.m-menu-catalog-list .home-catalog__item {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+.m-menu-catalog-list .home-catalog__item:last-child {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+.m-menu-catalog-list .home-catalog__item:last-child:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+.m-menu-catalog-list .home-catalog__item:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+.m-menu-catalog-list .home-catalog__item:hover + li {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+.m-menu-catalog-list .home-catalog__round {
+  background: rgba(255, 255, 255, 0.3);
+}
+.m-menu-catalog-list .link {
+  padding: 14px 0 13px;
+  color: #fff;
+}
+.m-menu-catalog-list .link::after {
+  width: 21px;
+  height: 11px;
+  background: url("../assets/icons/arrow-right-white.svg") no-repeat 50%/cover;
+}
+.m-menu-catalog-list .link span {
+  padding-right: 40px;
+  max-width: 229px;
+}
+.m-menu-list__link {
+  display: block;
+  padding: 19px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.375;
+}
+.m-menu-list__link::before {
+  content: none;
+}
+.m-menu-dropdown {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.m-menu-dropdown__btn {
+  display: flex;
+  padding: 19px 0;
+  color: #fff;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  line-height: 1.375;
+  width: 100%;
+}
+.m-menu-dropdown__btn span {
+  position: relative;
+  padding-right: 13px;
+}
+.m-menu-dropdown__btn span::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 7px;
+  height: 3.5px;
+  transform: translateY(-50%);
+  background: url("../assets/icons/drop.svg") no-repeat 50%/cover;
+}
+.m-menu-dropdown__btn.active {
+  padding-bottom: 15px;
+}
+.m-menu-dropdown__btn.active span::after {
+  transform: translateY(-50%) rotate(180deg);
+}
+.m-menu-dropdown__btn.active + ul {
+  display: block;
+}
+.m-menu-dropdown-list {
+  display: none;
+  padding-bottom: 21px;
+}
+.m-menu-dropdown-list__item {
+  display: flex;
+  margin-bottom: 10px;
+}
+.m-menu-dropdown-list__item:last-child {
+  margin-bottom: 0;
+}
+.m-menu-dropdown-list__link {
+  font-size: 1.4rem;
+  line-height: 1.3571428571;
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+}
+.m-menu__call {
+  width: 164px;
+  height: 164px;
+  top: auto;
+  left: auto;
+  bottom: -80px;
+  right: 0;
+  background: url("../assets/icons/call-light-round.svg") no-repeat 50%/cover;
+  animation: rotate 8s infinite linear;
+  position: absolute;
+}
 
 @media screen and (max-width: 991px) {
   .m-menu {
     display: block;
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
 .home-catalog {
