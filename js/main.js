@@ -408,6 +408,26 @@ function handleMobileMenuDropdowns() {
   });
 }
 
+function mobileMenuCallHandler() {
+  const callBtn = document.querySelector('.m-menu__call');
+  const applicationModal = document.querySelector('#application-modal');
+  const menu = document.querySelector('.m-menu');
+  const menuBtn = document.querySelector('.header__logo .hamburger');
+
+  if (callBtn && applicationModal) {
+    callBtn.addEventListener('click', () => {
+      applicationModal.classList.add('opened');
+      blocker.classList.add('blocker_opened');
+
+      if (menu && menuBtn) {
+        menuBtn.classList.remove('close');
+        menu.classList.remove('m-menu_opened');
+        document.documentElement.classList.remove('is-locked');
+      }
+    });
+  }
+}
+
 // Function for calling all modal handlers
 function callModalHandlers() {
   catalogModalHandler();
@@ -430,6 +450,7 @@ function callMobileMenuHandlers() {
   handleMobileMenu();
   handleMobileMenuCatalog();
   handleMobileMenuDropdowns();
+  mobileMenuCallHandler();
 }
 
 toggleHeaderHeight();
