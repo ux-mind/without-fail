@@ -1,6 +1,7 @@
 .hit {
 	position: absolute;
 	transform: rotate(-25deg);
+	z-index: 1;
 	& > div {
 		display: flex;
 		position: relative;

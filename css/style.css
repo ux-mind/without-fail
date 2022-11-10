@@ -296,7 +296,7 @@ p {
 .btn:hover {
   color: #fff;
   background: #1e1e1e;
-  border-color: rgba(255, 255, 255, 0.2);
+  border-color: rgba(249, 244, 234, 0.2);
 }
 .btn_classic {
   display: inline-block;
@@ -305,9 +305,9 @@ p {
   padding: 0;
 }
 .btn_black {
-  color: #fff;
+  color: #f9f4ea;
   background: #1e1e1e;
-  border-color: rgba(255, 255, 255, 0.2);
+  border-color: rgba(249, 244, 234, 0.2);
 }
 .btn_black:hover {
   background: #f9f4ea;
@@ -320,9 +320,9 @@ p {
   border-color: rgba(30, 30, 30, 0.2);
 }
 .btn_transparent:hover {
-  color: #fff;
+  color: #f9f4ea;
   background: #1e1e1e;
-  border-color: rgba(255, 255, 255, 0.2);
+  border-color: rgba(249, 244, 234, 0.2);
 }
 
 @media screen and (max-width: 991px) {
@@ -1380,6 +1380,7 @@ p {
 .hit {
   position: absolute;
   transform: rotate(-25deg);
+  z-index: 1;
 }
 .hit > div {
   display: flex;
@@ -2686,6 +2687,9 @@ p {
 .info-top-right__btn .btn {
   color: #f9f4ea;
 }
+.info-top-right__btn .btn:hover {
+  color: #1e1e1e;
+}
 .info-bottom {
   position: relative;
   display: grid;
@@ -2901,6 +2905,9 @@ p {
   text-decoration: none;
   color: #1e1e1e;
 }
+.connect-ways-address__scheme.d-mobile {
+  display: none;
+}
 .connect .map {
   border-right: 1px solid rgba(30, 30, 30, 0.2);
   position: relative;
@@ -2958,6 +2965,9 @@ p {
   }
   .connect-ways-address__scheme {
     grid-column: 1/3;
+  }
+  .connect-ways-address__scheme.d-mobile {
+    display: block;
   }
 }
 @media screen and (max-width: 767px) {

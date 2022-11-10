@@ -32,6 +32,9 @@
 				margin-top: 77px;
 				& .btn {
 					color: $light-100;
+					&:hover {
+						color: $black-900;
+					}
 				}
 			}
 		}

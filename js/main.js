@@ -428,8 +428,52 @@ function mobileMenuCallHandler() {
   }
 }
 
+function orderCallHandler() {
+  const callBtns = [
+    document.querySelector('.connect-ways__title .btn'),
+    document.querySelector('.order-a-call'),
+  ];
+  const applicationModal = document.querySelector('#application-modal');
+
+  callBtns.forEach((btn) => {
+    if (btn && applicationModal) {
+      btn.addEventListener('click', () => {
+        applicationModal.classList.add('opened');
+        blocker.classList.add('blocker_opened');
+      });
+    }
+  });
+}
+
+function handleHomeCatalogPictures() {
+  const catalogMainImg = document.querySelector('.home-catalog-img-1 img');
+  const catalogAdditionalImg = document.querySelector(
+    '.home-catalog-img-2 img'
+  );
+
+  const catalogLinks = document.querySelectorAll(
+    '.home-catalog .home-catalog__item .link'
+  );
+
+  if (catalogMainImg && catalogAdditionalImg) {
+    catalogLinks.forEach((link) => {
+      const mainImgSrc = link.dataset.imgMain;
+      const additionalImgSrc = link.dataset.imgAdditional;
+
+      link.addEventListener('mouseover', () => {
+        catalogMainImg.src = mainImgSrc;
+        catalogMainImg.srcset = mainImgSrc;
+
+        catalogAdditionalImg.src = additionalImgSrc;
+        catalogAdditionalImg.srcset = additionalImgSrc;
+      });
+    });
+  }
+}
+
 // Function for calling all modal handlers
 function callModalHandlers() {
+  orderCallHandler();
   catalogModalHandler();
   handleFixedModalClose();
   handleTestimonialModalOpen();
@@ -461,6 +505,7 @@ handleProductInfoTabs();
 handleTestimonialsStars();
 handleProductParametersMobile();
 handleTestimonialContent();
+handleHomeCatalogPictures();
 
 callModalHandlers();
 callDropdownHandlers();
