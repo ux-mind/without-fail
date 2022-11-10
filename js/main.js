@@ -471,6 +471,20 @@ function handleHomeCatalogPictures() {
   }
 }
 
+function questionsFormSubmit() {
+  const submitForm = document.querySelector('#questions-form');
+  const modal = document.querySelector('#application-modal-success');
+
+  if (submitForm && modal) {
+    submitForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      modal.classList.add('opened');
+      blocker.classList.add('blocker_opened');
+    });
+  }
+}
+
 // Function for calling all modal handlers
 function callModalHandlers() {
   orderCallHandler();
@@ -480,6 +494,7 @@ function callModalHandlers() {
   handleTestimonialModalSumbit();
   handleApplicationModal();
   handleApplicationModalSumbit();
+  questionsFormSubmit();
 }
 
 // Function for calling all dropdown handlers

@@ -54,7 +54,7 @@
 				}
 				&::before {
 					@include before(0, 20px, 20px);
-					top: 0;
+					top: 2px;
 					transform: none;
 					border: 1px solid $border-light-color;
 					border-radius: 3px;
