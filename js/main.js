@@ -485,6 +485,29 @@ function questionsFormSubmit() {
   }
 }
 
+function politicsCheckboxDisableHandler() {
+  const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+
+  checkboxes.forEach((checkboxInput) => {
+    const checkboxInputWrapper = checkboxInput.closest('div');
+    const submitBtn = checkboxInputWrapper
+      ? checkboxInputWrapper.nextElementSibling.children[0]
+      : null;
+
+    if (submitBtn && submitBtn.matches('button[type="submit"]')) {
+      const isChecked = checkboxInput.checked;
+
+      submitBtn.disabled = !isChecked;
+
+      checkboxInput.addEventListener('change', () => {
+        const isChecked = checkboxInput.checked;
+
+        submitBtn.disabled = !isChecked;
+      });
+    }
+  });
+}
+
 // Function for calling all modal handlers
 function callModalHandlers() {
   orderCallHandler();
@@ -495,6 +518,7 @@ function callModalHandlers() {
   handleApplicationModal();
   handleApplicationModalSumbit();
   questionsFormSubmit();
+  politicsCheckboxDisableHandler();
 }
 
 // Function for calling all dropdown handlers

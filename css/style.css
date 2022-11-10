@@ -298,6 +298,10 @@ p {
   background: #1e1e1e;
   border-color: rgba(249, 244, 234, 0.2);
 }
+.btn:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
 .btn_classic {
   display: inline-block;
   background: transparent;
