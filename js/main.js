@@ -437,7 +437,11 @@ function orderCallHandler() {
 
   callBtns.forEach((btn) => {
     if (btn && applicationModal) {
-      btn.addEventListener('click', () => {
+      btn.addEventListener('click', (e) => {
+        if (btn.matches('a')) {
+          e.preventDefault();
+        }
+
         applicationModal.classList.add('opened');
         blocker.classList.add('blocker_opened');
       });
