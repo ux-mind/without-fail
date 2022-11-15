@@ -1,9 +1,57 @@
 .section {
 	padding-top: 150px;
+	&-header {
+		position: relative;
+		min-height: 300px;
+		overflow: hidden;
+		border-radius: 10px;
+		display: grid;
+		grid-template-columns: 50% 50%;
+		background: image('services-img_01.jpg') no-repeat 50% / cover;
+		padding: 40px 50px;
+		box-sizing: border-box;
+		&::before {
+			@include before(0, 100%, 100%);
+			top: 0;
+			transform: none;
+			background: rgba($black, 0.4);
+		}
+		&-content {
+			@include flex(column, flex-start, flex-end);
+			position: relative;
+		}
+		&-btn {
+			position: relative;
+			@include flex(row, flex-end, flex-end);
+			&__btn {
+				border-color: rgba($white, 0.6);
+				color: $white;
+				&:hover {
+					background: $white;
+					border-color: $black-900;
+					color: $black-900;
+				}
+			}
+		}
+		&__breadcrumbs {
+			margin-bottom: 20px;
+			position: relative;
+		}
+		&-m {
+			display: none;
+			margin-bottom: 30px;
+			position: relative;
+		}
+	}
 }
 
 @media screen and (max-width: 991px) {
 	.section {
 		padding-top: 90px;
+		&-header {
+			&-m {
+				display: block;
+			}
+		}
 	}
 }
