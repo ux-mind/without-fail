@@ -1,0 +1,34 @@
+.delivery-hero {
+	padding-top: 170px;
+	position: relative;
+	overflow: hidden;
+	& .blur {
+		top: 236px;
+		left: -158px;
+		transform: rotate(51deg);
+	}
+	&__text {
+		margin-bottom: 40px;
+		position: relative;
+		& p {
+			@include font(1.6rem, calc(24 / 16));
+		}
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.delivery-hero {
+		padding-top: 125px;
+		& .blur {
+			top: 400px;
+			left: 50%;
+			transform: translateX(calc(-50% - 129px)) rotate(-49deg);
+		}
+		&__text {
+			margin-bottom: 30px;
+			& p {
+				@include font(1.4rem, calc(21 / 14));
+			}
+		}
+	}
+}

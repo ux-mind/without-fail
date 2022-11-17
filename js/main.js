@@ -23,6 +23,7 @@ const worksSwiperAdditional = new Swiper('.works-swiper-additional', {
   loopedSlides: 3,
   slidesPerView: 1,
   spaceBetween: 16,
+  initialSlide: 1,
   navigation: {
     nextEl: '.works-btn-next',
     prevEl: '.works-btn-prev',

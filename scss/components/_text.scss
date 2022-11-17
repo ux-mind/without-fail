@@ -14,4 +14,96 @@
 	&_uppercase {
 		text-transform: uppercase;
 	}
+	&_semi {
+		font-weight: 600;
+	}
+	&_bold {
+		font-weight: 700;
+	}
+	&-block {
+		margin-bottom: 50px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+		& .title {
+			@include font(3.2rem, 1);
+			margin-bottom: 20px;
+		}
+		& .subtitle {
+			@include font(2.6rem, 1);
+			margin-bottom: 20px;
+			text-transform: uppercase;
+			font-weight: 600;
+		}
+		& p {
+			@include font(1.6rem, calc(24 / 16));
+			margin-bottom: 15px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+			& + .subtitle {
+				padding-top: 15px;
+			}
+		}
+		& ul {
+			padding: 0;
+			margin-bottom: 15px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+			& p {
+				margin-bottom: 10px;
+			}
+			& li {
+				position: relative;
+				@include font(1.6rem, calc(19 / 16));
+				margin-bottom: 10px;
+				padding-left: 17px;
+				&:last-child {
+					margin-bottom: 0;
+				}
+				&::before {
+					@include before(0, 5px, 5px);
+					border-radius: 1px;
+					background: $green-700;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.text {
+		&-block {
+			margin-bottom: 90px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+			& .title {
+				@include font(3rem, 1);
+			}
+			& .subtitle {
+				@include font(2.2rem, 1);
+			}
+			& p {
+				@include font(1.4rem, calc(21 / 14));
+				margin-bottom: 10px;
+				&:last-child {
+					margin-bottom: 0;
+				}
+				& + .subtitle {
+					padding-top: 20px;
+				}
+			}
+			& ul {
+				margin-bottom: 10px;
+				&:last-child {
+					margin-bottom: 0;
+				}
+				& li {
+					@include font(1.4rem, calc(17 / 14));
+				}
+			}
+		}
+	}
 }
