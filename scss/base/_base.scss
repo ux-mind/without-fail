@@ -39,7 +39,7 @@ strong {
 body {
 	font-family: $font;
 	font-weight: 400;
-	color: $black-900;
+	color: $font-color;
 	font-size: 1.6rem;
 	height: 100%;
 	background: $white;
@@ -59,7 +59,7 @@ button {
 	outline-color: transparent;
 	box-shadow: none;
 	border-radius: 0;
-	color: $black-900;
+	color: $font-color;
 }
 select {
 	@extend button;
@@ -94,21 +94,21 @@ p {
 }
 ::-webkit-input-placeholder {
 	font-size: 1.6rem;
-	color: $black-900;
+	color: $font-color;
 }
 ::-moz-placeholder {
 	font-size: 1.6rem;
-	color: $black-900;
+	color: $font-color;
 	opacity: 1;
 }
 :-moz-placeholder {
 	font-size: 1.6rem;
-	color: $black-900;
+	color: $font-color;
 	opacity: 1;
 }
 :-ms-input-placeholder {
 	font-size: 1.6rem;
-	color: $black-900;
+	color: $font-color;
 }
 :focus::-webkit-input-placeholder {
 	color: transparent;

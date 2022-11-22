@@ -3,29 +3,11 @@
 // -----------------------------------------------------------------------------
 
 // Base
-$font: 'RandomGrotesqueStandard', Arial, sans-serif;
+$font: Arial, sans-serif;
 $base-font-size: 16px;
 $base-path: '../';
 
 // Colors
 $white: #fff;
-$black-900: #1e1e1e;
-$border-light-color: rgba($white, 0.2);
-$border-dark-color: rgba($black-900, 0.2);
-$light-100: #f9f4ea;
-$dark-200: #cbcbcb;
-$dark-300: #afafaf;
-$dark-500: #9c9c9c;
-$dark-590: #595959;
-$dark-600: #616161;
-$dark-800: #818181;
-$green-300: #27c200;
-$green-400: #65ae4b;
-$green-600: #b5d053;
-$green-700: #90c200;
-$green-light-300: #b7d2a2;
-$green-dark-300: #a0ab69;
-$yellow-dark-300: #ceaf27;
-$green-light-900: #c6ff26;
-$brown-200: #a77842;
+$font-color: #1e1e1e;
 $black: #000;

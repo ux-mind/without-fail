@@ -1,46 +1,10 @@
 .title {
-	margin: 0;
-	font-weight: 700;
-	color: $black-900;
-	text-transform: uppercase;
 	&_size {
 		&-l {
-			@include font(4rem, calc(48 / 40));
-			letter-spacing: 0.005em;
 		}
 		&-m {
-			@include font(3.8rem, calc(42 / 38));
 		}
 		&-s {
-			@include font(3.4rem, calc(41 / 34));
-		}
-		&-xs {
-			@include font(2.6rem, calc(34 / 26));
-		}
-		&-xxs {
-			@include font(2rem, calc(26 / 20));
-		}
-	}
-}
-
-@media screen and(max-width: 991px) {
-	.title {
-		&_size {
-			&-l {
-				@include font(3rem, calc(39 / 30));
-			}
-			&-m {
-				@include font(2.6rem, calc(28.5 / 26));
-			}
-			&-s {
-				@include font(3rem, calc(36 / 30));
-			}
-			&-xs {
-				@include font(3rem, calc(36 / 30));
-			}
-			&-xxs {
-				@include font(1.8rem, calc(24 / 18));
-			}
 		}
 	}
 }
