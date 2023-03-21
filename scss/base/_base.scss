@@ -92,6 +92,14 @@ ol {
 p {
 	margin: 0;
 }
+a {
+	color: $white;
+	text-decoration: none;
+	&:hover,
+	&:active {
+		color: $white;
+	}
+}
 ::-webkit-input-placeholder {
 	font-size: 1.6rem;
 	color: $font-color;
