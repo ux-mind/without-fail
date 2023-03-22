@@ -1,18 +1,20 @@
 .btn {
 	&-primary {
 		@include font(1.3rem, calc(16 / 13));
-		padding: 1.384em 4.4615em;
+		padding: 1.484em 4.4615em 1.284em;
 		text-transform: uppercase;
 		display: inline-block;
 		color: $white;
 		background: $dark-300;
+		letter-spacing: 0.1em;
 	}
 	&-transparent {
 		@include font(1.3rem, calc(16 / 13));
 		background: transparent;
-		padding: 1.30769em 3.6em;
+		padding: 1.40769em 3.6em 1.20769em;
 		text-transform: uppercase;
 		display: inline-block;
 		border: 1px solid $dark-600;
+		letter-spacing: 0.1em;
 	}
 }

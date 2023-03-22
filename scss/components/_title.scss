@@ -6,13 +6,16 @@
 	&_size {
 		&-l {
 			@include font(5.2rem, calc(60 / 52));
+			letter-spacing: 0.1em;
 		}
 		&-m {
 			@include font(3.2rem, calc(47 / 32));
+			letter-spacing: 0.05em;
 		}
 		&-s {
 			@include font(1.6rem, calc(22 / 16));
 			font-weight: 700;
+			letter-spacing: 0.03em;
 		}
 	}
 }

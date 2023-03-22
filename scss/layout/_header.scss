@@ -24,14 +24,14 @@
 				padding-left: 48px;
 				position: relative;
 				&::before {
-					@include before(0, 28px, 1px);
+					@include before(0, 28px, 1.5px);
 					background: $white;
-					transform: translateY(calc(-50% - 6px));
+					transform: translateY(calc(-50% - 5px));
 				}
 				&::after {
-					@include before(0, 28px, 1px);
+					@include before(0, 28px, 1.5px);
 					background: $white;
-					transform: translateY(calc(-50% + 2px));
+					transform: translateY(calc(-50% + 3px));
 				}
 			}
 		}
@@ -43,7 +43,6 @@
 			height: 20px;
 			position: relative;
 			margin-right: 30px;
-			transition: opacity 0.2s;
 			&:last-child {
 				margin-right: 0;
 			}

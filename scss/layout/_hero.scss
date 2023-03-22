@@ -36,6 +36,7 @@
 			}
 		}
 		& p {
+			letter-spacing: 0.12em;
 			@include font(1.8rem, calc(22 / 18));
 			color: $white;
 			text-align: center;
