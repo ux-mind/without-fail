@@ -159,6 +159,16 @@ a:hover, a:active {
   font-style: normal;
   font-display: swap;
 }
+.title {
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #222;
+  margin: 0;
+}
+.title_size-l {
+  font-size: 5.2rem;
+  line-height: 1.1538461538;
+}
 .container {
   margin: 0 auto;
   max-width: 1400px;
@@ -201,7 +211,11 @@ a:hover, a:active {
 }
 
 .header {
-  background: #000;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
 }
 .header-wrapper {
   padding: 37px 0;
@@ -286,6 +300,114 @@ a:hover, a:active {
   display: grid;
   place-items: center;
   padding-top: 2px;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+.hero-swiper {
+  max-height: 100%;
+}
+.hero__video {
+  width: 100%;
+  height: 100vh;
+  object-position: 50% 50%;
+  object-fit: cover;
+}
+.hero-banner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+}
+.hero-banner__title {
+  font-weight: 400;
+  color: #fff;
+  padding-bottom: 8px;
+  position: relative;
+  text-align: center;
+}
+.hero-banner__title::before {
+  position: absolute;
+  content: "";
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 53px;
+  height: 2px;
+  background: #fff;
+}
+.hero-banner p {
+  font-size: 1.8rem;
+  line-height: 1.2222222222;
+  color: #fff;
+  text-align: center;
+  margin: 0;
+  margin-top: 18px;
+  text-transform: uppercase;
+}
+.hero .btn-prev, .hero .btn-next {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 100%;
+}
+.hero .btn-prev svg, .hero .btn-next svg {
+  width: 20px;
+  height: 40px;
+  transition: transform 0.1s;
+}
+.hero .btn-prev:hover svg, .hero .btn-next:hover svg {
+  transform: scale(1.05);
+}
+.hero .btn-prev {
+  left: 0;
+  padding-left: 41px;
+  padding-right: 20px;
+}
+.hero .btn-next {
+  right: 0;
+  padding-right: 41px;
+  padding-left: 20px;
+}
+.hero .swiper-pagination {
+  position: absolute;
+  bottom: 20px;
+}
+.hero .swiper-pagination-bullet {
+  width: 90px;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 1px;
+  opacity: 1;
+  position: relative;
+  overflow: hidden;
+}
+.hero .swiper-pagination-bullet-active::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translateY(-50%);
+  background: #fff;
+  animation: pagination 5s linear forwards;
+  top: 0;
+  transform: translateX(-100%);
+}
+
+@keyframes pagination {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

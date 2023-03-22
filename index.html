@@ -14,6 +14,7 @@
 	<meta property="og:url" content="" />
 	<meta property="og:image" content="" />
 	<title>Without Fail</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 	<link rel="stylesheet" href="css/style.css" type="text/css" />
 </head>
 
@@ -156,9 +157,51 @@
 		</div>
 	</header>
 	<main class="main">
-		<section class="hero"></section>
+		<section class="hero">
+			<div class="swiper hero-swiper">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<video class="hero__video" loop="loop" preload="true" muted="muted" playsinline="playsinline">
+							<source src="./assets/videos/banner.mov" type="video/mp4">
+						</video>
+					</div>
+					<div class="swiper-slide">
+						<video class="hero__video" loop="loop" preload="true" muted="muted" playsinline="playsinline">
+							<source src="./assets/videos/banner.mov" type="video/mp4">
+						</video>
+					</div>
+					<div class="swiper-slide">
+						<video class="hero__video" loop="loop" preload="true" muted="muted" playsinline="playsinline">
+							<source src="./assets/videos/banner.mov" type="video/mp4">
+						</video>
+					</div>
+				</div>
+
+				<div class="swiper-pagination"></div>
+
+				<button class="btn-prev">
+					<svg xmlns="http://www.w3.org/2000/svg" width="21.826" height="42.076" viewBox="0 0 21.826 42.076">
+						<path id="path116" d="M20.015,39.954,0,19.977,20.015,0" transform="translate(0.75 1.061)" fill="none"
+							stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="79.84" stroke-width="1.5"
+							fill-rule="evenodd" />
+					</svg>
+				</button>
+				<button class="btn-next">
+					<svg xmlns="http://www.w3.org/2000/svg" width="21.826" height="42.076" viewBox="0 0 21.826 42.076">
+						<path id="path116" d="M0,39.954,20.016,19.977,0,0" transform="translate(1.061 1.061)" fill="none"
+							stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="79.84" stroke-width="1.5"
+							fill-rule="evenodd" />
+					</svg>
+				</button>
+			</div>
+			<div class="hero-banner">
+				<h1 class="title title_size-l hero-banner__title">Весна-Лето ‘23</h1>
+				<p>Новая коллекция</p>
+			</div>
+		</section>
 	</main>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+	<script src="js/main.js" defer></script>
 </body>
 
 </html>
-<script src="js/main.js" defer></script>

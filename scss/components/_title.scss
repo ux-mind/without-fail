@@ -1,6 +1,12 @@
 .title {
+	text-transform: uppercase;
+	font-weight: 600;
+	color: $dark-200;
+	margin: 0;
 	&_size {
 		&-l {
+			font-size: 5.2rem;
+			line-height: calc(60 / 52);
 		}
 		&-m {
 		}
