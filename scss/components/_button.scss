@@ -1,2 +1,10 @@
 .btn {
+	&-primary {
+		@include font(1.3rem, calc(16 / 13));
+		padding: 1.384em 4.4615em;
+		text-transform: uppercase;
+		display: inline-block;
+		color: $white;
+		background: $dark-300;
+	}
 }

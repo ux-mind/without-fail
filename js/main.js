@@ -1,7 +1,7 @@
 'use strict';
 
 // Hero slider
-function initSlider() {
+function initHeroSlider() {
   const swiper = new Swiper('.hero-swiper', {
     loop: true,
 
@@ -22,6 +22,21 @@ function initSlider() {
   });
 }
 
+// Collection swiper
+function initCollectionSlider() {
+  const swiper = new Swiper('.collection-swiper', {
+    slidesPerView: 3,
+    spaceBetween: 28,
+
+    // Navigation arrows
+    navigation: {
+      nextEl: '.collection-swiper__next',
+      prevEl: '.collection-swiper__prev',
+    },
+  });
+}
+
+// Hero video play
 function handleVideoPlay() {
   const videoSlides = document.querySelectorAll('.hero-swiper .swiper-slide');
 
@@ -47,5 +62,9 @@ function handleVideoPlay() {
   }
 }
 
-initSlider();
+// Sliders
+initHeroSlider();
+initCollectionSlider();
+
+// Help functions
 handleVideoPlay();

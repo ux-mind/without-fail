@@ -1,9 +1,14 @@
 .header {
-	position: fixed;
-	width: 100%;
-	top: 0;
-	left: 0;
-	z-index: 10;
+	&_fixed {
+		position: fixed;
+		width: 100%;
+		top: 0;
+		left: 0;
+		z-index: 10;
+		&_white {
+			background: $white;
+		}
+	}
 	&-wrapper {
 		padding: 37px 0;
 		@include flex(row, center, space-between);
