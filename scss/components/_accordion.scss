@@ -9,8 +9,10 @@
 	&__item {
 		flex: 1;
 		position: relative;
-		transition: flex 1s cubic-bezier(0.29, 0, 0.2, 1);
-		-webkit-transition: flex 1s cubic-bezier(0.29, 0, 0.2, 1);
+		// transition: flex 1s cubic-bezier(0.29, 0, 0.2, 1);
+		// -webkit-transition: flex 1s cubic-bezier(0.29, 0, 0.2, 1);
+		transition: flex 1s ease;
+		-webkit-transition: flex 1s ease;
 		will-change: flex;
 		& img {
 			width: 100%;
