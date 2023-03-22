@@ -1,2 +1,114 @@
 .footer {
+	background: $light-700;
+	padding: 69px 0 53px;
+	& a:hover {
+		opacity: 0.8;
+	}
+	&-wrapper {
+		display: grid;
+		grid-template-columns: 3.62fr 5.88fr 4.5fr;
+		grid-row-gap: 80px;
+	}
+	&-help {
+		&__support,
+		&__testimonials {
+			@include flex(column);
+		}
+		&__support {
+			margin-bottom: 30px;
+			& a {
+				color: $dark-300;
+				@include font(2.5rem, calc(30 / 25));
+			}
+		}
+		&__testimonials {
+			& a {
+				color: $dark-300;
+				@include font(1.6rem, calc(23 / 16));
+			}
+		}
+	}
+	&-list {
+		& .title {
+			margin-bottom: 20px;
+		}
+		&__item {
+			margin-bottom: 16px;
+			& a {
+				color: $dark-600;
+			}
+			&:last-child {
+				margin-bottom: 0;
+			}
+			&:hover {
+				opacity: 0.8;
+			}
+		}
+	}
+	&-nav {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+	&-news {
+		& .title {
+			margin-bottom: 20px;
+		}
+		& p {
+			@include font(1.4rem, calc(17 / 14));
+			color: $dark-700;
+			max-width: 310px;
+			margin-bottom: 17px;
+		}
+	}
+	&-form {
+		@include flex(row, center);
+		margin-bottom: 56px;
+		& .input {
+			margin: 0;
+			flex-grow: 1;
+		}
+		& button {
+			margin-left: 18px;
+		}
+	}
+	&-span {
+		color: $dark-600;
+		@include font(1.4rem, calc(17 / 14));
+	}
+	&-privacy {
+		@include flex(row, center);
+		gap: 34px;
+		& a {
+			color: $dark-600;
+			@include font(1.4rem, calc(17 / 14));
+		}
+	}
+	&-mark {
+		color: $dark-600;
+		@include font(1.4rem, calc(17 / 14));
+		text-align: right;
+	}
+	&-social {
+		& .title {
+			margin-bottom: 19px;
+		}
+		&-block {
+			@include flex(row, center);
+			gap: 32px;
+			&__item {
+				color: $dark-600;
+				@include flex(row, center);
+				& span {
+					display: inline-block;
+					margin-left: 10px;
+				}
+				&:hover {
+					opacity: 0.8;
+					& span {
+						color: $dark-600;
+					}
+				}
+			}
+		}
+	}
 }

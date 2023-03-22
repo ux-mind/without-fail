@@ -7,4 +7,12 @@
 		color: $white;
 		background: $dark-300;
 	}
+	&-transparent {
+		@include font(1.3rem, calc(16 / 13));
+		background: transparent;
+		padding: 1.30769em 3.6em;
+		text-transform: uppercase;
+		display: inline-block;
+		border: 1px solid $dark-600;
+	}
 }

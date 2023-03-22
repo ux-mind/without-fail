@@ -11,6 +11,8 @@
 			@include font(3.2rem, calc(47 / 32));
 		}
 		&-s {
+			@include font(1.6rem, calc(22 / 16));
+			font-weight: 700;
 		}
 	}
 }
