@@ -40,7 +40,7 @@ function initCollectionSlider() {
 function handleVideoPlay() {
   const videoSlides = document.querySelectorAll('.hero-swiper .swiper-slide');
 
-  if (videoSlides) {
+  if (videoSlides[0]) {
     const videos = Array.from(videoSlides).map((slide) =>
       slide.querySelector('.hero__video')
     );
@@ -62,9 +62,32 @@ function handleVideoPlay() {
   }
 }
 
+function handleAccordions() {
+  const accordions = document.querySelectorAll('.accordion');
+
+  if (accordions[0]) {
+    accordions.forEach((acc) => {
+      const items = acc.querySelectorAll('.accordion__item');
+
+      if (items[0]) {
+        items.forEach((item) => {
+          item.addEventListener('mouseenter', (evt) => {
+            items.forEach((item) =>
+              item.classList.remove('accordion__item_big')
+            );
+
+            evt.target.classList.add('accordion__item_big');
+          });
+        });
+      }
+    });
+  }
+}
+
 // Sliders
 initHeroSlider();
 initCollectionSlider();
 
 // Help functions
 handleVideoPlay();
+handleAccordions();

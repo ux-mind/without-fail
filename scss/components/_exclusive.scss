@@ -1,0 +1,23 @@
+.exclusive {
+	margin-bottom: 60px;
+	&-wrapper {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 40px;
+	}
+	&-content {
+		&__img {
+			margin-bottom: 60px;
+		}
+		&__content {
+			max-width: 467px;
+			& .title {
+				margin-bottom: 10px;
+			}
+		}
+		&__text {
+			margin-bottom: 31px;
+			color: $dark-600;
+		}
+	}
+}

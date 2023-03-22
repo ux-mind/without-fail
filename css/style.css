@@ -182,7 +182,7 @@ a:hover, a:active {
 }
 .title_size-m {
   font-size: 3.2rem;
-  line-height: 0.6808510638;
+  line-height: 1.46875;
 }
 .container {
   margin: 0 auto;
@@ -324,6 +324,7 @@ a:hover, a:active {
   position: relative;
   width: 100%;
   height: 100vh;
+  margin-bottom: 93px;
 }
 .hero-swiper {
   max-height: 100%;
@@ -428,7 +429,7 @@ a:hover, a:active {
   }
 }
 .collection {
-  padding-top: 93px;
+  margin-bottom: 66px;
 }
 .collection-wrapper {
   display: grid;
@@ -498,6 +499,64 @@ a:hover, a:active {
   color: #222;
   font-size: 2rem;
   line-height: 1.0909090909;
+}
+
+.exclusive {
+  margin-bottom: 60px;
+}
+.exclusive-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 40px;
+}
+.exclusive-content__img {
+  margin-bottom: 60px;
+}
+.exclusive-content__content {
+  max-width: 467px;
+}
+.exclusive-content__content .title {
+  margin-bottom: 10px;
+}
+.exclusive-content__text {
+  margin-bottom: 31px;
+  color: #666;
+}
+
+.home-accordion {
+  margin-bottom: 85px;
+}
+
+.accordion {
+  position: relative;
+  display: flex;
+  max-height: 604px;
+}
+.accordion__item {
+  flex: 1;
+  position: relative;
+  transition: flex 1s cubic-bezier(0.29, 0, 0.2, 1);
+  -webkit-transition: flex 1s cubic-bezier(0.29, 0, 0.2, 1);
+  will-change: flex;
+}
+.accordion__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+.accordion__item p {
+  position: absolute;
+  bottom: 32px;
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+  text-orientation: mixed;
+  left: 40px;
+  font-size: 2.4rem;
+  line-height: 1.3333333333;
+  text-transform: uppercase;
+}
+.accordion__item_big {
+  flex: 2;
 }
 
 /*# sourceMappingURL=style.css.map */
