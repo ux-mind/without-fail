@@ -4,6 +4,8 @@
 @import './abstracts/functions', './abstracts/mixins', './abstracts/variables';
 // Import base
 @import './base/base', './base/default', './base/fonts';
+// Import utils
+@import './utils/swiper';
 // Import Components
 @import './components/button', './components/title', './components/container', './components/link', './components/input';
 // Import Layout

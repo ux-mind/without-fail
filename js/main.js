@@ -4,7 +4,7 @@
 function initHeroSlider() {
   const swiper = new Swiper('.hero-swiper', {
     loop: true,
-    speed: 800,
+    speed: 1100,
 
     // If we need pagination
     pagination: {
@@ -19,6 +19,7 @@ function initHeroSlider() {
 
     autoplay: {
       delay: 5000,
+      disableOnInteraction: false,
     },
   });
 }

@@ -160,6 +160,13 @@ a:hover, a:active {
   font-style: normal;
   font-display: swap;
 }
+.swiper-wrapper {
+  max-height: 100%;
+}
+.swiper-slide {
+  max-height: 100%;
+}
+
 .btn-primary {
   font-size: 1.3rem;
   line-height: 1.2307692308;
@@ -350,15 +357,21 @@ a:hover, a:active {
 .hero {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 45vw;
   margin-bottom: 93px;
 }
 .hero-swiper {
   max-height: 100%;
 }
+.hero__img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
 .hero__video {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   object-position: 50% 50%;
   object-fit: cover;
 }
