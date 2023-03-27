@@ -1,2 +1,36 @@
 .catalog {
+	&-page {
+		&__wrapper {
+			display: grid;
+			grid-template-columns: 250px 1fr;
+			grid-gap: 130px;
+		}
+	}
+	&-aside {
+		&__title {
+			@include font(2.6rem, calc(32 / 26));
+			letter-spacing: 0.05em;
+			color: $dark-200;
+			padding-bottom: 14px;
+			border-bottom: 0.5px solid rgba($dark-700, 0.5);
+		}
+		&-list {
+			padding: 30px 0;
+			border-bottom: 0.5px solid rgba($dark-700, 0.5);
+			&__item {
+				margin-bottom: 12px;
+				& a {
+					@include font(1.8rem, calc(26 / 18));
+					color: $dark-300;
+					letter-spacing: 0.03em;
+					&:hover {
+						opacity: 0.8;
+					}
+				}
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
 }

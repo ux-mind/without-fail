@@ -157,6 +157,34 @@ a:hover, a:active {
   padding: 36px 0 39px;
 }
 
+.price-content {
+  display: none;
+  padding-bottom: 30px;
+}
+.price-content input {
+  width: calc(100% - 15px);
+  padding: 10px 7px 9px;
+  font-size: 1.6rem;
+  line-height: 1;
+  border: 0.5px solid rgba(119, 119, 119, 0.5);
+  border-radius: 2px;
+}
+.price-content input::placeholder {
+  color: #888;
+}
+.price-content div {
+  width: 15px;
+  margin: 0 7.5px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+.price-content div .divider {
+  width: 100%;
+  height: 0.5px;
+  background: #707070;
+}
+
 @font-face {
   font-family: "Mont";
   src: url("../assets/fonts/Mont-Regular.woff") format("woff"), url("../assets/fonts/Mont-Regular.woff2") format("woff2");
@@ -726,6 +754,39 @@ a:hover, a:active {
   color: #666;
 }
 
+.catalog-page__wrapper {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  grid-gap: 130px;
+}
+.catalog-aside__title {
+  font-size: 2.6rem;
+  line-height: 1.2307692308;
+  letter-spacing: 0.05em;
+  color: #222;
+  padding-bottom: 14px;
+  border-bottom: 0.5px solid rgba(119, 119, 119, 0.5);
+}
+.catalog-aside-list {
+  padding: 30px 0;
+  border-bottom: 0.5px solid rgba(119, 119, 119, 0.5);
+}
+.catalog-aside-list__item {
+  margin-bottom: 12px;
+}
+.catalog-aside-list__item a {
+  font-size: 1.8rem;
+  line-height: 1.4444444444;
+  color: #333;
+  letter-spacing: 0.03em;
+}
+.catalog-aside-list__item a:hover {
+  opacity: 0.8;
+}
+.catalog-aside-list__item:last-child {
+  margin-bottom: 0;
+}
+
 .collection {
   margin-bottom: 66px;
 }
@@ -925,6 +986,102 @@ a:hover, a:active {
   color: #666;
   font-size: 1.4rem;
   line-height: 1.6428571429;
+}
+
+.aside-btn {
+  text-align: left;
+  display: block;
+  width: 100%;
+  position: relative;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  padding: 1.25em 45px 1.125em;
+}
+.aside-btn::before {
+  content: "";
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  width: 12px;
+  height: 6px;
+  transform: translateY(-50%);
+  background: url("../assets/icons/drop_big.svg") no-repeat 50%/cover;
+}
+.aside-btn__wrapper {
+  border-bottom: 0.5px solid rgba(119, 119, 119, 0.5);
+}
+.aside-btn_opened + .aside-list__wrapper {
+  display: block;
+}
+.aside-btn_opened + .price-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.aside-list {
+  padding: 0 15px;
+  padding-bottom: 16px;
+  position: relative;
+  max-height: 170px;
+  overflow-y: scroll;
+}
+.aside-list::-webkit-scrollbar {
+  width: 4px;
+}
+.aside-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+.aside-list::-webkit-scrollbar-thumb {
+  background: #d6d6d6;
+  width: 4px;
+  border-radius: 3px;
+}
+.aside-list li:not(:last-child) {
+  margin-bottom: 16px;
+}
+.aside-list__wrapper {
+  display: none;
+  padding-bottom: 23px;
+  position: relative;
+}
+.aside-list__wrapper .bottom-blocker {
+  position: absolute;
+  width: calc(100% - 4px);
+  height: 35px;
+  bottom: 23px;
+  left: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(transparent, #fff);
+}
+.aside-list__checkbox-label {
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.aside-list__checkbox-label input {
+  display: none;
+}
+.aside-list__checkbox-label .checkbox {
+  width: 18px;
+  height: 18px;
+  margin-right: 12px;
+  border: 0.5px solid #bbbbbb;
+  border-radius: 1px;
+}
+.aside-list__checkbox-label span {
+  font-size: 1.6rem;
+  line-height: 1;
+  letter-spacing: 0.03em;
+  color: #666;
+  padding-top: 2.5px;
+  display: inline-block;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -13,3 +13,30 @@
 		padding: 36px 0 39px;
 	}
 }
+
+.price-content {
+	display: none;
+	padding-bottom: 30px;
+	& input {
+		width: calc(100% - 15px);
+		padding: 10px 7px 9px;
+		@include font(1.6rem, 1);
+		border: 0.5px solid rgba($dark-700, 0.5);
+		border-radius: 2px;
+		&::placeholder {
+			color: $dark-800;
+		}
+	}
+	& div {
+		width: 15px;
+		margin: 0 7.5px;
+		display: grid;
+		place-items: center;
+		flex-shrink: 0;
+		& .divider {
+			width: 100%;
+			height: 0.5px;
+			background: #707070;
+		}
+	}
+}

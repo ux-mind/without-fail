@@ -65,51 +65,53 @@ function handleAccordions() {
 function createHeroSlides(slides) {
   const wrapperEl = document.querySelector('.hero .swiper-wrapper');
 
-  for (let i = 0; i < slides.length; i++) {
-    const slideData = slides[i];
+  if (wrapperEl) {
+    for (let i = 0; i < slides.length; i++) {
+      const slideData = slides[i];
 
-    if (!slideData) {
-      return;
+      if (!slideData) {
+        return;
+      }
+
+      const slideEl = document.createElement('div');
+      slideEl.classList.add('swiper-slide');
+      slideEl.setAttribute(
+        'data-swiper-autoplay',
+        `${slideData.duration * 1000}`
+      );
+
+      if (slideData.type === 'video') {
+        const slideInner = `
+						<video class="hero__video" loop="loop" preload="true" muted="muted" playsinline="playinline">
+							<source src="${slideData.link}" type="video/mp4">
+						</video>
+					`;
+
+        slideEl.innerHTML = slideInner;
+      }
+
+      if (slideData.type === 'image') {
+        const slideInner = `
+						<img class="hero__img" src="${slideData.link.x1}" ${
+          slideData.link.x2
+            ? `srcset="${slideData.link.x1} 1x, ${slideData.link.x2} 2x"`
+            : ''
+        } alt="hero image" />
+						<div class="dark-layer"></div>
+					`;
+
+        slideEl.innerHTML = slideInner;
+      }
+
+      wrapperEl.append(slideEl);
     }
-
-    const slideEl = document.createElement('div');
-    slideEl.classList.add('swiper-slide');
-    slideEl.setAttribute(
-      'data-swiper-autoplay',
-      `${slideData.duration * 1000}`
-    );
-
-    if (slideData.type === 'video') {
-      const slideInner = `
-					<video class="hero__video" loop="loop" preload="true" muted="muted" playsinline="playinline">
-						<source src="${slideData.link}" type="video/mp4">
-					</video>
-				`;
-
-      slideEl.innerHTML = slideInner;
-    }
-
-    if (slideData.type === 'image') {
-      const slideInner = `
-					<img class="hero__img" src="${slideData.link.x1}" ${
-        slideData.link.x2
-          ? `srcset="${slideData.link.x1} 1x, ${slideData.link.x2} 2x"`
-          : ''
-      } alt="hero image" />
-					<div class="dark-layer"></div>
-				`;
-
-      slideEl.innerHTML = slideInner;
-    }
-
-    wrapperEl.append(slideEl);
   }
 }
 
 function handleHeroSliderPagination(slides) {
   const paginationWrapper = document.querySelector('.hero .swiper-pagination');
 
-  if (paginationWrapper.children[0]) {
+  if (paginationWrapper && paginationWrapper.children[0]) {
     const bullets = Array.from(paginationWrapper.children);
 
     for (let i = 0; i < slides.length; i++) {
@@ -187,8 +189,6 @@ function handleTransparentHeader() {
     const scroll =
       document.documentElement.scrollTop || document.body.scrollTop;
 
-    console.log(scroll);
-
     const header = document.querySelector('.header_fixed');
 
     if (!scroll && header) {
@@ -201,6 +201,18 @@ function handleTransparentHeader() {
   });
 }
 
+function handleAsideDropdowns() {
+  const btns = document.querySelectorAll('.aside-btn');
+
+  if (btns[0]) {
+    btns.forEach((btn) => {
+      btn.addEventListener('click', (evt) => {
+        evt.target.classList.toggle('aside-btn_opened');
+      });
+    });
+  }
+}
+
 // Sliders
 handleHeroSlider();
 initCollectionSlider();
@@ -208,3 +220,4 @@ initCollectionSlider();
 // Help functions
 handleAccordions();
 handleTransparentHeader();
+handleAsideDropdowns();
