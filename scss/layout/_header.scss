@@ -1,6 +1,10 @@
 .header {
-	position: relative;
 	background: $white;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 10;
 	& div.gamburger span {
 		background: $dark-200;
 	}
@@ -23,7 +27,7 @@
 		display: none;
 	}
 	& .header-wrapper {
-		border-bottom: 0.5px solid rgba($dark-700, 0.3);
+		border-bottom: 0.5px solid rgba($dark-700, 0.2);
 	}
 	&_fixed {
 		position: fixed;
@@ -33,11 +37,11 @@
 		z-index: 10;
 		background: transparent;
 		transition: background 0.2s;
-		& .header-wrapper {
-			border: none;
-		}
-		&_white {
+		& div.gamburger span {
 			background: $white;
+		}
+		& a {
+			color: $white;
 		}
 		& .header-icons__icon svg.black {
 			display: none;
@@ -45,8 +49,18 @@
 		& .header-icons__icon svg.white {
 			display: inline-block;
 		}
+		& .header-logo svg path {
+			fill: $white;
+		}
+		& .header-wrapper {
+			border: none;
+		}
+		&_white {
+			background: $white;
+		}
 		&_scrolled {
 			background: $white;
+			box-shadow: 0 3px 6px rgba($black, 0.1);
 			& div.gamburger span {
 				background: $dark-200;
 			}
@@ -65,6 +79,7 @@
 		}
 		&:hover {
 			background: $white;
+			box-shadow: 0 3px 6px rgba($black, 0.1);
 			& .gamburger span {
 				background: $dark-200;
 			}

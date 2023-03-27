@@ -205,7 +205,7 @@ function handleTransparentHeader() {
     const scroll =
       document.documentElement.scrollTop || document.body.scrollTop;
 
-    const header = document.querySelector('.header_fixed');
+    const header = document.querySelector('.header');
 
     if (!scroll && header) {
       header.classList.remove('header_fixed_scrolled');

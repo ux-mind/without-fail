@@ -25,6 +25,7 @@
 				align-items: center;
 			}
 			&:disabled {
+				opacity: 1;
 				& svg path,
 				& svg line {
 					stroke: #aaa;
@@ -43,6 +44,7 @@
 				margin-right: 14px;
 			}
 			&:disabled {
+				opacity: 1;
 				color: #aaa;
 				& svg path {
 					stroke: #aaa;
@@ -117,11 +119,16 @@
 		}
 	}
 	&-article {
+		cursor: pointer;
 		max-width: calc((100% - 30px - 30px) / 3);
 		&:hover {
 			& .like-btn {
 				display: inline-block;
 			}
+		}
+		&__link {
+			display: block;
+			cursor: pointer;
 		}
 		&__img {
 			height: 485px;

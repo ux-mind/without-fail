@@ -14,8 +14,13 @@
 		&__wrapper {
 			border-bottom: 0.5px solid rgba($dark-700, 0.5);
 		}
-		&_opened + .aside-list__wrapper {
-			display: block;
+		&_opened {
+			&::before {
+				transform: translateY(-50%) rotate(180deg);
+			}
+			& + .aside-list__wrapper {
+				display: block;
+			}
 		}
 		&_opened + .price-content {
 			@include flex(row, center);
@@ -80,6 +85,7 @@
 					display: none;
 					&:checked + .checkbox {
 						background: $dark-600;
+						border-color: $dark-600;
 						&::before {
 							content: '';
 							position: absolute;

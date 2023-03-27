@@ -20,6 +20,9 @@
 			border-bottom: 0.5px solid rgba($dark-700, 0.5);
 			&__item {
 				margin-bottom: 12px;
+				&_active a {
+					font-weight: 600;
+				}
 				& a {
 					@include font(1.8rem, calc(26 / 18));
 					color: $dark-300;
