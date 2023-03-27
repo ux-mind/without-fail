@@ -402,6 +402,9 @@ a:hover, a:active {
   background: #fff;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
 }
+.header_fixed_scrolled .header-wrapper {
+  border: none;
+}
 .header_fixed_scrolled div.gamburger span {
   background: #222;
 }
