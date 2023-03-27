@@ -10,7 +10,7 @@
 .page-header {
 	&__wrapper {
 		@include flex(row, center, space-between);
-		padding: 36px 0 39px;
+		padding: 36px 0 30px;
 	}
 }
 
@@ -36,7 +36,20 @@
 		& .divider {
 			width: 100%;
 			height: 0.5px;
-			background: #707070;
+			background: $dark-770;
 		}
+	}
+}
+
+.show-more {
+	text-align: center;
+	margin-bottom: 57px;
+	&__btn {
+		max-width: 320px;
+		width: 100%;
+		border: 1px solid $dark-300;
+		border-radius: 2px;
+		color: $dark-300;
+		letter-spacing: 0.05em;
 	}
 }

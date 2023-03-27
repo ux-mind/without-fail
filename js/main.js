@@ -14,6 +14,22 @@ function initCollectionSlider() {
   });
 }
 
+// Catalog swiper
+function initCatalogSlider() {
+  // const sliders = document.querySelectorAll('.catalog-swiper');
+
+  // if (sliders[0]) {
+  // 	sliders.forEach((sliderEl) => {
+  // 		const swiper = new Swiper('')
+  // 	})
+  // }
+  const swiper = new Swiper('.catalog-swiper', {
+    pagination: {
+      el: '.catalog-swiper .swiper-pagination',
+    },
+  });
+}
+
 // Hero video play
 function handleVideoPlay() {
   const videoSlides = document.querySelectorAll('.hero-swiper .swiper-slide');
@@ -216,6 +232,7 @@ function handleAsideDropdowns() {
 // Sliders
 handleHeroSlider();
 initCollectionSlider();
+initCatalogSlider();
 
 // Help functions
 handleAccordions();
