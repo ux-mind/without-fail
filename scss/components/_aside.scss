@@ -56,14 +56,52 @@
 				background: linear-gradient(transparent, $white);
 			}
 		}
+		&.color {
+			& .aside-list__checkbox-label {
+				& input:checked + .color::before {
+					content: '';
+					position: absolute;
+					width: 20px;
+					height: 20px;
+					left: 50%;
+					top: 50%;
+					transform: translate(-50%, -50%);
+					border-radius: 50%;
+					border: 1px solid $dark-600;
+				}
+			}
+		}
 		&__checkbox {
 			&-label {
+				padding: 2px 0;
 				cursor: pointer;
 				@include flex(row, center);
 				& input {
 					display: none;
+					&:checked + .checkbox {
+						background: $dark-600;
+						&::before {
+							content: '';
+							position: absolute;
+							top: 1px;
+							left: 50%;
+							width: 7px;
+							height: 10px;
+							border-bottom: 1px solid $white;
+							border-right: 1px solid $white;
+							transform: translateX(-50%) rotate(45deg);
+						}
+					}
+				}
+				& .color {
+					width: 16px;
+					height: 16px;
+					margin-right: 13px;
+					border-radius: 50%;
+					position: relative;
 				}
 				& .checkbox {
+					position: relative;
 					width: 18px;
 					height: 18px;
 					margin-right: 12px;
