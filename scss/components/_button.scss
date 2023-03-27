@@ -1,20 +1,23 @@
 .btn {
 	&-primary {
-		@include font(1.3rem, calc(16 / 13));
-		padding: 1.484em 4.4615em 1.284em;
-		text-transform: uppercase;
+		@include font(1.6rem, calc(24 / 16));
+		padding: 0.875em 3.35em 0.753em;
 		display: inline-block;
 		color: $white;
 		background: $dark-300;
-		letter-spacing: 0.1em;
+		letter-spacing: 0.05em;
+		border-radius: 2px;
+		&:hover {
+			background: $dark-400;
+		}
 	}
 	&-transparent {
-		@include font(1.3rem, calc(16 / 13));
+		@include font(1.4rem, calc(24 / 14));
 		background: transparent;
-		padding: 1.40769em 3.6em 1.20769em;
-		text-transform: uppercase;
+		padding: 1em 2.8em 0.9em;
 		display: inline-block;
 		border: 1px solid $dark-600;
-		letter-spacing: 0.1em;
+		letter-spacing: 0.05em;
+		border-radius: 2px;
 	}
 }

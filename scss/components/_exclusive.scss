@@ -5,9 +5,17 @@
 		grid-template-columns: 1fr 1fr;
 		grid-gap: 40px;
 	}
+	&__poster {
+		& img {
+			border-radius: 2px;
+		}
+	}
 	&-content {
 		&__img {
 			margin-bottom: 60px;
+			& img {
+				border-radius: 2px;
+			}
 		}
 		&__content {
 			max-width: 467px;

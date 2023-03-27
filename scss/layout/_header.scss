@@ -5,8 +5,52 @@
 		top: 0;
 		left: 0;
 		z-index: 10;
+		background: transparent;
+		transition: background 0.2s;
 		&_white {
 			background: $white;
+		}
+		& .header-icons__icon svg.black {
+			display: none;
+		}
+		& .header-icons__icon svg.white {
+			display: inline-block;
+		}
+		&_scrolled {
+			background: $white;
+			& div.gamburger span {
+				background: $dark-200;
+			}
+			& a {
+				color: $dark-200;
+			}
+			& .header-icons__icon svg.black {
+				display: inline-block;
+			}
+			& .header-icons__icon svg.white {
+				display: none;
+			}
+			& .header-logo svg path {
+				fill: $dark-200;
+			}
+		}
+		&:hover {
+			background: $white;
+			& .gamburger span {
+				background: $dark-200;
+			}
+			& a {
+				color: $dark-200;
+			}
+			& .header-icons__icon svg.black {
+				display: inline-block;
+			}
+			& .header-icons__icon svg.white {
+				display: none;
+			}
+			& .header-logo svg path {
+				fill: $dark-200;
+			}
 		}
 	}
 	&-wrapper {
@@ -23,15 +67,44 @@
 			&_catalog {
 				padding-left: 48px;
 				position: relative;
-				&::before {
-					@include before(0, 28px, 1.5px);
-					background: $white;
-					transform: translateY(calc(-50% - 5px));
-				}
-				&::after {
-					@include before(0, 28px, 1.5px);
-					background: $white;
-					transform: translateY(calc(-50% + 3px));
+				@include flex(row, center, space-between);
+				// &::before {
+				// 	@include before(0, 28px, 1.5px);
+				// 	background: $white;
+				// 	transform: translateY(calc(-50% - 5px));
+				// }
+				// &::after {
+				// 	@include before(0, 28px, 1.5px);
+				// 	background: $white;
+				// 	transform: translateY(calc(-50% + 3px));
+				// }
+				& .gamburger {
+					position: relative;
+					left: 0;
+					top: 0;
+					width: 28px;
+					height: 18px;
+					margin-right: 20px;
+					& span {
+						display: inline-block;
+						position: absolute;
+						width: 100%;
+						height: 1.5px;
+						top: 50%;
+						left: 0;
+						transform: translateY(-50%);
+						background: $white;
+					}
+					& span:first-child {
+						width: 50%;
+						transform: translateY(calc(-50% - 8px));
+					}
+					& span:last-child {
+						width: 50%;
+						left: auto;
+						right: 0;
+						transform: translateY(calc(-50% + 8px));
+					}
 				}
 			}
 		}

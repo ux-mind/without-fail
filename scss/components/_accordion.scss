@@ -6,6 +6,8 @@
 	position: relative;
 	display: flex;
 	height: 604px;
+	overflow: hidden;
+	border-radius: 2px;
 	&__item {
 		flex: 1;
 		position: relative;
@@ -28,8 +30,7 @@
 			transform: rotate(180deg);
 			text-orientation: mixed;
 			left: 40px;
-			@include font(2.4rem, calc(32 / 24));
-			text-transform: uppercase;
+			@include font(2.6rem, calc(32 / 26));
 		}
 		&_big {
 			flex: 2;
