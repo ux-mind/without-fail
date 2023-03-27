@@ -1,4 +1,30 @@
 .header {
+	position: relative;
+	background: $white;
+	& div.gamburger span {
+		background: $dark-200;
+	}
+	& a {
+		color: $dark-200;
+	}
+	& .header-icons__icon svg.black {
+		display: inline-block;
+	}
+	& .header-icons__icon svg.white {
+		display: none;
+	}
+	& .header-logo svg path {
+		fill: $dark-200;
+	}
+	& .header-icons__icon svg.black {
+		display: inline-block;
+	}
+	& .header-icons__icon svg.white {
+		display: none;
+	}
+	& .header-wrapper {
+		border-bottom: 0.5px solid rgba($dark-700, 0.3);
+	}
 	&_fixed {
 		position: fixed;
 		width: 100%;
@@ -7,6 +33,9 @@
 		z-index: 10;
 		background: transparent;
 		transition: background 0.2s;
+		& .header-wrapper {
+			border: none;
+		}
 		&_white {
 			background: $white;
 		}
@@ -65,7 +94,6 @@
 				margin-right: 0;
 			}
 			&_catalog {
-				padding-left: 48px;
 				position: relative;
 				@include flex(row, center, space-between);
 				// &::before {
@@ -110,6 +138,7 @@
 		}
 	}
 	&-icons {
+		padding-right: 14px;
 		@include flex(row, center);
 		&__icon {
 			width: 20px;

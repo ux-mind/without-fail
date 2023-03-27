@@ -2,4 +2,5 @@
 	min-height: 52px;
 	border: 1px solid $gray-200;
 	@include font(1.6rem, calc(22 / 16));
+	border-radius: 2px;
 }

@@ -1,0 +1,11 @@
+.breadcrumbs {
+	@include flex(row, center);
+	color: $dark-600;
+	@include font(1.4rem, calc(23 / 14));
+	& a {
+		color: $dark-600;
+		@include font(1.4rem, calc(23 / 14));
+		display: inline-block;
+		position: relative;
+	}
+}

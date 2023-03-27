@@ -1,0 +1,25 @@
+.sort {
+	@include flex(row, center);
+	& span {
+		display: inline-block;
+		margin-right: 12px;
+		@include font(1.4rem, calc(23 / 14));
+		color: $dark-600;
+	}
+	&-select {
+		border: 0.5px solid rgba($dark-700, 0.5);
+		border-radius: 2px;
+		padding: 4px 9px;
+		padding-right: 28px;
+		position: relative;
+		cursor: pointer;
+		&::after {
+			@include after(12px, 8px, 4px);
+			background: icon('drop.svg') no-repeat 50% / cover;
+		}
+		&__value {
+			color: $dark-600;
+			@include font(1.4rem, calc(23 / 14));
+		}
+	}
+}

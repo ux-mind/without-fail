@@ -148,6 +148,15 @@ a:hover, a:active {
   background: rgba(0, 0, 0, 0.22);
 }
 
+.page-header__wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  padding: 36px 0 39px;
+}
+
 @font-face {
   font-family: "Mont";
   src: url("../assets/fonts/Mont-Regular.woff") format("woff"), url("../assets/fonts/Mont-Regular.woff2") format("woff2");
@@ -191,13 +200,13 @@ a:hover, a:active {
   background: #444;
 }
 .btn-transparent {
-  font-size: 1.4rem;
-  line-height: 1.7142857143;
+  font-size: 1.6rem;
+  line-height: 1.5;
   background: transparent;
-  padding: 1em 2.8em 0.9em;
+  padding: 0.875em 2em 0.753em;
   display: inline-block;
   border: 1px solid #666;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.1em;
   border-radius: 2px;
 }
 
@@ -262,7 +271,6 @@ a:hover, a:active {
   letter-spacing: 0.1em;
 }
 .link:hover {
-  color: #fff;
   opacity: 0.8;
 }
 .link:active {
@@ -274,8 +282,37 @@ a:hover, a:active {
   border: 1px solid #c6c1c1;
   font-size: 1.6rem;
   line-height: 1.375;
+  border-radius: 2px;
 }
 
+.header {
+  position: relative;
+  background: #fff;
+}
+.header div.gamburger span {
+  background: #222;
+}
+.header a {
+  color: #222;
+}
+.header .header-icons__icon svg.black {
+  display: inline-block;
+}
+.header .header-icons__icon svg.white {
+  display: none;
+}
+.header .header-logo svg path {
+  fill: #222;
+}
+.header .header-icons__icon svg.black {
+  display: inline-block;
+}
+.header .header-icons__icon svg.white {
+  display: none;
+}
+.header .header-wrapper {
+  border-bottom: 0.5px solid rgba(119, 119, 119, 0.3);
+}
 .header_fixed {
   position: fixed;
   width: 100%;
@@ -284,6 +321,9 @@ a:hover, a:active {
   z-index: 10;
   background: transparent;
   transition: background 0.2s;
+}
+.header_fixed .header-wrapper {
+  border: none;
 }
 .header_fixed_white {
   background: #fff;
@@ -352,7 +392,6 @@ a:hover, a:active {
   margin-right: 0;
 }
 .header-nav__item_catalog {
-  padding-left: 48px;
   position: relative;
   display: flex;
   flex-direction: row;
@@ -389,6 +428,7 @@ a:hover, a:active {
   transform: translateY(calc(-50% + 8px));
 }
 .header-icons {
+  padding-right: 14px;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -829,6 +869,62 @@ a:hover, a:active {
 }
 .accordion__item_big {
   flex: 2;
+}
+
+.breadcrumbs {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  color: #666;
+  font-size: 1.4rem;
+  line-height: 1.6428571429;
+}
+.breadcrumbs a {
+  color: #666;
+  font-size: 1.4rem;
+  line-height: 1.6428571429;
+  display: inline-block;
+  position: relative;
+}
+
+.sort {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.sort span {
+  display: inline-block;
+  margin-right: 12px;
+  font-size: 1.4rem;
+  line-height: 1.6428571429;
+  color: #666;
+}
+.sort-select {
+  border: 0.5px solid rgba(119, 119, 119, 0.5);
+  border-radius: 2px;
+  padding: 4px 9px;
+  padding-right: 28px;
+  position: relative;
+  cursor: pointer;
+}
+.sort-select::after {
+  content: "";
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  width: 8px;
+  height: 4px;
+  transform: translateY(-50%);
+  background: url("../assets/icons/drop.svg") no-repeat 50%/cover;
+}
+.sort-select__value {
+  color: #666;
+  font-size: 1.4rem;
+  line-height: 1.6428571429;
 }
 
 /*# sourceMappingURL=style.css.map */

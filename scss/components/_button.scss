@@ -12,12 +12,12 @@
 		}
 	}
 	&-transparent {
-		@include font(1.4rem, calc(24 / 14));
+		@include font(1.6rem, calc(24 / 16));
 		background: transparent;
-		padding: 1em 2.8em 0.9em;
+		padding: 0.875em 2em 0.753em;
 		display: inline-block;
 		border: 1px solid $dark-600;
-		letter-spacing: 0.05em;
+		letter-spacing: 0.1em;
 		border-radius: 2px;
 	}
 }

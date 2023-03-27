@@ -11,6 +11,7 @@
 // Import Layout
 @import './layout/section', './layout/header', './layout/hero', './layout/footer', './layout/main';
 // Import Pages
-@import './pages/home';
+@import './pages/home', './pages/catalog';
 // Import Components
-@import './components/collection', './components/exclusive', './components/accordion';
+@import './components/collection', './components/exclusive', './components/accordion', './components/breadcrumbs',
+	'./components/sort';

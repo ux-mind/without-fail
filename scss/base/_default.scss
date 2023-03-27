@@ -6,3 +6,10 @@
 	left: 0;
 	background: rgba($black, 0.22);
 }
+
+.page-header {
+	&__wrapper {
+		@include flex(row, center, space-between);
+		padding: 36px 0 39px;
+	}
+}
