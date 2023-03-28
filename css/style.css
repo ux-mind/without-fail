@@ -1105,14 +1105,15 @@ a:hover, a:active {
   padding: 0;
   display: grid;
   place-items: center;
-  width: 58px;
-  height: 58px;
+  width: 60px;
+  height: 60px;
 }
 .product-content__btns .like-btn:hover {
   background: transparent;
 }
 .product-content__btns .like-btn:hover svg path {
   fill: #333;
+  stroke: #333;
 }
 .product-content__description {
   margin-bottom: 30px;

@@ -212,12 +212,13 @@
 				padding: 0;
 				display: grid;
 				place-items: center;
-				width: 58px;
-				height: 58px;
+				width: 60px;
+				height: 60px;
 				&:hover {
 					background: transparent;
 					& svg path {
 						fill: $dark-300;
+						stroke: $dark-300;
 					}
 				}
 			}
