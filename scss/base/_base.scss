@@ -37,6 +37,7 @@ strong {
 	font-weight: bold;
 }
 body {
+	min-height: 100vh;
 	font-family: $font;
 	font-weight: 400;
 	color: $font-color;

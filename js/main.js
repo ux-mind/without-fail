@@ -16,18 +16,72 @@ function initCollectionSlider() {
 
 // Catalog swiper
 function initCatalogSlider() {
-  // const sliders = document.querySelectorAll('.catalog-swiper');
-
-  // if (sliders[0]) {
-  // 	sliders.forEach((sliderEl) => {
-  // 		const swiper = new Swiper('')
-  // 	})
-  // }
   const swiper = new Swiper('.catalog-swiper', {
     pagination: {
       el: '.catalog-swiper .swiper-pagination',
     },
   });
+}
+
+// Product swiper
+function handleProductSlider() {
+  const swiper = new Swiper('.product-swiper', {
+    navigation: {
+      prevEl: '.product-swiper__prev',
+      nextEl: '.product-swiper__next',
+    },
+  });
+
+  const thumbsWrapper = document.querySelector(
+    '.product-swiper-thumbs__wrapper'
+  );
+
+  if (thumbsWrapper) {
+    const children = Array.from(thumbsWrapper.children);
+
+    thumbsWrapper.addEventListener('click', (evt) => {
+      const target = evt.target;
+      const thumb = target.closest('.product-swiper-thumbs__slide');
+
+      if (thumb) {
+        children.forEach((thumb) => {
+          thumb.classList.remove('product-swiper-thumbs__slide_active');
+        });
+
+        const activeIndex = children.indexOf(thumb);
+
+        thumb.classList.add('product-swiper-thumbs__slide_active');
+
+        swiper.slideTo(activeIndex);
+      }
+    });
+
+    swiper.on('slideChange', (swiper) => {
+      const activeIndex = swiper.activeIndex;
+
+      console.log(activeIndex);
+
+      children.forEach((thumb, idx) => {
+        if (idx !== activeIndex) {
+          thumb.classList.remove('product-swiper-thumbs__slide_active');
+        }
+
+        if (
+          idx === activeIndex &&
+          !thumb.classList.contains('product-swiper-thumbs__slide_active')
+        ) {
+          thumb.classList.add('product-swiper-thumbs__slide_active');
+        }
+      });
+    });
+  }
+
+  // const thumbsSlider = new Swiper('.product-swiper-thumbs', {
+  //   direction: 'vertical',
+  //   slidesPerView: 'auto',
+  //   spaceBetween: 10,
+  //   centeredSlides: true,
+  // });
 }
 
 // Hero video play
@@ -233,6 +287,7 @@ function handleAsideDropdowns() {
 handleHeroSlider();
 initCollectionSlider();
 initCatalogSlider();
+handleProductSlider();
 
 // Help functions
 handleAccordions();
