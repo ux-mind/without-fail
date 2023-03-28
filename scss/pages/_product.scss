@@ -4,6 +4,7 @@
 			display: grid;
 			grid-template-columns: calc(50% - 10px) calc(50% - 10px);
 			grid-gap: 20px;
+			padding-bottom: 100px;
 		}
 	}
 	&-swiper {
@@ -95,6 +96,132 @@
 		& video,
 		& img {
 			border-radius: 2px;
+		}
+	}
+	&-content {
+		max-width: 535px;
+		& p {
+			letter-spacing: 0.015em;
+		}
+		&__title {
+			@include font(2.8rem, calc(36 / 28));
+			letter-spacing: 0.015em;
+			font-weight: 600;
+		}
+		&__subtitle {
+			margin-bottom: 6px;
+			& p {
+				@include font(1.6rem, calc(24 / 16));
+				letter-spacing: 0.015em;
+				color: $dark-600;
+			}
+		}
+		&__article {
+			margin-bottom: 18px;
+			& p {
+				@include font(1.4rem, calc(24 / 14));
+				letter-spacing: 0.015em;
+				color: $dark-900;
+			}
+		}
+		&__price {
+			@include font(2.4rem, calc(35 / 24));
+			font-weight: 600;
+			letter-spacing: 0.015em;
+			display: block;
+			margin-bottom: 15px;
+		}
+		&__guide {
+			display: inline-block;
+			margin-bottom: 12px;
+		}
+		&__size {
+			&-select {
+				margin-bottom: 30px;
+			}
+		}
+		&__btns {
+			@include flex(row, center);
+			gap: 14px;
+			margin-bottom: 40px;
+			& .cart-btn {
+				padding: 1.375em;
+				line-height: 1;
+				min-width: 62.42990654%;
+			}
+			& .like-btn {
+				padding: 0;
+				display: grid;
+				place-items: center;
+				width: 58px;
+				height: 58px;
+				&:hover {
+					background: transparent;
+					& svg path {
+						fill: $dark-300;
+					}
+				}
+			}
+		}
+		&__description {
+			margin-bottom: 30px;
+			&-title {
+				font-weight: 600;
+				@include font(1.6rem, calc(22 / 16));
+				margin-bottom: 11px;
+				letter-spacing: 0;
+			}
+			&-text {
+				& p {
+					@include font(1.4rem, calc(20 / 14));
+					color: $dark-500;
+					letter-spacing: 0;
+				}
+			}
+		}
+	}
+	&-colors {
+		margin-bottom: 26px;
+		&__wrapper {
+			@include flex(row, center);
+			margin-bottom: 9px;
+			& .color-btn {
+				border-radius: 50%;
+				width: 20px;
+				height: 20px;
+				position: relative;
+			}
+		}
+		&__color {
+			display: inline-block;
+			margin-right: 12px;
+			cursor: pointer;
+			& input {
+				display: none;
+				&:checked + .color-btn {
+					&::before {
+						content: '';
+						position: absolute;
+						width: calc(100% + 4px);
+						height: calc(100% + 4px);
+						top: 50%;
+						left: 50%;
+						transform: translate(-50%, -50%);
+						border-radius: 50%;
+						border: 1px solid $dark-600;
+					}
+				}
+			}
+			&-value {
+				& p {
+					@include font(1.4rem, calc(24 / 14));
+					letter-spacing: 0.015em;
+					color: $dark-800;
+				}
+			}
+			&:last-child {
+				margin-right: 0;
+			}
 		}
 	}
 }

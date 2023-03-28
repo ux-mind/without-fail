@@ -7,7 +7,23 @@
 	&:hover {
 		opacity: 0.8;
 	}
-	&:active {
+	&:active,
+	&:focus {
 		opacity: 0.6;
+	}
+	&-underline {
+		color: $dark-300;
+		text-decoration: underline;
+		letter-spacing: 0.015em;
+		@include font(1.6rem, calc(24 / 16));
+		&:hover {
+			opacity: 0.8;
+			color: $dark-300;
+		}
+		&:active,
+		&:focus {
+			color: $dark-300;
+			opacity: 0.6;
+		}
 	}
 }

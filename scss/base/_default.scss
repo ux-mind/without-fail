@@ -53,3 +53,19 @@
 		letter-spacing: 0.05em;
 	}
 }
+
+.size-select {
+	@include font(1.6rem, 1);
+	letter-spacing: 0.015em;
+	color: $dark-800;
+	min-width: 408px;
+	border-radius: 2px;
+	border: 1px solid rgba($dark-700, 0.2);
+	text-align: left;
+	padding: 1.125em 0.6875em 1em;
+	position: relative;
+	&::after {
+		@include after(12px, 14px, 7px);
+		background: icon('drop-light.svg') no-repeat 50% / cover;
+	}
+}

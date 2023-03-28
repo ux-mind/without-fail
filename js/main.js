@@ -75,13 +75,6 @@ function handleProductSlider() {
       });
     });
   }
-
-  // const thumbsSlider = new Swiper('.product-swiper-thumbs', {
-  //   direction: 'vertical',
-  //   slidesPerView: 'auto',
-  //   spaceBetween: 10,
-  //   centeredSlides: true,
-  // });
 }
 
 // Hero video play
@@ -283,6 +276,35 @@ function handleAsideDropdowns() {
   }
 }
 
+function handleProductDropdowns() {
+  const btns = document.querySelectorAll('.dropdowns-block__drop-btn');
+
+  if (btns[0]) {
+    btns.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        btn.classList.toggle('dropdowns-block__drop-btn_opened');
+      });
+    });
+  }
+}
+
+function handleProductColors() {
+  const colorInputs = document.querySelectorAll(
+    '.product-colors__color input[type="radio"]'
+  );
+  const colorBlock = document.querySelector('.product-colors__color-value p');
+
+  if (colorInputs[0] && colorBlock) {
+    colorInputs.forEach((input) => {
+      input.addEventListener('change', () => {
+        if (input.checked) {
+          colorBlock.innerHTML = input.value;
+        }
+      });
+    });
+  }
+}
+
 // Sliders
 handleHeroSlider();
 initCollectionSlider();
@@ -293,3 +315,5 @@ handleProductSlider();
 handleAccordions();
 handleTransparentHeader();
 handleAsideDropdowns();
+handleProductDropdowns();
+handleProductColors();

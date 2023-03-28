@@ -1,0 +1,31 @@
+.dropdowns-block {
+	&__drop {
+		margin-bottom: 10px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+		&-content {
+			margin-top: 4px;
+			display: none;
+		}
+		&-btn {
+			color: $dark-300;
+			padding-left: 22px;
+			position: relative;
+			@include font(1.6rem, calc(24 / 16));
+			font-weight: 600;
+			letter-spacing: 0;
+			&::before {
+				@include before(0, 12px, 6px);
+				background: icon('drop-semibold.svg') no-repeat 50% / cover;
+				transform: translateY(calc(-50% - 1px));
+			}
+			&_opened::before {
+				transform: translateY(calc(-50% - 1px)) rotate(180deg);
+			}
+			&_opened + .dropdowns-block__drop-content {
+				display: block;
+			}
+		}
+	}
+}
