@@ -35,9 +35,58 @@ function initRecommendationsSlider() {
   });
 }
 
+function handleProductVideos(swiper) {
+  const videos = document.querySelectorAll(
+    '.product-swiper .product-slide__video'
+  );
+
+  if (videos[0]) {
+    videos.forEach((video) => {
+      const playBtn = video.previousElementSibling;
+
+      if (playBtn.matches('.play-btn')) {
+        playBtn.addEventListener('click', () => {
+          const isVideoPlaying = !!(
+            video.currentTime > 0 &&
+            !video.paused &&
+            !video.ended &&
+            video.readyState > 2
+          );
+
+          if (isVideoPlaying) {
+            playBtn.classList.add('paused');
+
+            video.pause();
+          } else {
+            playBtn.classList.remove('paused');
+
+            video.play();
+          }
+        });
+
+        swiper.on('slideChange', () => {
+          const isVideoPlaying = !!(
+            video.currentTime > 0 &&
+            !video.paused &&
+            !video.ended &&
+            video.readyState > 2
+          );
+
+          if (isVideoPlaying) {
+            playBtn.classList.add('paused');
+
+            video.pause();
+          }
+        });
+      }
+    });
+  }
+}
+
 // Product swiper
 function handleProductSlider() {
   const swiper = new Swiper('.product-swiper', {
+    allowTouchMove: false,
     navigation: {
       prevEl: '.product-swiper__prev',
       nextEl: '.product-swiper__next',
@@ -87,6 +136,8 @@ function handleProductSlider() {
       });
     });
   }
+
+  handleProductVideos(swiper);
 }
 
 // Hero video play
@@ -317,39 +368,6 @@ function handleProductColors() {
   }
 }
 
-function handleProductVideos() {
-  const videos = document.querySelectorAll(
-    '.product-swiper .product-slide__video'
-  );
-
-  if (videos[0]) {
-    videos.forEach((video) => {
-      const playBtn = video.previousElementSibling;
-
-      if (playBtn.matches('.play-btn')) {
-        playBtn.addEventListener('click', () => {
-          const isVideoPlaying = !!(
-            video.currentTime > 0 &&
-            !video.paused &&
-            !video.ended &&
-            video.readyState > 2
-          );
-
-          if (isVideoPlaying) {
-            playBtn.classList.add('paused');
-
-            video.pause();
-          } else {
-            playBtn.classList.remove('paused');
-
-            video.play();
-          }
-        });
-      }
-    });
-  }
-}
-
 // Sliders
 handleHeroSlider();
 initCollectionSlider();
@@ -363,4 +381,4 @@ handleTransparentHeader();
 handleAsideDropdowns();
 handleProductDropdowns();
 handleProductColors();
-handleProductVideos();
+// handleProductVideos();

@@ -1011,8 +1011,8 @@ a:hover, a:active {
   place-items: center;
   border-radius: 2px;
   z-index: 2;
-  width: 80px;
-  height: 80px;
+  width: 100%;
+  height: 100%;
   opacity: 0;
   transition: opacity 0.2s;
 }
@@ -1023,6 +1023,12 @@ a:hover, a:active {
   height: 40px;
 }
 .product-slide .play-btn svg[data-play=pause] {
+  display: none;
+}
+.product-slide .play-btn.paused svg[data-play=pause] {
+  display: block;
+}
+.product-slide .play-btn.paused svg[data-play=play] {
   display: none;
 }
 .product-slide:hover .play-btn {
