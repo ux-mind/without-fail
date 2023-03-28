@@ -23,6 +23,18 @@ function initCatalogSlider() {
   });
 }
 
+// Recommendations swiper
+function initRecommendationsSlider() {
+  const swiper = new Swiper('.recommendations-swiper', {
+    slidesPerView: 'auto',
+    spaceBetween: 24,
+    navigation: {
+      prevEl: '.recommendations-swiper__prev',
+      nextEl: '.recommendations-swiper__next',
+    },
+  });
+}
+
 // Product swiper
 function handleProductSlider() {
   const swiper = new Swiper('.product-swiper', {
@@ -310,6 +322,7 @@ handleHeroSlider();
 initCollectionSlider();
 initCatalogSlider();
 handleProductSlider();
+initRecommendationsSlider();
 
 // Help functions
 handleAccordions();
