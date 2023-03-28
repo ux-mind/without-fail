@@ -439,10 +439,6 @@ a:hover, a:active {
 }
 .header_fixed_scrolled {
   background: #fff;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
-}
-.header_fixed_scrolled .header-wrapper {
-  border: none;
 }
 .header_fixed_scrolled div.gamburger span {
   background: #222;
@@ -458,6 +454,9 @@ a:hover, a:active {
 }
 .header_fixed_scrolled .header-logo svg path {
   fill: #222;
+}
+.header_fixed_scrolled .header-wrapper {
+  border-bottom: 0.5px solid rgba(119, 119, 119, 0.2);
 }
 .header_fixed:hover {
   background: #fff;
@@ -478,8 +477,11 @@ a:hover, a:active {
 .header_fixed:hover .header-logo svg path {
   fill: #222;
 }
+.header-logo {
+  display: flex;
+}
 .header-wrapper {
-  padding: 37px 0;
+  padding: 30px 0 28px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
