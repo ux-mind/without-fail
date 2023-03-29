@@ -3,6 +3,7 @@
 	border: 1px solid $gray-200;
 	@include font(1.6rem, calc(22 / 16));
 	border-radius: 2px;
+	color: $dark-300;
 }
 
 .count-input {
@@ -58,4 +59,30 @@
 			}
 		}
 	}
+}
+
+.form-input {
+	min-height: 42px;
+	border: 1px solid rgba($dark-700, 0.3);
+	@include font(1.6rem, calc(22 / 16));
+	letter-spacing: 0.015em;
+	border-radius: 2px;
+	width: 100%;
+	padding: 0.64em 11px 0.52em;
+	color: $dark-300;
+	&::placeholder {
+		@include font(1.6rem, calc(22 / 16));
+		color: #aaa;
+		letter-spacing: 0.015em;
+	}
+}
+
+.radio {
+	width: 20px;
+	height: 20px;
+	margin-right: 10px;
+	border: 1px solid rgba($dark-700, 0.3);
+	border-radius: 50%;
+	flex-shrink: 0;
+	position: relative;
 }

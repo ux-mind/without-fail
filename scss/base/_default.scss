@@ -76,3 +76,18 @@
 	height: 14px;
 	position: relative;
 }
+
+.personal-data {
+	& p {
+		@include font(1.2rem, calc(16 / 12));
+		letter-spacing: 0.015em;
+		color: $dark-700;
+	}
+	& a {
+		color: inherit;
+		@include font(1.2rem, calc(16 / 12));
+		letter-spacing: 0.015em;
+		color: $dark-700;
+		text-decoration: underline;
+	}
+}

@@ -12,7 +12,6 @@
 		border-bottom: 1px solid rgba($dark-700, 0.3);
 		&__item {
 			margin-bottom: 40px;
-			// @include flex(row, center);
 			display: grid;
 			grid-template-columns: 3.56fr 1.54fr 1.06fr 1.63fr 90px 18px;
 			&:last-child {
@@ -108,6 +107,172 @@
 					background: icon('drop.svg') no-repeat center / cover;
 					transform: translateY(calc(-50% + 1px));
 				}
+			}
+		}
+	}
+	&-form {
+		@include flex(row, flex-start, space-between);
+		gap: 40px;
+		padding-top: 45px;
+		&-row {
+			@include flex(column);
+			max-width: 350px;
+			&__header {
+				width: 100%;
+				@include flex(row, center, space-between);
+				gap: 30px;
+				margin-bottom: 14px;
+				& .link-underline {
+					@include font(1.4rem, 1);
+					color: $dark-600;
+				}
+			}
+			&__title {
+				font-size: 1.8rem;
+				line-height: 1.3333333333;
+				letter-spacing: 0.015em;
+				font-weight: 600;
+			}
+		}
+		&__label {
+			width: 100%;
+			@include flex(column);
+			margin-bottom: 18px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+			& span {
+				display: inline-block;
+				margin-bottom: 7px;
+				@include font(1.6rem, 1);
+				color: $dark-300;
+				letter-spacing: 0.015em;
+			}
+		}
+		&__divide {
+			width: 100%;
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-gap: 16px;
+			& label {
+				margin: 0;
+			}
+			&:not(:last-child) {
+				margin-bottom: 18px;
+			}
+		}
+	}
+	&-delivery {
+		padding-top: 16px;
+		&__block {
+			margin-bottom: 38px;
+			&.payment .method {
+				@include font(1.4rem, calc(24 / 14));
+				letter-spacing: 0.015em;
+			}
+		}
+		&__label {
+			@include flex(row);
+			margin-bottom: 14px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+			& input[type='radio'] {
+				display: none;
+				&:checked + .radio {
+					position: relative;
+					&::before {
+						width: 10px;
+						height: 10px;
+						content: '';
+						position: absolute;
+						left: 50%;
+						top: 50%;
+						transform: translate(-50%, -50%);
+						background: $dark-600;
+						border-radius: 50%;
+					}
+				}
+			}
+		}
+		&__info {
+			max-width: 270px;
+			@include flex(column);
+			& .method {
+				@include font(1.6rem, calc(24 / 16));
+				letter-spacing: 0.015em;
+				color: $dark-300;
+				&:not(:last-child) {
+					margin-bottom: 2px;
+				}
+			}
+			& .subtext {
+				@include font(1.2rem, calc(16 / 12));
+				color: $dark-700;
+				letter-spacing: 0.015em;
+				&:not(:last-child) {
+					margin-bottom: 2px;
+				}
+			}
+			& .price {
+				@include font(1.6rem, calc(24 / 16));
+				letter-spacing: 0;
+				color: $dark-300;
+				&:not(:last-child) {
+					margin-bottom: 2px;
+				}
+			}
+			& .link-underline {
+				display: inline-block;
+				@include font(1.4rem, calc(16 / 14));
+				letter-spacing: 0.015em;
+				color: $dark-300;
+				&:not(:last-child) {
+					margin-bottom: 2px;
+				}
+			}
+		}
+		&__price {
+			width: 100%;
+			margin-bottom: 28px;
+			&-row {
+				@include flex(row, center, space-between);
+				&:not(:last-child) {
+					margin-bottom: 8px;
+				}
+				&[data-price='delivery'] {
+					& p {
+						@include font(1.6rem, calc(24 / 16));
+						letter-spacing: 0.015em;
+						color: $dark-600;
+					}
+					& span {
+						@include font(1.8rem, calc(24 / 18));
+						letter-spacing: 0;
+						color: $dark-600;
+					}
+				}
+				&[data-price='final'] {
+					& p {
+						@include font(1.8rem, calc(24 / 16));
+						letter-spacing: 0.015em;
+						font-weight: 600;
+						color: $dark-300;
+					}
+					& span {
+						@include font(1.8rem, calc(24 / 18));
+						letter-spacing: 0;
+						color: $dark-300;
+						font-weight: 600;
+					}
+				}
+			}
+		}
+		&__submit {
+			& .btn-primary {
+				width: 100%;
+				margin-bottom: 20px;
+				padding: 1.15em 1em 1.05em;
 			}
 		}
 	}

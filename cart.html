@@ -247,11 +247,11 @@
 									</div>
 									<div class="order-list__product-count">
 										<div class="count-input__wrapper">
-											<button data-count="decrement">
+											<button data-count="decrement" aria-label="decrement">
 												<span></span>
 											</button>
 											<input id="product-count" class="count-input" type="number" name="product-count" value="1">
-											<button data-count="increment">
+											<button data-count="increment" aria-label="increment">
 												<span></span>
 												<span></span>
 											</button>
@@ -261,7 +261,7 @@
 										<span>35 000 ₽</span>
 									</div>
 									<div class="order-list__product-remove">
-										<button class="remove">
+										<button class="remove" aria-label="close">
 											<span></span>
 											<span></span>
 										</button>
@@ -310,7 +310,133 @@
 								</li>
 							</ul>
 						</div>
-						<form class="order-form"></form>
+						<form class="order-form">
+							<div class="order-form-row">
+								<div class="order-form-row__header">
+									<h3 class="title title_size-s order-form-row__title">Получатель</h3>
+									<a href="#" class="link-underline">Войти в личный кабинет</a>
+								</div>
+								<label class="order-form__label">
+									<span>Имя</span>
+									<input class="form-input" type="text" name="name">
+								</label>
+								<label class="order-form__label">
+									<span>Фамилия</span>
+									<input class="form-input" type="text" name="surname">
+								</label>
+								<label class="order-form__label">
+									<span>E-mail</span>
+									<input class="form-input" type="email" name="email">
+								</label>
+								<label class="order-form__label">
+									<span>Телефон</span>
+									<input class="form-input" type="tel" name="tel" value="+7">
+								</label>
+								<label class="order-form__label">
+									<span>Населенный пункт</span>
+									<input class="form-input" type="text" name="city">
+								</label>
+								<label class="order-form__label">
+									<span>Адрес</span>
+									<input class="form-input" type="text" name="address">
+								</label>
+								<div class="order-form__divide">
+									<label class="order-form__label">
+										<span>Дом</span>
+										<input class="form-input" type="number" name="house">
+									</label>
+									<label class="order-form__label">
+										<span>Квартира/Офис</span>
+										<input class="form-input" type="text" name="appartaments">
+									</label>
+								</div>
+								<label class="order-form__label">
+									<span>Комментарий</span>
+									<textarea rows="2" class="form-input" type="text" name="comments"></textarea>
+								</label>
+							</div>
+							<div class="order-form-row">
+								<div class="order-delivery__block">
+									<h3 class="title title_size-s order-form-row__title">Доставка</h3>
+									<div class="order-delivery">
+										<label class="order-delivery__label">
+											<input type="radio" name="delivery" value="free Moscow" checked>
+											<div class="radio"></div>
+											<div class="order-delivery__info">
+												<p class="method">Бесплатно по Москве и МО</p>
+											</div>
+										</label>
+										<label class="order-delivery__label">
+											<input type="radio" name="delivery" value="courier">
+											<div class="radio"></div>
+											<div class="order-delivery__info">
+												<p class="method">СДЭК Курьерская доставка</p>
+												<p class="subtext">Официальный модуль доставки от&nbsp;компании СДЭК 11-13&nbsp;дней</p>
+												<span class="price">+840 ₽</span>
+											</div>
+										</label>
+										<label class="order-delivery__label">
+											<input type="radio" name="delivery" value="PVZ">
+											<div class="radio"></div>
+											<div class="order-delivery__info">
+												<p class="method">СДЭК: до пункта выдачи</p>
+												<button id="delivery-map" class="link-underline">Выбрать на карте</button>
+												<span class="price">+360 ₽</span>
+											</div>
+										</label>
+									</div>
+								</div>
+								<div class="order-delivery__block payment">
+									<h3 class="title title_size-s order-form-row__title">Способ оплаты</h3>
+									<div class="order-delivery">
+										<label class="order-delivery__label">
+											<input type="radio" name="payment" value="bank card" checked>
+											<div class="radio"></div>
+											<div class="order-delivery__info">
+												<p class="method">Банковской картой</p>
+											</div>
+										</label>
+										<label class="order-delivery__label">
+											<input type="radio" name="payment" value="money">
+											<div class="radio"></div>
+											<div class="order-delivery__info">
+												<p class="method">Наличными при получении</p>
+											</div>
+										</label>
+										<label class="order-delivery__label">
+											<input type="radio" name="payment" value="bank after getting">
+											<div class="radio"></div>
+											<div class="order-delivery__info">
+												<p class="method">Банковской картой при получении</p>
+											</div>
+										</label>
+									</div>
+								</div>
+								<div class="promocode">
+									<input class="form-input" type="text" name="promocode" placeholder="Введите промокод">
+									<button class="promocode-btn">Ок</button>
+								</div>
+								<div class="order-delivery__price">
+									<div class="order-delivery__price-row" data-price="delivery">
+										<p>Доставка</p>
+										<span>840 ₽</span>
+									</div>
+									<div class="order-delivery__price-row" data-price="final">
+										<p>Итого</p>
+										<span>82 840 ₽</span>
+									</div>
+								</div>
+								<div class="order-delivery__submit">
+									<button type="submit" class="btn btn-primary">Оформить заказ</button>
+									<div class="personal-data">
+										<p>
+											Нажимая на кнопку «оплатить заказ», я принимаю условия <a href="offerta.html">публичной
+												оферты</a> и политики <a href="policy.html">конфиденциальности</a>
+										</p>
+									</div>
+								</div>
+							</div>
+						</form>
 					</div>
 				</div>
 			</div>
