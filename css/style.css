@@ -222,6 +222,13 @@ a:hover, a:active {
   background: url("../assets/icons/drop-light.svg") no-repeat 50%/cover;
 }
 
+.color-btn {
+  border-radius: 50%;
+  width: 14px;
+  height: 14px;
+  position: relative;
+}
+
 @font-face {
   font-family: "Mont";
   src: url("../assets/fonts/Mont-Regular.woff") format("woff"), url("../assets/fonts/Mont-Regular.woff2") format("woff2");
@@ -373,6 +380,64 @@ a:hover, a:active {
   font-size: 1.6rem;
   line-height: 1.375;
   border-radius: 2px;
+}
+
+.count-input {
+  width: 100%;
+  height: 100%;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  color: #777;
+  padding: 0;
+  text-align: center;
+}
+.count-input__wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  position: relative;
+  overflow: hidden;
+  border-radius: 2px;
+  border: 1px solid rgba(119, 119, 119, 0.3);
+  min-height: 35px;
+}
+.count-input__wrapper button[data-count=decrement], .count-input__wrapper select[data-count=decrement], .count-input__wrapper input[data-count=decrement], .count-input__wrapper textarea[data-count=decrement] {
+  flex-shrink: 0;
+  width: 28px;
+  height: 33px;
+  position: relative;
+  display: grid;
+}
+.count-input__wrapper button[data-count=decrement] span, .count-input__wrapper select[data-count=decrement] span, .count-input__wrapper input[data-count=decrement] span, .count-input__wrapper textarea[data-count=decrement] span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 11px;
+  height: 1px;
+  background: #777;
+  transform: translate(-50%, -50%);
+}
+.count-input__wrapper button[data-count=increment], .count-input__wrapper select[data-count=increment], .count-input__wrapper input[data-count=increment], .count-input__wrapper textarea[data-count=increment] {
+  flex-shrink: 0;
+  width: 28px;
+  height: 33px;
+  position: relative;
+  display: grid;
+  padding: 9px;
+}
+.count-input__wrapper button[data-count=increment] span, .count-input__wrapper select[data-count=increment] span, .count-input__wrapper input[data-count=increment] span, .count-input__wrapper textarea[data-count=increment] span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 11px;
+  height: 1px;
+  background: #777;
+  transform: translate(-50%, -50%);
+}
+.count-input__wrapper button[data-count=increment] span:first-child, .count-input__wrapper select[data-count=increment] span:first-child, .count-input__wrapper input[data-count=increment] span:first-child, .count-input__wrapper textarea[data-count=increment] span:first-child {
+  transform: translate(-50%, -50%) rotate(90deg);
 }
 
 .header {
@@ -1219,6 +1284,12 @@ a:hover, a:active {
   color: #222;
 }
 
+.cart-page__wrapper {
+  max-width: 1145px;
+  display: grid;
+  grid-template-columns: 2.55fr 8.9fr;
+}
+
 .collection {
   margin-bottom: 66px;
 }
@@ -1855,6 +1926,150 @@ a:hover, a:active {
 }
 .recommendations-swiper__next.swiper-button-disabled {
   opacity: 0;
+}
+
+.order-details__title {
+  margin-bottom: 18px;
+  font-size: 1.8rem;
+  line-height: 1.3333333333;
+  letter-spacing: 0.015em;
+  font-weight: 600;
+}
+.order-list {
+  padding-bottom: 50px;
+  border-bottom: 1px solid rgba(119, 119, 119, 0.3);
+}
+.order-list__item {
+  margin-bottom: 40px;
+  display: grid;
+  grid-template-columns: 3.56fr 1.54fr 1.06fr 1.63fr 90px 18px;
+}
+.order-list__item:last-child {
+  margin-bottom: 0;
+}
+.order-list__product {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.order-list__product-img {
+  flex-shrink: 0;
+  margin-right: 40px;
+}
+.order-list__product-info {
+  padding-right: 30px;
+}
+.order-list__product-info p {
+  font-size: 1.4rem;
+  line-height: 1.2857142857;
+  margin-bottom: 4px;
+  letter-spacing: 0;
+}
+.order-list__product-info span {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: #999;
+  letter-spacing: 0.015em;
+}
+.order-list__product-color {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.order-list__product-color .color-btn {
+  margin-right: 7px;
+}
+.order-list__product-color p {
+  font-size: 1.2rem;
+  line-height: 1;
+  color: #888;
+  letter-spacing: 0.015em;
+  transform: translateY(2px);
+}
+.order-list__product-size {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.order-list__product-count {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  position: relative;
+}
+.order-list__product-count .count-input__wrapper {
+  max-width: 80px;
+}
+.order-list__product-price {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.order-list__product-price span {
+  font-weight: 600;
+  font-size: 1.8rem;
+  line-height: 1.5;
+}
+.order-list__product-remove {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: nowrap;
+  position: relative;
+}
+.order-list__product-remove .remove {
+  position: relative;
+  width: 12px;
+  height: 12px;
+}
+.order-list__product-remove .remove span {
+  width: 16px;
+  height: 1px;
+  background: #d6d6d6;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+.order-list__product-remove .remove span:first-child {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.order-list__product-remove .remove span:last-child {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+.order-list__size-drop {
+  border-radius: 2px;
+  border: 1px solid rgba(119, 119, 119, 0.3);
+  min-height: 34px;
+  min-width: 66px;
+  display: grid;
+  align-items: center;
+  font-size: 1.4rem;
+  line-height: 1;
+  color: #666;
+  padding: 0.7857142857em 0.6428571429em 0.5714285714em;
+  position: relative;
+}
+.order-list__size-drop::after {
+  content: "";
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  width: 12px;
+  height: 6px;
+  transform: translateY(-50%);
+  background: url("../assets/icons/drop.svg") no-repeat center/cover;
+  transform: translateY(calc(-50% + 1px));
 }
 
 /*# sourceMappingURL=style.css.map */

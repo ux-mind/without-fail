@@ -1,0 +1,114 @@
+.order {
+	&-details {
+		&__title {
+			margin-bottom: 18px;
+			@include font(1.8rem, calc(24 / 18));
+			letter-spacing: 0.015em;
+			font-weight: 600;
+		}
+	}
+	&-list {
+		padding-bottom: 50px;
+		border-bottom: 1px solid rgba($dark-700, 0.3);
+		&__item {
+			margin-bottom: 40px;
+			// @include flex(row, center);
+			display: grid;
+			grid-template-columns: 3.56fr 1.54fr 1.06fr 1.63fr 90px 18px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+		&__product {
+			@include flex(row, center);
+			&-img {
+				flex-shrink: 0;
+				margin-right: 40px;
+			}
+			&-info {
+				padding-right: 30px;
+				& p {
+					@include font(1.4rem, calc(18 / 14));
+					margin-bottom: 4px;
+					letter-spacing: 0;
+				}
+				& span {
+					@include font(1.2rem, calc(18 / 12));
+					color: $dark-900;
+					letter-spacing: 0.015em;
+				}
+			}
+			&-color {
+				@include flex(row, center);
+				& .color-btn {
+					margin-right: 7px;
+				}
+				& p {
+					@include font(1.2rem, 1);
+					color: $dark-800;
+					letter-spacing: 0.015em;
+					transform: translateY(2px);
+				}
+			}
+			&-size {
+				@include flex(row, center);
+			}
+			&-count {
+				@include flex(row, center);
+				position: relative;
+				& .count-input__wrapper {
+					max-width: 80px;
+				}
+			}
+			&-price {
+				@include flex(row, center);
+				& span {
+					font-weight: 600;
+					@include font(1.8rem, calc(27 / 18));
+				}
+			}
+			&-remove {
+				@include flex(row, center, flex-end);
+				position: relative;
+				& .remove {
+					position: relative;
+					width: 12px;
+					height: 12px;
+					& span {
+						width: 16px;
+						height: 1px;
+						background: #d6d6d6;
+						position: absolute;
+						top: 50%;
+						left: 50%;
+						&:first-child {
+							transform: translate(-50%, -50%) rotate(45deg);
+						}
+						&:last-child {
+							transform: translate(-50%, -50%) rotate(-45deg);
+						}
+					}
+				}
+			}
+		}
+		&__size {
+			&-drop {
+				border-radius: 2px;
+				border: 1px solid rgba($dark-700, 0.3);
+				min-height: 34px;
+				min-width: 66px;
+				display: grid;
+				align-items: center;
+				@include font(1.4rem, 1);
+				color: $dark-600;
+				padding: 0.7857142857em 0.6428571429em 0.5714285714em;
+				position: relative;
+				&::after {
+					@include after(8px, 12px, 6px);
+					background: icon('drop.svg') no-repeat center / cover;
+					transform: translateY(calc(-50% + 1px));
+				}
+			}
+		}
+	}
+}
