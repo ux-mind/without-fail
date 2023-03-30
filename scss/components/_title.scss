@@ -22,3 +22,29 @@
 		}
 	}
 }
+
+// @media screen and (max-width: 991px) {
+// 	.title {
+// 		&_size {
+// 			&-m {
+// 				@include font(1.8rem, calc(26 / 18));
+// 				letter-spacing: 0.03em;
+// 			}
+// 		}
+// 	}
+// }
+
+@media screen and (max-width: 768px) {
+	.title {
+		&_size {
+			&-m {
+				@include font(1.8rem, calc(26 / 18));
+				letter-spacing: 0.03em;
+			}
+			&-s {
+				@include font(1.4rem, calc(22 / 14));
+				letter-spacing: 0.03em;
+			}
+		}
+	}
+}

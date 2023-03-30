@@ -55,6 +55,10 @@
 		& .header-wrapper {
 			border: none;
 		}
+		& .header-nav__item a,
+		& .header-nav__item span {
+			color: $white;
+		}
 		&_white {
 			background: $white;
 		}
@@ -65,6 +69,10 @@
 			}
 			& a {
 				color: $dark-200;
+			}
+			& .header-nav__item a,
+			& .header-nav__item span {
+				color: $black;
 			}
 			& .header-icons__icon svg.black {
 				display: inline-block;
@@ -97,6 +105,10 @@
 			& .header-logo svg path {
 				fill: $dark-200;
 			}
+			& .header-nav__item a,
+			& .header-nav__item span {
+				color: $black;
+			}
 		}
 	}
 	&-logo {
@@ -116,16 +128,6 @@
 			&_catalog {
 				position: relative;
 				@include flex(row, center, space-between);
-				// &::before {
-				// 	@include before(0, 28px, 1.5px);
-				// 	background: $white;
-				// 	transform: translateY(calc(-50% - 5px));
-				// }
-				// &::after {
-				// 	@include before(0, 28px, 1.5px);
-				// 	background: $white;
-				// 	transform: translateY(calc(-50% + 3px));
-				// }
 				& .gamburger {
 					position: relative;
 					left: 0;
@@ -165,6 +167,9 @@
 			height: 20px;
 			position: relative;
 			margin-right: 30px;
+			&_mobile {
+				display: none;
+			}
 			&:last-child {
 				margin-right: 0;
 			}
@@ -187,6 +192,54 @@
 					display: grid;
 					place-items: center;
 					padding-top: 2px;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.header {
+		&-logo {
+			justify-content: center;
+			& svg {
+				max-height: 27px;
+				max-width: 130px;
+			}
+		}
+		&-wrapper {
+			padding: 23px 0 24px;
+			display: grid;
+			grid-template-columns: 1fr 2fr 1fr;
+		}
+		&-nav {
+			&__item {
+				display: none;
+				&_catalog {
+					display: inline-block;
+					margin-right: 17px;
+					& span {
+						display: none;
+					}
+					& .gamburger {
+						margin: 0;
+						width: 26px;
+					}
+				}
+			}
+		}
+		&-icons {
+			justify-content: flex-end;
+			&__icon {
+				margin-right: 22px;
+				&:last-child {
+					margin-right: 0;
+				}
+				&_desktop {
+					display: none;
+				}
+				&_mobile {
+					display: inline-block;
 				}
 			}
 		}

@@ -14,6 +14,12 @@
 	}
 }
 
+@media screen and (max-width: 991px) {
+	.page-header {
+		display: none;
+	}
+}
+
 .price-content {
 	display: none;
 	padding-bottom: 30px;

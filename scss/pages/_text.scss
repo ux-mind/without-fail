@@ -15,6 +15,7 @@
 			margin-bottom: 58px;
 		}
 		&__title {
+			font-weight: 600;
 			@include font(2rem, calc(24 / 20));
 			letter-spacing: 0.015em;
 			margin-bottom: 24px;
@@ -60,11 +61,78 @@
 			margin-bottom: 5px;
 			letter-spacing: 0.015em;
 			color: $dark-500;
+			&:last-child {
+				margin-bottom: 0;
+			}
 		}
 		& strong {
 			font-weight: 600;
 			letter-spacing: inherit;
 			color: inherit;
+		}
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.text {
+		&-page {
+			&__wrapper {
+				grid-template-columns: 100%;
+				padding-top: 18px;
+				padding-bottom: 50px;
+			}
+		}
+		&-block {
+			&__title {
+				margin-bottom: 16px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.text {
+		&-page {
+			&__content {
+				padding-top: 16px;
+			}
+		}
+		&-block {
+			&:not(:last-child) {
+				margin-bottom: 50px;
+			}
+			&__title {
+				@include font(1.6rem, calc(24 / 16));
+				letter-spacing: 0.015em;
+				margin-bottom: 18px;
+			}
+			&__text {
+				&_big {
+					&:not(:last-child) {
+						margin-bottom: 48px;
+					}
+				}
+				&_small {
+					max-width: 725px;
+					&:not(:last-child) {
+						margin-bottom: 22px;
+					}
+				}
+			}
+			&__list {
+				&-item:not(:last-child) {
+					margin-bottom: 20px;
+					&::before {
+						top: 5px;
+					}
+				}
+			}
+			& p {
+				@include font(1.4rem, calc(20 / 14));
+			}
+			& strong {
+				@include font(1.4rem, calc(22 / 14));
+			}
 		}
 	}
 }

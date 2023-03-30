@@ -6,5 +6,8 @@
 			display: grid;
 			grid-template-columns: 2.55fr 8.9fr;
 		}
+		&__title {
+			padding-right: 40px;
+		}
 	}
 }
