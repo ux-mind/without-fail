@@ -208,7 +208,9 @@ function createHeroSlides(slides) {
 
       if (slideData.type === 'video') {
         const slideInner = `
-						<video class="hero__video" loop="loop" preload="true" muted="muted" playsinline="playinline">
+						<video class="hero__video" loop="loop" preload="true" muted="muted" playsinline="playinline" ${
+              slideData.poster ? `poster="${slideData.poster}"` : ''
+            }>
 							<source src="${slideData.link}" type="video/mp4">
 						</video>
 					`;
@@ -269,7 +271,12 @@ function handleHeroSliderPagination(slides) {
 
 function handleHeroSlider() {
   const HERO_SLIDES = [
-    { type: 'video', link: './assets/videos/banner.mov', duration: 10 },
+    {
+      type: 'video',
+      link: './assets/videos/banner.mov',
+      poster: './assets/images/outerwear.jpg',
+      duration: 10,
+    },
     {
       type: 'image',
       link: {
@@ -278,7 +285,12 @@ function handleHeroSlider() {
       },
       duration: 5,
     },
-    { type: 'video', link: './assets/videos/banner.mov', duration: 10 },
+    {
+      type: 'video',
+      link: './assets/videos/banner.mov',
+      poster: './assets/images/outerwear.jpg',
+      duration: 10,
+    },
   ];
 
   window.addEventListener('load', () => {
@@ -334,6 +346,7 @@ function handleAsideDropdowns() {
     btns.forEach((btn) => {
       btn.addEventListener('click', (evt) => {
         evt.target.classList.toggle('aside-btn_opened');
+        evt.target.classList.toggle('aside-btn_closed');
       });
     });
   }

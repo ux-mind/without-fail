@@ -16,6 +16,10 @@
 		background: #fff;
 		transition: opacity 0.2s;
 		transform: rotate(180deg);
+		opacity: 0.8;
+		&:hover {
+			opacity: 1;
+		}
 		&.swiper-button-disabled {
 			opacity: 0;
 			pointer-events: none;
@@ -32,6 +36,10 @@
 		place-items: center;
 		background: #fff;
 		transition: opacity 0.2s;
+		opacity: 0.8;
+		&:hover {
+			opacity: 1;
+		}
 		&.swiper-button-disabled {
 			opacity: 0;
 		}

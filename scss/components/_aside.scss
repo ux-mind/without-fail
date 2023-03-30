@@ -18,8 +18,25 @@
 			&::before {
 				transform: translateY(-50%) rotate(180deg);
 			}
-			& + .aside-list__wrapper {
-				display: block;
+			& + .drop-wrapper {
+				animation: slideUpAccordionDesktop 0.3s ease 1 both;
+			}
+			& + .price-drop-wrapper {
+				animation: priceUpAccordionDesktop 0.3s ease 1 both;
+				& > .price-content {
+					display: flex;
+				}
+			}
+		}
+		&_closed {
+			& + .drop-wrapper {
+				animation: slideDownAccordionDesktop 0.3s ease 1 both;
+			}
+			& + .price-drop-wrapper {
+				animation: priceDownAccordionDesktop 0.3s ease 1 both;
+				& > .price-content {
+					display: flex;
+				}
 			}
 		}
 		&_opened + .price-content {
@@ -47,7 +64,6 @@
 			margin-bottom: 16px;
 		}
 		&__wrapper {
-			display: none;
 			padding-bottom: 23px;
 			position: relative;
 			& .bottom-blocker {
@@ -123,5 +139,57 @@
 				}
 			}
 		}
+	}
+}
+
+@keyframes slideDownAccordionDesktop {
+	0% {
+		max-height: 193px;
+		overflow-y: hidden;
+		display: block;
+	}
+	to {
+		max-height: 0;
+		display: none;
+		overflow-y: hidden;
+	}
+}
+
+@keyframes slideUpAccordionDesktop {
+	0% {
+		max-height: 0;
+		display: none;
+		overflow-y: hidden;
+	}
+	to {
+		display: block;
+		max-height: 193px;
+		overflow-y: hidden;
+	}
+}
+
+@keyframes priceDownAccordionDesktop {
+	0% {
+		max-height: 72px;
+		overflow-y: hidden;
+		display: block;
+	}
+	to {
+		max-height: 0;
+		display: none;
+		overflow-y: hidden;
+	}
+}
+
+@keyframes priceUpAccordionDesktop {
+	0% {
+		max-height: 0;
+		display: none;
+		overflow-y: hidden;
+	}
+	to {
+		display: block;
+		max-height: 72px;
+		overflow-y: hidden;
 	}
 }

@@ -25,6 +25,7 @@
 				align-items: center;
 			}
 			&:disabled {
+				pointer-events: none;
 				opacity: 1;
 				& svg path,
 				& svg line {
@@ -44,6 +45,7 @@
 				margin-right: 14px;
 			}
 			&:disabled {
+				pointer-events: none;
 				opacity: 1;
 				color: #aaa;
 				& svg path {
@@ -63,6 +65,7 @@
 				margin-left: 14px;
 			}
 			&:disabled {
+				pointer-events: none;
 				color: #aaa;
 				& svg path {
 					stroke: #aaa;
@@ -129,6 +132,12 @@
 		&__link {
 			display: block;
 			cursor: pointer;
+			&:hover {
+				& p,
+				& .catalog-article__price {
+					opacity: 0.75;
+				}
+			}
 		}
 		&__img {
 			height: 485px;

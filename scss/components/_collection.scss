@@ -31,6 +31,10 @@
 			background: $white;
 			transform: rotate(180deg);
 			transition: opacity 0.2s;
+			opacity: 0.8;
+			&:hover {
+				opacity: 1;
+			}
 		}
 		&__next {
 			position: absolute;
@@ -43,6 +47,10 @@
 			place-items: center;
 			background: $white;
 			transition: opacity 0.2s;
+			opacity: 0.8;
+			&:hover {
+				opacity: 1;
+			}
 		}
 		& .swiper-button-disabled {
 			opacity: 0;
@@ -51,6 +59,15 @@
 	}
 	&-item {
 		@include flex(column);
+		&:hover {
+			& .collection-item__name,
+			& .collection-item__price {
+				opacity: 0.75;
+			}
+		}
+		&:active {
+			opacity: 0.6;
+		}
 		&__img {
 			max-height: 420px;
 			margin-bottom: 22px;

@@ -28,6 +28,10 @@
 			left: 13px;
 			transform: translateY(-50%);
 			transition: opacity 0.2s;
+			opacity: 0.8;
+			&:hover {
+				opacity: 1;
+			}
 			& svg {
 				transform: translateX(-1px);
 			}
@@ -49,6 +53,10 @@
 			right: 13px;
 			transform: translateY(-50%);
 			transition: opacity 0.2s;
+			opacity: 0.8;
+			&:hover {
+				opacity: 1;
+			}
 			& svg {
 				transform: translateX(1px);
 			}
@@ -63,7 +71,7 @@
 			max-width: 70px;
 			box-sizing: content-box;
 			@include flex(column, center, center);
-			max-height: 690px;
+			max-height: 682px;
 			overflow-y: auto;
 			padding: 4px;
 			&__slide {
@@ -289,10 +297,10 @@
 		&__link {
 			display: inline-block;
 			&:hover {
-				opacity: 0.8;
-			}
-			&:active {
-				opacity: 0.6;
+				& .product-recommendations__product,
+				& .product-recommendations__price {
+					opacity: 0.75;
+				}
 			}
 		}
 		&__title {
