@@ -20,6 +20,9 @@
 		}
 		&__product {
 			@include flex(row, center);
+			&:hover {
+				opacity: 0.75;
+			}
 			&-img {
 				flex-shrink: 0;
 				margin-right: 40px;
@@ -27,6 +30,7 @@
 			&-info {
 				padding-right: 30px;
 				& p {
+					color: $dark-200;
 					@include font(1.4rem, calc(18 / 14));
 					margin-bottom: 4px;
 					letter-spacing: 0;
@@ -87,11 +91,17 @@
 							transform: translate(-50%, -50%) rotate(-45deg);
 						}
 					}
+					&:hover {
+						& span {
+							background: $dark-600;
+						}
+					}
 				}
 			}
 		}
 		&__size {
 			&-drop {
+				cursor: pointer;
 				border-radius: 2px;
 				border: 1px solid rgba($dark-700, 0.3);
 				min-height: 34px;
@@ -163,9 +173,9 @@
 		}
 	}
 	&-delivery {
-		padding-top: 16px;
+		padding-top: 12px;
 		&__block {
-			margin-bottom: 38px;
+			margin-bottom: 32px;
 			&.payment .method {
 				@include font(1.4rem, calc(24 / 14));
 				letter-spacing: 0.015em;
@@ -173,7 +183,8 @@
 		}
 		&__label {
 			@include flex(row);
-			margin-bottom: 14px;
+			margin-bottom: 10px;
+			cursor: pointer;
 			&:last-child {
 				margin-bottom: 0;
 			}
@@ -234,11 +245,11 @@
 		}
 		&__price {
 			width: 100%;
-			margin-bottom: 28px;
+			margin-bottom: 24px;
 			&-row {
 				@include flex(row, center, space-between);
 				&:not(:last-child) {
-					margin-bottom: 8px;
+					margin-bottom: 6px;
 				}
 				&[data-price='delivery'] {
 					& p {

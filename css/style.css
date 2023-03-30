@@ -67,6 +67,18 @@ input {
   padding: 0 15px;
 }
 
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
 textarea {
   cursor: text;
   resize: none;
@@ -1564,6 +1576,9 @@ a:hover, a:active {
 .cart-page__title {
   padding-right: 40px;
 }
+.cart-content {
+  padding-top: 16px;
+}
 
 .text-page__wrapper {
   padding-bottom: 75px;
@@ -2445,6 +2460,9 @@ a:hover, a:active {
   align-items: center;
   flex-wrap: nowrap;
 }
+.order-list__product:hover {
+  opacity: 0.75;
+}
 .order-list__product-img {
   flex-shrink: 0;
   margin-right: 40px;
@@ -2453,6 +2471,7 @@ a:hover, a:active {
   padding-right: 30px;
 }
 .order-list__product-info p {
+  color: #222;
   font-size: 1.4rem;
   line-height: 1.2857142857;
   margin-bottom: 4px;
@@ -2538,7 +2557,11 @@ a:hover, a:active {
 .order-list__product-remove .remove span:last-child {
   transform: translate(-50%, -50%) rotate(-45deg);
 }
+.order-list__product-remove .remove:hover span {
+  background: #666;
+}
 .order-list__size-drop {
+  cursor: pointer;
   border-radius: 2px;
   border: 1px solid rgba(119, 119, 119, 0.3);
   min-height: 34px;
@@ -2633,10 +2656,10 @@ a:hover, a:active {
   margin-bottom: 18px;
 }
 .order-delivery {
-  padding-top: 16px;
+  padding-top: 12px;
 }
 .order-delivery__block {
-  margin-bottom: 38px;
+  margin-bottom: 32px;
 }
 .order-delivery__block.payment .method {
   font-size: 1.4rem;
@@ -2649,7 +2672,8 @@ a:hover, a:active {
   justify-content: flex-start;
   align-items: flex-start;
   flex-wrap: nowrap;
-  margin-bottom: 14px;
+  margin-bottom: 10px;
+  cursor: pointer;
 }
 .order-delivery__label:last-child {
   margin-bottom: 0;
@@ -2718,7 +2742,7 @@ a:hover, a:active {
 }
 .order-delivery__price {
   width: 100%;
-  margin-bottom: 28px;
+  margin-bottom: 24px;
 }
 .order-delivery__price-row {
   display: flex;
@@ -2728,7 +2752,7 @@ a:hover, a:active {
   flex-wrap: nowrap;
 }
 .order-delivery__price-row:not(:last-child) {
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 .order-delivery__price-row[data-price=delivery] p {
   font-size: 1.6rem;
