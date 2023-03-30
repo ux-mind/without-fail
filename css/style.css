@@ -1335,6 +1335,67 @@ a:hover, a:active {
   grid-template-columns: 2.55fr 8.9fr;
 }
 
+.text-page__wrapper {
+  padding-bottom: 75px;
+  max-width: 1030px;
+  display: grid;
+  grid-template-columns: 2.55fr 7.75fr;
+}
+.text-page__content {
+  padding-top: 12px;
+}
+.text-block:not(:last-child) {
+  margin-bottom: 58px;
+}
+.text-block__title {
+  font-size: 2rem;
+  line-height: 1.2;
+  letter-spacing: 0.015em;
+  margin-bottom: 24px;
+  color: #333;
+}
+.text-block__text_big:not(:last-child) {
+  margin-bottom: 54px;
+}
+.text-block__text_small {
+  max-width: 725px;
+}
+.text-block__text_small:not(:last-child) {
+  margin-bottom: 24px;
+}
+.text-block__list:not(:last-child) {
+  margin-bottom: 24px;
+}
+.text-block__list-item {
+  position: relative;
+  padding-left: 20px;
+}
+.text-block__list-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #d6d6d6;
+}
+.text-block__list-item:not(:last-child) {
+  margin-bottom: 24px;
+}
+.text-block p {
+  font-size: 1.6rem;
+  line-height: 1.5;
+  margin-bottom: 5px;
+  letter-spacing: 0.015em;
+  color: #555;
+}
+.text-block strong {
+  font-weight: 600;
+  letter-spacing: inherit;
+  color: inherit;
+}
+
 .collection {
   margin-bottom: 66px;
 }
