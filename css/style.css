@@ -372,7 +372,7 @@ a:hover, a:active {
   width: calc(100% - 80px);
 }
 
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1200px) {
   .container {
     max-width: 950px;
   }
@@ -514,8 +514,8 @@ a:hover, a:active {
 }
 
 .radio {
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
   margin-right: 10px;
   border: 1px solid rgba(119, 119, 119, 0.3);
   border-radius: 50%;
@@ -786,6 +786,9 @@ a:hover, a:active {
 }
 .hero-swiper {
   max-height: 100%;
+}
+.hero-swiper .swiper-slide {
+  background: #f7f7f7;
 }
 .hero__img {
   width: 100%;
@@ -2638,7 +2641,7 @@ a:hover, a:active {
   justify-content: flex-start;
   align-items: flex-start;
   flex-wrap: nowrap;
-  margin-bottom: 18px;
+  margin-bottom: 25px;
 }
 .order-form__label:last-child {
   margin-bottom: 0;
@@ -2664,10 +2667,14 @@ a:hover, a:active {
   margin-bottom: 18px;
 }
 .order-delivery {
-  padding-top: 12px;
+  padding-top: 10px;
 }
 .order-delivery__block {
-  margin-bottom: 32px;
+  width: 100%;
+  padding: 18px 22px;
+  border: 1px solid #ededed;
+  border-radius: 2px;
+  margin-bottom: 26px;
 }
 .order-delivery__block.payment .method {
   font-size: 1.4rem;
@@ -2680,11 +2687,14 @@ a:hover, a:active {
   justify-content: flex-start;
   align-items: flex-start;
   flex-wrap: nowrap;
-  margin-bottom: 10px;
+  margin-bottom: 7px;
   cursor: pointer;
 }
 .order-delivery__label:last-child {
   margin-bottom: 0;
+}
+.order-delivery__label .radio {
+  transform: translateY(2px);
 }
 .order-delivery__label input[type=radio] {
   display: none;
@@ -2801,7 +2811,7 @@ a:hover, a:active {
   align-items: space-between;
   flex-wrap: nowrap;
   width: 100%;
-  margin-bottom: 35px;
+  margin-bottom: 32px;
 }
 .promocode-btn {
   margin-left: 16px;
