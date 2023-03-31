@@ -7,7 +7,8 @@
 // Import utils
 @import './utils/swiper';
 // Import Components
-@import './components/button', './components/title', './components/container', './components/link', './components/input';
+@import './components/button', './components/title', './components/container', './components/link', './components/input',
+	'./components/select';
 // Import Layout
 @import './layout/section', './layout/header', './layout/hero', './layout/footer', './layout/main', './layout/menu';
 // Import Pages

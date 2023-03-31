@@ -539,6 +539,67 @@ a:hover, a:active {
   position: relative;
 }
 
+.select {
+  font-size: 1.6rem;
+  line-height: 1;
+  letter-spacing: 0.015em;
+  color: #888;
+  min-width: 408px;
+  border-radius: 2px;
+  border: 1px solid rgba(119, 119, 119, 0.2);
+  text-align: left;
+  padding: 1.125em 0.6875em 1em;
+  position: relative;
+}
+.select::after {
+  content: "";
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  width: 14px;
+  height: 7px;
+  transform: translateY(-50%);
+  background: url("../assets/icons/drop-light.svg") no-repeat 50%/cover;
+}
+.select-wrapper {
+  width: fit-content;
+  position: relative;
+}
+.select_opened + .select-block {
+  opacity: 1;
+  transform: none;
+  pointer-events: auto;
+}
+.select_opened::after {
+  transform: translateY(-50%) rotate(180deg);
+}
+.select-block {
+  position: absolute;
+  top: calc(100% + 3px);
+  left: 0;
+  width: 100%;
+  height: auto;
+  padding: 10px 0;
+  border: 1px solid rgba(119, 119, 119, 0.2);
+  border-radius: 2px;
+  background: #fff;
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(15px);
+  transition: transform 0.2s, opacity 0.2s;
+}
+.select-list__item {
+  font-size: 1.6rem;
+  line-height: 1;
+  padding: 8px 0.6875em 6px;
+  letter-spacing: 0.03em;
+  color: #666;
+  cursor: pointer;
+}
+.select-list__item:hover {
+  background: #f7f7f7;
+}
+
 .header {
   background: #fff;
   position: fixed;
@@ -1628,8 +1689,17 @@ a:hover, a:active {
   background: transparent;
 }
 .product-content__btns .like-btn:hover svg path {
-  fill: #333;
-  stroke: #333;
+  fill: #666;
+  stroke: #666;
+}
+.product-content__btns .like-btn_active.like-btn {
+  border: 1px solid rgba(119, 119, 119, 0.2);
+  border-radius: 2px;
+  background: rgba(195, 195, 195, 0.2);
+}
+.product-content__btns .like-btn_active.like-btn svg path {
+  fill: none;
+  stroke: #666;
 }
 .product-content__description {
   margin-bottom: 30px;

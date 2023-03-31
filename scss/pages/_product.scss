@@ -225,8 +225,17 @@
 				&:hover {
 					background: transparent;
 					& svg path {
-						fill: $dark-300;
-						stroke: $dark-300;
+						fill: $dark-600;
+						stroke: $dark-600;
+					}
+				}
+				&_active.like-btn {
+					border: 1px solid rgba($dark-700, 0.2);
+					border-radius: 2px;
+					background: rgba($gray-300, 0.2);
+					& svg path {
+						fill: none;
+						stroke: $dark-600;
 					}
 				}
 			}

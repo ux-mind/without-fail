@@ -449,6 +449,47 @@ function handleMenu() {
   }
 }
 
+function handleLikeBtns() {
+  const likeBtns = document.querySelectorAll('.like-btn');
+
+  if (likeBtns[0]) {
+    likeBtns.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        btn.classList.toggle('like-btn_active');
+      });
+    });
+  }
+}
+
+function handleSelect() {
+  const selectElements = document.querySelectorAll('.select');
+
+  if (selectElements[0]) {
+    selectElements.forEach((select) => {
+      select.addEventListener('click', () => {
+        select.classList.toggle('select_opened');
+
+        // Select change value
+        const block = select.nextElementSibling;
+
+        if (block.matches('.select-block')) {
+          block.addEventListener('click', (evt) => {
+            const target = evt.target;
+
+            if (target.matches('.select-list__item')) {
+              const value = target.innerHTML;
+
+              select.innerHTML = value;
+
+              select.classList.remove('select_opened');
+            }
+          });
+        }
+      });
+    });
+  }
+}
+
 // Sliders
 handleHeroSlider();
 initCollectionSlider();
@@ -464,3 +505,5 @@ handleProductDropdowns();
 handleProductColors();
 handleCountInputs();
 handleMenu();
+handleLikeBtns();
+handleSelect();
