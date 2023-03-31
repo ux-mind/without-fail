@@ -107,7 +107,9 @@
 	background: rgba($black, 0.15);
 	opacity: 0;
 	transition: opacity 0.3s;
+	pointer-events: none;
 	&_opened {
 		opacity: 1;
+		pointer-events: auto;
 	}
 }
