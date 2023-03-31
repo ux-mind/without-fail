@@ -27,6 +27,7 @@
 		}
 	}
 	&-block {
+		z-index: 2;
 		position: absolute;
 		top: calc(100% + 3px);
 		left: 0;
@@ -40,6 +41,13 @@
 		opacity: 0;
 		transform: translateY(15px);
 		transition: transform 0.2s, opacity 0.2s;
+		&_small-font {
+			padding: 6px 0;
+			& li {
+				@include font(1.4rem, 1);
+				padding: 7px 0.6875em 5px;
+			}
+		}
 	}
 	&-list {
 		&__item {

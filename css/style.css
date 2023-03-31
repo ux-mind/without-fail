@@ -574,6 +574,7 @@ a:hover, a:active {
   transform: translateY(-50%) rotate(180deg);
 }
 .select-block {
+  z-index: 2;
   position: absolute;
   top: calc(100% + 3px);
   left: 0;
@@ -587,6 +588,14 @@ a:hover, a:active {
   opacity: 0;
   transform: translateY(15px);
   transition: transform 0.2s, opacity 0.2s;
+}
+.select-block_small-font {
+  padding: 6px 0;
+}
+.select-block_small-font li {
+  font-size: 1.4rem;
+  line-height: 1;
+  padding: 7px 0.6875em 5px;
 }
 .select-list__item {
   font-size: 1.6rem;
@@ -2125,27 +2134,28 @@ a:hover, a:active {
   color: #666;
 }
 .sort-select {
-  border: 0.5px solid rgba(119, 119, 119, 0.5);
-  border-radius: 2px;
-  padding: 4px 9px;
-  padding-right: 28px;
-  position: relative;
+  flex-grow: 0;
   cursor: pointer;
-}
-.sort-select::after {
-  content: "";
-  position: absolute;
-  right: 12px;
-  top: 50%;
-  width: 8px;
-  height: 4px;
-  transform: translateY(-50%);
-  background: url("../assets/icons/drop.svg") no-repeat 50%/cover;
 }
 .sort-select__value {
   color: #666;
   font-size: 1.4rem;
   line-height: 1.6428571429;
+  line-height: 1;
+  padding: 10px 9px 9px;
+  padding-right: 30px;
+  min-width: 220px;
+}
+.sort-select__value::after {
+  width: 9px;
+  height: 5px;
+}
+.sort-select__value + .select-block {
+  width: auto;
+  min-width: calc(100% + 20px);
+}
+.sort-select__value + .select-block .select-list__item {
+  padding: 9px 0.6875em 7px;
 }
 
 .aside-btn {

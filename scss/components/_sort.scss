@@ -7,19 +7,26 @@
 		color: $dark-600;
 	}
 	&-select {
-		border: 0.5px solid rgba($dark-700, 0.5);
-		border-radius: 2px;
-		padding: 4px 9px;
-		padding-right: 28px;
-		position: relative;
+		flex-grow: 0;
 		cursor: pointer;
-		&::after {
-			@include after(12px, 8px, 4px);
-			background: icon('drop.svg') no-repeat 50% / cover;
-		}
 		&__value {
 			color: $dark-600;
 			@include font(1.4rem, calc(23 / 14));
+			line-height: 1;
+			padding: 10px 9px 9px;
+			padding-right: 30px;
+			min-width: 220px;
+			&::after {
+				width: 9px;
+				height: 5px;
+			}
+			& + .select-block {
+				width: auto;
+				min-width: calc(100% + 20px);
+				& .select-list__item {
+					padding: 9px 0.6875em 7px;
+				}
+			}
 		}
 	}
 }
