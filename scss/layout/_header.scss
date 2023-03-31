@@ -213,6 +213,9 @@
 			display: grid;
 			grid-template-columns: 1fr 2fr 1fr;
 		}
+		& .header-wrapper {
+			// border-color: rgba($dark-700, 0.5);
+		}
 		&-nav {
 			&__item {
 				display: none;

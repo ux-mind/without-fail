@@ -434,16 +434,30 @@ function handleMenu() {
   const menu = document.querySelector('#menu');
   const blocker = document.querySelector('#blocker');
   const menuBtn = document.querySelector('#catalog-btn');
+  const menuCloseMobile = document.querySelector('#menu-close-mobile');
 
   if (menuBtn && menu) {
     menuBtn.addEventListener('click', () => {
       menu.classList.toggle('menu_opened');
 
-      // const htmlEl = document.documentElement;
-      // htmlEl.classList.toggle('is-locked');
+      const htmlEl = document.documentElement;
+      htmlEl.classList.toggle('is-locked');
 
       if (blocker) {
         blocker.classList.toggle('blocker_opened');
+      }
+    });
+  }
+
+  if (menuCloseMobile) {
+    menuCloseMobile.addEventListener('click', () => {
+      menu.classList.remove('menu_opened');
+
+      const htmlEl = document.documentElement;
+      htmlEl.classList.remove('is-locked');
+
+      if (blocker) {
+        blocker.classList.remove('blocker_opened');
       }
     });
   }
@@ -490,6 +504,17 @@ function handleSelect() {
   }
 }
 
+function handleMenuDrop() {
+  const btn = document.querySelector('.menu-drop');
+
+  if (btn) {
+    btn.addEventListener('click', () => {
+      btn.classList.toggle('menu-drop_opened');
+      btn.classList.toggle('menu-drop_closed');
+    });
+  }
+}
+
 // Sliders
 handleHeroSlider();
 initCollectionSlider();
@@ -507,3 +532,4 @@ handleCountInputs();
 handleMenu();
 handleLikeBtns();
 handleSelect();
+handleMenuDrop();

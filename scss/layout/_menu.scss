@@ -13,13 +13,20 @@
 		opacity: 1;
 		pointer-events: auto;
 	}
+	&-drop,
+	&-login {
+		display: none;
+	}
 	&-content {
-		border-bottom: 0.5px solid rgba($dark-700, 0.2);
+		position: relative;
 		display: grid;
 		grid-template-columns: calc(50% - 20px) calc(50% - 20px);
 		grid-gap: 40px;
 		padding-top: 38px;
 		padding-bottom: 50px;
+		& .close-btn {
+			display: none;
+		}
 		&__wrapper {
 			display: grid;
 			grid-template-columns: 2.15fr 2.6fr 2.05fr;
@@ -34,6 +41,10 @@
 	}
 	&-list {
 		&__item {
+			& a {
+				color: $dark-300;
+				letter-spacing: 0.03em;
+			}
 			margin-bottom: 12px;
 			&:last-child {
 				margin-bottom: 0;
@@ -131,5 +142,157 @@
 				height: 1px;
 			}
 		}
+	}
+}
+
+@media screen and (max-width: 1500px) {
+	.menu {
+		&-content {
+			&__wrapper {
+				grid-template-columns: 1fr 1fr;
+				grid-row-gap: 30px;
+			}
+			&__contacts {
+				grid-column: 1 / 3;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.menu {
+		height: 100vh;
+		overflow-y: auto;
+		top: 0;
+		&-poster {
+			display: none;
+		}
+		&-login {
+			display: block;
+			border-bottom: 0.5px solid rgba($dark-700, 0.2);
+			&__btn {
+				display: inline-block;
+				position: relative;
+				width: 100%;
+				letter-spacing: 0.015em;
+				position: relative;
+				@include font(1.6rem, calc(24 / 16));
+				text-align: left;
+				padding: 15px 10px 13px;
+				color: $dark-600;
+			}
+		}
+		&-content {
+			grid-template-columns: 100%;
+			padding-top: 75px;
+			& .close-btn {
+				display: inline-block;
+				position: absolute;
+				width: 20px;
+				height: 20px;
+				top: 26px;
+				left: 0;
+			}
+			&__wrapper {
+				border-top: 0.5px solid rgba($dark-700, 0.2);
+				grid-template-columns: 100%;
+				grid-gap: 0;
+			}
+			&__contacts {
+				grid-column: 1 / 2;
+				padding: 0 10px;
+				padding-top: 22px;
+			}
+			&__links {
+				padding: 22px 0;
+				border-bottom: 0.5px solid rgba($dark-700, 0.2);
+			}
+			&__about {
+				& .menu-list {
+					padding-bottom: 22px;
+					border-bottom: 0.5px solid rgba($dark-700, 0.2);
+				}
+			}
+		}
+		&-drop {
+			display: block;
+			position: relative;
+			width: 100%;
+			letter-spacing: 0.015em;
+			position: relative;
+			@include font(1.6rem, calc(24 / 16));
+			text-align: left;
+			padding: 15px 10px 13px;
+			color: $dark-600;
+			&::after {
+				@include after(10px, 12px, 6px);
+				background: icon('drop.svg') no-repeat 50% / cover;
+			}
+			&_closed {
+				& + .menu-list {
+					animation: slideDownMenuDrop 0.3s ease 1 both;
+					display: block;
+				}
+			}
+			&_opened {
+				color: $dark-300;
+				&::after {
+					transform: translateY(-50%) rotate(180deg);
+				}
+				& + .menu-list {
+					animation: slideUpMenuDrop 0.3s ease 1 both;
+					display: block;
+				}
+			}
+		}
+		&-list {
+			&__item {
+				padding: 0 10px;
+				margin-bottom: 10px;
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+		&-login {
+			&__btn {
+				color: $dark-300;
+			}
+		}
+		&-contacts {
+			& .title {
+				margin-bottom: 6px;
+			}
+		}
+	}
+}
+
+@keyframes slideDownMenuDrop {
+	0% {
+		max-height: 180px;
+		overflow-y: auto;
+		display: block;
+		padding-bottom: 24px;
+	}
+	to {
+		max-height: 0;
+		display: none;
+		overflow-y: hidden;
+		padding-bottom: 0;
+	}
+}
+
+@keyframes slideUpMenuDrop {
+	0% {
+		max-height: 0;
+		display: none;
+		overflow-y: hidden;
+		padding-bottom: 0;
+	}
+	to {
+		display: block;
+		max-height: 180px;
+		overflow-y: auto;
+		padding-bottom: 24px;
 	}
 }
