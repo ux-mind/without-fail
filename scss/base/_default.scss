@@ -97,3 +97,17 @@
 		text-decoration: underline;
 	}
 }
+
+.blocker {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	background: rgba($black, 0.15);
+	opacity: 0;
+	transition: opacity 0.3s;
+	&_opened {
+		opacity: 1;
+	}
+}

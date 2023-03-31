@@ -115,6 +115,7 @@
 		display: flex;
 	}
 	&-wrapper {
+		position: relative;
 		padding: 30px 0 28px;
 		@include flex(row, center, space-between);
 	}

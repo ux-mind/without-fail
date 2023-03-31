@@ -430,6 +430,25 @@ function handleCountInputs() {
   }
 }
 
+function handleMenu() {
+  const menu = document.querySelector('#menu');
+  const blocker = document.querySelector('#blocker');
+  const menuBtn = document.querySelector('#catalog-btn');
+
+  if (menuBtn && menu) {
+    menuBtn.addEventListener('click', () => {
+      menu.classList.toggle('menu_opened');
+
+      // const htmlEl = document.documentElement;
+      // htmlEl.classList.toggle('is-locked');
+
+      if (blocker) {
+        blocker.classList.toggle('blocker_opened');
+      }
+    });
+  }
+}
+
 // Sliders
 handleHeroSlider();
 initCollectionSlider();
@@ -444,3 +463,4 @@ handleAsideDropdowns();
 handleProductDropdowns();
 handleProductColors();
 handleCountInputs();
+handleMenu();
