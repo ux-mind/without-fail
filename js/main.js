@@ -381,6 +381,51 @@ function handleProductColors() {
   }
 }
 
+function handleCountInputs() {
+  const countInputs = document.querySelectorAll('.count-input');
+
+  if (countInputs[0]) {
+    countInputs.forEach((input) => {
+      const decrementBtn = input.previousElementSibling;
+      const incrementBtn = input.nextElementSibling;
+
+      if (decrementBtn.matches('button[data-count="decrement"]')) {
+        decrementBtn.addEventListener('click', () => {
+          if (+input.value <= 0) {
+            input.value = 0;
+
+            return;
+          }
+
+          input.value = +input.value - 1;
+
+          const changeEvent = new Event('change');
+          input.dispatchEvent(changeEvent);
+        });
+      }
+
+      if (incrementBtn.matches('button[data-count="increment"]')) {
+        incrementBtn.addEventListener('click', () => {
+          input.value = +input.value + 1;
+
+          const changeEvent = new Event('change');
+          input.dispatchEvent(changeEvent);
+        });
+      }
+
+      input.addEventListener('change', () => {
+        let value = +input.value;
+
+        if (value <= 0) {
+          value = 0;
+        }
+
+        input.value = value;
+      });
+    });
+  }
+}
+
 // Sliders
 handleHeroSlider();
 initCollectionSlider();
@@ -394,4 +439,4 @@ handleTransparentHeader();
 handleAsideDropdowns();
 handleProductDropdowns();
 handleProductColors();
-// handleProductVideos();
+handleCountInputs();
