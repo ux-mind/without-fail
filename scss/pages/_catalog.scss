@@ -7,6 +7,22 @@
 			grid-gap: 130px;
 		}
 	}
+	&-swiper {
+		position: relative;
+		& .tabs-wrapper {
+			@include flex();
+			position: absolute;
+			width: 100%;
+			height: 100%;
+		}
+		& .tab {
+			// pointer-events: none;
+			height: 100%;
+			flex: 1;
+			flex-grow: 1;
+			z-index: 2;
+		}
+	}
 	&-aside {
 		&__title {
 			@include font(2.6rem, calc(32 / 26));

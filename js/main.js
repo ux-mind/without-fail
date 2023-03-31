@@ -21,6 +21,47 @@ function initCatalogSlider() {
       el: '.catalog-swiper .swiper-pagination',
     },
   });
+
+  const tabsWrapperElements = document.querySelectorAll(
+    '.catalog-swiper .tabs-wrapper'
+  );
+
+  if (tabsWrapperElements[0]) {
+    const slidesCount = swiper.slides.length;
+
+    tabsWrapperElements.forEach((el) => {
+      for (let i = 0; i < slidesCount; i++) {
+        const tab = document.createElement('div');
+        tab.classList.add('tab');
+
+        el.append(tab);
+      }
+    });
+  }
+
+  function handleSlides(swiper) {
+    const swiperElements = document.querySelectorAll('.catalog-swiper');
+
+    if (swiperElements[0]) {
+      swiperElements.forEach((el) => {
+        const tabs = el.querySelectorAll('.tab');
+
+        if (tabs[0]) {
+          tabs.forEach((tab, idx) => {
+            tab.addEventListener('mouseover', () => {
+              swiper.slideTo(idx);
+
+              console.log(idx);
+            });
+          });
+        }
+      });
+    }
+  }
+
+  window.addEventListener('load', () => {
+    handleSlides(swiper);
+  });
 }
 
 // Recommendations swiper
