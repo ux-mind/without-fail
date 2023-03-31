@@ -14,12 +14,21 @@
 		&__wrapper {
 			border-bottom: 0.5px solid rgba($dark-700, 0.5);
 		}
+		&_preload {
+			& + .drop-wrapper {
+				display: none;
+			}
+			& + .price-drop-wrapper {
+				display: none;
+			}
+		}
 		&_opened {
 			&::before {
 				transform: translateY(-50%) rotate(180deg);
 			}
 			& + .drop-wrapper {
 				animation: slideUpAccordionDesktop 0.3s ease 1 both;
+				display: block;
 			}
 			& + .price-drop-wrapper {
 				animation: priceUpAccordionDesktop 0.3s ease 1 both;

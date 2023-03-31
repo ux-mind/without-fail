@@ -1936,11 +1936,18 @@ a:hover, a:active {
 .aside-btn__wrapper {
   border-bottom: 0.5px solid rgba(119, 119, 119, 0.5);
 }
+.aside-btn_preload + .drop-wrapper {
+  display: none;
+}
+.aside-btn_preload + .price-drop-wrapper {
+  display: none;
+}
 .aside-btn_opened::before {
   transform: translateY(-50%) rotate(180deg);
 }
 .aside-btn_opened + .drop-wrapper {
   animation: slideUpAccordionDesktop 0.3s ease 1 both;
+  display: block;
 }
 .aside-btn_opened + .price-drop-wrapper {
   animation: priceUpAccordionDesktop 0.3s ease 1 both;

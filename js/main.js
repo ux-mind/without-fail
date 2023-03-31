@@ -345,6 +345,10 @@ function handleAsideDropdowns() {
   if (btns[0]) {
     btns.forEach((btn) => {
       btn.addEventListener('click', (evt) => {
+        if (evt.target.classList.contains('aside-btn_preload')) {
+          evt.target.classList.remove('aside-btn_preload');
+        }
+
         evt.target.classList.toggle('aside-btn_opened');
         evt.target.classList.toggle('aside-btn_closed');
       });
