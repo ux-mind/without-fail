@@ -2,12 +2,20 @@
 	margin-bottom: 60px;
 	&-wrapper {
 		display: grid;
-		grid-template-columns: 1fr 1fr;
+		grid-template-columns: calc(50% - 20px) calc(50% - 20px);
 		grid-gap: 40px;
 	}
 	&__poster {
 		& img {
 			border-radius: 2px;
+		}
+	}
+	&-swiper {
+		& .swiper-slide:not(:first-child) {
+			display: none;
+		}
+		& .swiper-pagination {
+			display: none;
 		}
 	}
 	&-content {
@@ -26,6 +34,78 @@
 		&__text {
 			margin-bottom: 31px;
 			color: $dark-600;
+		}
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.exclusive {
+		margin-bottom: 40px;
+		&-wrapper {
+			grid-template-columns: 100%;
+			grid-gap: 30px;
+		}
+		&-content {
+			&__img {
+				display: none;
+			}
+			&__content {
+				& .title {
+					font-size: 2.6rem;
+					text-transform: uppercase;
+					margin-bottom: 6px;
+				}
+			}
+			&__text {
+				margin-bottom: 26px;
+				& p {
+					@include font(1.4rem, calc(20 / 14));
+				}
+			}
+		}
+		&-swiper {
+			border-radius: 2px;
+			overflow: hidden;
+			& .swiper-slide,
+			& .swiper-slide:not(:first-child) {
+				display: block;
+				height: auto;
+				& img {
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+				}
+			}
+			& .swiper-pagination {
+				@include flex(row, center, center);
+				bottom: 15px;
+				& .swiper-pagination-bullet {
+					display: inline-block;
+					width: 32px;
+					height: 2.5px;
+					background: rgba(255, 255, 255, 0.3);
+					border-radius: 1px;
+					opacity: 1;
+					position: relative;
+					overflow: hidden;
+					&-active {
+						background: $white;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.exclusive {
+		&-content {
+			&__content {
+				max-width: none;
+				& .btn {
+					width: 100%;
+				}
+			}
 		}
 	}
 }

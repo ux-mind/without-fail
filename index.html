@@ -354,13 +354,13 @@
 			<div class="container">
 				<div class="collection-wrapper">
 					<div class="collection-info">
-						<h3 class="title title_size-m collection-info__title">Spring-Summer ‘23</h3>
+						<h3 class="title title_size-m collection-info__title"><span>Spring-</span>Summer ‘23</h3>
 						<div class="collection-info__text">
 							<p>WITHOUT FAIL - новый российский бренд одежды, основанный в 2023 году.</p>
 							<p>Мы создаем яркую и качественную одежду в формате «play, work, dinner».</p>
 							<p>Наша одежда - беспроигрышный вариант для любого случая жизни.</p>
 						</div>
-						<a href="catalog.html" class="btn btn-primary collection-info__btn">В каталог</a>
+						<a href="catalog.html" class="btn btn-primary collection-info__btn btn_desktop">В каталог</a>
 					</div>
 					<div class="swiper collection-swiper">
 						<div class="swiper-wrapper">
@@ -422,6 +422,9 @@
 							</svg>
 						</button>
 					</div>
+					<div class="collection-info__btn-wrapper">
+						<a href="catalog.html" class="btn btn-primary collection-info__btn btn_mobile">В каталог</a>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -429,9 +432,20 @@
 			<div class="container">
 				<div class="exclusive-wrapper">
 					<div class="exclusive__poster">
-						<img src="./assets/images/exclusive-poster.jpg"
-							srcset="./assets/images/exclusive-poster.jpg 1x, ./assets/images/exclusive-poster@2x.jpg 2x"
-							alt="exclusive-poster">
+						<div class="swiper exclusive-swiper">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<img src="./assets/images/exclusive-poster.jpg"
+										srcset="./assets/images/exclusive-poster.jpg 1x, ./assets/images/exclusive-poster@2x.jpg 2x"
+										alt="exclusive-poster">
+								</div>
+								<div class="swiper-slide">
+									<img src="./assets/images/exclusive.jpg"
+										srcset="./assets/images/exclusive.jpg 1x, ./assets/images/exclusive@2x.jpg 2x" alt="exclusive">
+								</div>
+							</div>
+							<div class="swiper-pagination"></div>
+						</div>
 					</div>
 					<div class="exclusive-content">
 						<div class="exclusive-content__img">

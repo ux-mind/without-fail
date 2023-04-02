@@ -3,13 +3,19 @@
 // Collection swiper
 function initCollectionSlider() {
   const swiper = new Swiper('.collection-swiper', {
-    slidesPerView: 3,
+    slidesPerView: 'auto',
     spaceBetween: 28,
 
     // Navigation arrows
     navigation: {
       nextEl: '.collection-swiper__next',
       prevEl: '.collection-swiper__prev',
+    },
+
+    breakpoints: {
+      768: {
+        slidesPerView: 3,
+      },
     },
   });
 }
@@ -61,6 +67,15 @@ function initCatalogSlider() {
 
   window.addEventListener('load', () => {
     handleSlides(swiper);
+  });
+}
+
+// Exclusive swiper
+function initExclusiveSlider() {
+  const swiper = new Swiper('.exclusive-swiper', {
+    pagination: {
+      el: '.exclusive-swiper .swiper-pagination',
+    },
   });
 }
 
@@ -481,8 +496,8 @@ function handleMenu() {
     menuBtn.addEventListener('click', () => {
       menu.classList.toggle('menu_opened');
 
-      const htmlEl = document.documentElement;
-      htmlEl.classList.toggle('is-locked');
+      // const htmlEl = document.documentElement;
+      // htmlEl.classList.toggle('is-locked');
 
       if (blocker) {
         blocker.classList.toggle('blocker_opened');
@@ -494,8 +509,8 @@ function handleMenu() {
     menuCloseMobile.addEventListener('click', () => {
       menu.classList.remove('menu_opened');
 
-      const htmlEl = document.documentElement;
-      htmlEl.classList.remove('is-locked');
+      // const htmlEl = document.documentElement;
+      // htmlEl.classList.remove('is-locked');
 
       if (blocker) {
         blocker.classList.remove('blocker_opened');
@@ -556,12 +571,33 @@ function handleMenuDrop() {
   }
 }
 
+function handleFixedMenuHover() {
+  const header = document.querySelector('.header_fixed');
+
+  if (header) {
+    const menu = document.querySelector('#menu');
+
+    document.addEventListener('mousemove', () => {
+      const menuOpened = menu.classList.contains('menu_opened');
+      const scroll =
+        document.documentElement.scrollTop || document.body.scrollTop;
+
+      if (menu.classList.contains('menu_opened') && menuOpened) {
+        header.classList.add('header_fixed_scrolled');
+      } else if (!menuOpened && !scroll) {
+        header.classList.remove('header_fixed_scrolled');
+      }
+    });
+  }
+}
+
 // Sliders
 handleHeroSlider();
 initCollectionSlider();
 initCatalogSlider();
 handleProductSlider();
 initRecommendationsSlider();
+initExclusiveSlider();
 
 // Help functions
 handleAccordions();
@@ -574,3 +610,4 @@ handleMenu();
 handleLikeBtns();
 handleSelect();
 handleMenuDrop();
+handleFixedMenuHover();

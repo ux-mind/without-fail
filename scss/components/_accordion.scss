@@ -11,8 +11,6 @@
 	&__item {
 		flex: 1;
 		position: relative;
-		// transition: flex 1s cubic-bezier(0.29, 0, 0.2, 1);
-		// -webkit-transition: flex 1s cubic-bezier(0.29, 0, 0.2, 1);
 		transition: flex 1s ease;
 		-webkit-transition: flex 1s ease;
 		will-change: flex;
@@ -34,6 +32,21 @@
 		}
 		&_big {
 			flex: 2;
+		}
+	}
+}
+
+@media screen and (max-width: 1200px) {
+	.accordion {
+		height: 400px;
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.accordion {
+		flex-direction: column;
+		height: auto;
+		&__item {
 		}
 	}
 }
