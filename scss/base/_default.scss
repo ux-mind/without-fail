@@ -60,6 +60,24 @@
 	}
 }
 
+@media screen and (max-width: 767px) {
+	.show-more {
+		display: none;
+	}
+}
+
+.mobile-loader {
+	display: grid;
+	place-items: center;
+	display: none;
+}
+
+@media screen and (max-width: 767px) {
+	.mobile-loader {
+		display: grid;
+	}
+}
+
 .size-select {
 	@include font(1.6rem, 1);
 	letter-spacing: 0.015em;
