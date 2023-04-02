@@ -2226,6 +2226,16 @@ a:hover, a:active {
   padding-top: 16px;
 }
 
+@media screen and (max-width: 991px) {
+  .cart-content {
+    padding-top: 10px;
+  }
+  .cart-page__wrapper {
+    padding-top: 17px;
+    grid-template-columns: 100%;
+    padding-bottom: 50px;
+  }
+}
 .text-page__wrapper {
   padding-bottom: 75px;
   max-width: 1030px;
@@ -3271,7 +3281,7 @@ a:hover, a:active {
 .order-list__item {
   margin-bottom: 40px;
   display: grid;
-  grid-template-columns: 3.56fr 1.54fr 1.06fr 1.63fr 90px 18px;
+  grid-template-columns: 1.26fr 2.3fr 1.54fr 1.06fr 1.63fr 90px 18px;
 }
 .order-list__item:last-child {
   margin-bottom: 0;
@@ -3290,7 +3300,15 @@ a:hover, a:active {
   flex-shrink: 0;
   margin-right: 40px;
 }
+.order-list__product-img img {
+  border-radius: 2px;
+}
 .order-list__product-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
   padding-right: 30px;
 }
 .order-list__product-info p {
@@ -3337,6 +3355,9 @@ a:hover, a:active {
   align-items: center;
   flex-wrap: nowrap;
   position: relative;
+}
+.order-list__product-count.mobile {
+  display: none;
 }
 .order-list__product-count .count-input__wrapper {
   max-width: 80px;
@@ -3616,6 +3637,127 @@ a:hover, a:active {
   padding: 1.15em 1em 1.05em;
 }
 
+@media screen and (max-width: 991px) {
+  .order-form {
+    grid-gap: 30px;
+  }
+  .order-form-row__header {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-gap: 10px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .order-details__title {
+    font-size: 1.6rem;
+    line-height: 1.5;
+    letter-spacing: 0.015em;
+    margin-bottom: 10px;
+  }
+  .order-list {
+    padding-bottom: 40px;
+  }
+  .order-list__item {
+    grid-template-columns: 1.18fr 2fr;
+    grid-row-gap: 14px;
+    position: relative;
+    margin-bottom: 30px;
+  }
+  .order-list__item:last-child {
+    margin-bottom: 0;
+  }
+  .order-list__product {
+    grid-row: 1/6;
+  }
+  .order-list__product-count.desktop {
+    display: none;
+  }
+  .order-list__product-count.mobile {
+    display: block;
+  }
+  .order-list__product-remove {
+    position: absolute;
+    right: 3px;
+    top: 4px;
+  }
+  .order-list__product-info {
+    padding-top: 4px;
+  }
+  .order-list__product-img {
+    flex-grow: 0;
+    max-width: 100%;
+    margin: 0;
+    padding-right: 17px;
+  }
+  .order-list__product-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .order-list__product-size {
+    gap: 13px;
+  }
+  .order-form {
+    display: grid;
+    grid-template-columns: 100%;
+  }
+  .order-form-row {
+    width: 100%;
+    max-width: none;
+  }
+  .order-form-row__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin-bottom: 20px;
+  }
+  .order-form-row__title {
+    font-size: 1.6rem;
+    line-height: 1.5;
+  }
+  .order-form__label {
+    margin-bottom: 18px;
+  }
+  .order-form__label:last-child {
+    margin-bottom: 0;
+  }
+  .order-form__label span {
+    font-size: 1.4rem;
+    line-height: 1.4285714286;
+    letter-spacing: 0.015em;
+  }
+  .order-delivery__label {
+    margin-bottom: 11px;
+  }
+  .order-delivery__label:last-child {
+    margin-bottom: 0;
+  }
+  .order-delivery__info {
+    transform: translateY(1px);
+  }
+  .order-delivery__info .method, .order-delivery__info .price {
+    font-size: 1.4rem;
+    line-height: 1.4285714286;
+  }
+  .order-delivery__submit .btn {
+    font-size: 1.6rem;
+    line-height: 1.5;
+    letter-spacing: 0.05em;
+  }
+}
+@media screen and (max-width: 576px) {
+  .order-list__product {
+    grid-row: 1/5;
+  }
+  .order-list__product-info {
+    padding-top: 0;
+  }
+  .order-form {
+    padding-top: 40px;
+  }
+}
 .promocode {
   display: flex;
   flex-direction: row;
@@ -3636,6 +3778,12 @@ a:hover, a:active {
 .promocode-btn:hover {
   background: #333;
   color: #fff;
+}
+
+@media screen and (max-width: 767px) {
+  .promocode {
+    margin-bottom: 24px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
