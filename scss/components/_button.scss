@@ -36,7 +36,8 @@
 
 @media screen and (max-width: 768px) {
 	.btn {
-		&-transparent {
-		}
+		@include font(1.4rem, 1);
+		padding: 1.68em 2em 1.62em;
+		letter-spacing: 0.05em;
 	}
 }

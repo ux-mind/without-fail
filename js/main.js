@@ -142,10 +142,19 @@ function handleProductVideos(swiper) {
 // Product swiper
 function handleProductSlider() {
   const swiper = new Swiper('.product-swiper', {
-    allowTouchMove: false,
+    allowTouchMove: true,
     navigation: {
       prevEl: '.product-swiper__prev',
       nextEl: '.product-swiper__next',
+    },
+    pagination: {
+      el: '.product-swiper .swiper-pagination',
+    },
+
+    breakpoints: {
+      577: {
+        allowTouchMove: false,
+      },
     },
   });
 

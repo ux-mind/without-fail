@@ -263,6 +263,7 @@
 				border: 1.5px solid $dark-600;
 				border-radius: 2px;
 				padding: 0.5625em 0.875em 0.4375em;
+				@include font(1.6rem, calc(24 / 16));
 				& .mobile {
 					display: inline;
 				}

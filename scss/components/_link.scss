@@ -27,3 +27,11 @@
 		}
 	}
 }
+
+@media screen and (max-width: 767px) {
+	.link {
+		&-underline {
+			@include font(1.4rem, calc(24 / 14));
+		}
+	}
+}

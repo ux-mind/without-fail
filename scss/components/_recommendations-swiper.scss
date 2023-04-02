@@ -45,3 +45,14 @@
 		}
 	}
 }
+
+@media screen and (max-width: 767px) {
+	.recommendations {
+		&-swiper {
+			&__prev,
+			&__next {
+				display: none;
+			}
+		}
+	}
+}

@@ -12,6 +12,9 @@
 		max-height: 690px;
 		position: relative;
 		margin: 0;
+		& .swiper-pagination {
+			display: none;
+		}
 		&__wrapper {
 			@include flex(row, stretch, center);
 		}
@@ -222,6 +225,9 @@
 				place-items: center;
 				width: 60px;
 				height: 60px;
+				& span {
+					display: none;
+				}
 				&:hover {
 					background: transparent;
 					& svg path {
@@ -339,6 +345,190 @@
 			letter-spacing: 0.02em;
 			font-weight: 600;
 			color: $dark-200;
+		}
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.product {
+		&-swiper {
+			max-width: 455px;
+			&-thumbs {
+				display: none;
+			}
+		}
+		&-container {
+			&__wrapper {
+				grid-template-columns: 100%;
+			}
+		}
+		&-content {
+			max-width: 455px;
+			margin: 0 auto;
+		}
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.product {
+		&-container {
+			&__wrapper {
+				padding-bottom: 40px;
+			}
+		}
+		&-recommendations {
+			padding-bottom: 45px;
+			& .container {
+				width: 100%;
+				max-width: calc(100% - ((100% - 528px) / 2));
+				margin-right: 0;
+			}
+		}
+		&-content {
+			&__btns {
+				display: grid;
+				grid-template-columns: 100%;
+				grid-gap: 16px;
+				& .cart-btn {
+					padding: 1.68em 2em 1.62em;
+				}
+				& .like-btn {
+					@include flex(row, center, center);
+					@include font(1.4rem, 1);
+					letter-spacing: 0.05em;
+					width: 100%;
+					padding: 1.7em 2em 1.6em;
+					color: $dark-300;
+					position: relative;
+					border: 1.5px solid $dark-300 !important;
+					& .standard-text {
+						display: inline-block;
+					}
+					& svg {
+						position: absolute;
+						top: 50%;
+						left: 18px;
+						transform: translateY(-50%);
+					}
+					&_active {
+						& .standard-text {
+							display: none;
+						}
+						& .active-text {
+							display: inline-block;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.product {
+		&-content {
+			&__title {
+				@include font(1.8rem, calc(22 / 18));
+				letter-spacing: 0.03em;
+				margin-bottom: 6px;
+			}
+			&__subtitle {
+				& p {
+					letter-spacing: 0.015em;
+					@include font(1.4rem, calc(24 / 14));
+				}
+			}
+			&__article {
+				& p {
+					letter-spacing: 0.015em;
+					@include font(1.4rem, calc(24 / 14));
+				}
+			}
+			&__size {
+				&-select {
+					width: 100%;
+					& .select {
+						width: 100%;
+						min-width: auto;
+					}
+				}
+			}
+			&__description {
+				&-title {
+					margin-bottom: 6px;
+				}
+			}
+			&__guide {
+				margin-bottom: 10px;
+			}
+			&__price {
+				margin: 0;
+			}
+		}
+		&-container {
+			&__wrapper {
+				grid-gap: 24px;
+			}
+		}
+		&-swiper {
+			& .swiper-pagination {
+				@include flex(row, center, center);
+				bottom: 10px;
+				&-bullet {
+					margin: 0;
+					width: 4px;
+					height: 4px;
+					background: $white;
+					border-radius: 50%;
+					margin: 0 !important;
+					&:not(:last-child) {
+						margin-right: 6px !important;
+					}
+					&-active {
+						width: 12px;
+						border-radius: 19px;
+					}
+				}
+			}
+		}
+		&-colors {
+			margin: 0;
+			margin-left: 25px;
+			transform: translateY(-2px);
+			&__wrapper {
+				margin: 0;
+				& .color-btn {
+					width: 18px;
+					height: 18px;
+					&::before {
+						width: 22px;
+						height: 22px;
+					}
+				}
+			}
+			&__color {
+				&-value {
+					display: none;
+				}
+			}
+		}
+		&-price {
+			&__wrapper {
+				@include flex(row, center);
+				margin-bottom: 25px;
+			}
+		}
+		&-recommendations {
+			&__title {
+				max-width: 250px;
+				margin-bottom: 18px;
+			}
+			& .container {
+				width: 100%;
+				max-width: none;
+				padding-left: 20px;
+				margin-right: 0;
+			}
 		}
 	}
 }
