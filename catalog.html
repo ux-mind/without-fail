@@ -475,6 +475,25 @@
 								</div>
 							</div>
 						</div>
+						<button id="filter-mobile-btn" class="catalog-aside__m-btn">
+							<svg id="Component_1_1" data-name="Component 1 – 1" xmlns="http://www.w3.org/2000/svg" width="27"
+								height="16.5" viewBox="0 0 27 16.5">
+								<rect id="Rectangle_90" data-name="Rectangle 90" width="27" height="1.5" transform="translate(0 3)"
+									fill="#222" />
+								<g id="Ellipse_30" data-name="Ellipse 30" transform="translate(14.978)" fill="#fff" stroke="#222"
+									stroke-width="1.5">
+									<circle cx="3.75" cy="3.75" r="3.75" stroke="none" />
+									<circle cx="3.75" cy="3.75" r="3" fill="none" />
+								</g>
+								<rect id="Rectangle_91" data-name="Rectangle 91" width="27" height="1.5" transform="translate(0 12)"
+									fill="#222" />
+								<g id="Ellipse_31" data-name="Ellipse 31" transform="translate(4.5 9)" fill="#fff" stroke="#222"
+									stroke-width="1.5">
+									<circle cx="3.75" cy="3.75" r="3.75" stroke="none" />
+									<circle cx="3.75" cy="3.75" r="3" fill="none" />
+								</g>
+							</svg>
+						</button>
 					</aside>
 					<div class="catalog-content__wrapper">
 						<div class="catalog-content">
@@ -864,6 +883,52 @@
 		</div>
 	</footer>
 	<div id="blocker" class="blocker"></div>
+	<div id="filter-modal-mobile" class="filter-modal">
+		<form class="filter-form">
+			<div class="filter-form__main">
+				<div class="container">
+					<div class="filter-modal__header">
+						<h3 class="title title_size-s filter-modal__title">Сортировать по</h3>
+						<button type="button" class="close" aria-label="close">
+							<svg xmlns="http://www.w3.org/2000/svg" width="11.435" height="11.314" viewBox="0 0 11.435 11.314">
+								<g id="Group_137" data-name="Group 137" transform="translate(-1167.919 -282.419)">
+									<line id="Line_15" data-name="Line 15" y2="15" transform="translate(1168.272 282.772) rotate(-45)"
+										fill="none" stroke="#b4b3b3" stroke-width="1" />
+									<line id="Line_16" data-name="Line 16" y2="15" transform="translate(1179 282.772) rotate(45)"
+										fill="none" stroke="#b4b3b3" stroke-width="1" />
+								</g>
+							</svg>
+						</button>
+					</div>
+					<div class="filter-modal__block">
+						<label class="filter-modal__label">
+							<input type="radio" name="sort" value="price-down" checked>
+							<div class="radio"></div>
+							<p>По убыванию цены</p>
+						</label>
+						<label class="filter-modal__label">
+							<input type="radio" name="sort" value="price-up">
+							<div class="radio"></div>
+							<p>По возрастанию цены</p>
+						</label>
+						<label class="filter-modal__label">
+							<input type="radio" name="sort" value="new">
+							<div class="radio"></div>
+							<p>Новинки</p>
+						</label>
+					</div>
+					<div class="filter-additional">
+						<button type="button" data-id="filter-size" class="filter-additional__btn">Размер одежды</button>
+						<button type="button" data-id="filter-colors" class="filter-additional__btn">Цвета</button>
+						<button type="button" data-id="filter-price" class="filter-additional__btn">Цена</button>
+					</div>
+					<div class="filter-btn-block">
+						<button type="submit" class="btn btn-primary filter-btn-block__show">Показать</button>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
 	<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 	<script src="js/main.js" defer></script>
 </body>

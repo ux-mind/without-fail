@@ -70,11 +70,28 @@
 	display: grid;
 	place-items: center;
 	display: none;
+	&__wrapper {
+		display: flex;
+		animation: rotation 1.5s linear infinite;
+	}
 }
 
 @media screen and (max-width: 767px) {
 	.mobile-loader {
 		display: grid;
+	}
+
+	.new-item {
+		font-size: 1.4rem !important;
+	}
+}
+
+@keyframes rotation {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
 	}
 }
 
@@ -129,5 +146,11 @@
 	&_opened {
 		opacity: 1;
 		pointer-events: auto;
+	}
+}
+
+@media screen and(max-width: 991px) {
+	.blocker {
+		z-index: 20;
 	}
 }

@@ -259,6 +259,9 @@
 			&__img {
 				height: auto;
 				min-height: 250px;
+				& .like-btn {
+					display: flex;
+				}
 			}
 		}
 		&-swiper {
@@ -271,6 +274,12 @@
 
 @media screen and (max-width: 576px) {
 	.catalog {
+		&-aside {
+			&__title {
+				font-size: 1.8rem;
+				letter-spacing: 0.03em;
+			}
+		}
 		&-article {
 			&__img {
 				margin-bottom: 14px;

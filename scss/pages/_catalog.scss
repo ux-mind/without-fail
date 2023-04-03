@@ -60,6 +60,11 @@
 				}
 			}
 		}
+		&__m-btn {
+			width: 30px;
+			height: 18px;
+			display: none;
+		}
 	}
 }
 
@@ -91,6 +96,13 @@
 				display: grid;
 				grid-template-columns: 100%;
 				grid-gap: 24px;
+			}
+		}
+		&-aside {
+			@include flex(row, center, space-between);
+			&__m-btn {
+				display: grid;
+				place-items: center;
 			}
 		}
 	}

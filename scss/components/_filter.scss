@@ -1,0 +1,131 @@
+.filter {
+	&-form {
+		position: relative;
+		width: 100%;
+		height: inherit;
+		&__main {
+			position: relative;
+		}
+	}
+	&-modal {
+		display: none;
+		max-height: 100vh;
+		min-height: 85.31vh;
+		position: fixed;
+		z-index: 25;
+		bottom: 0;
+		left: 0;
+		background: $white;
+		width: 100%;
+		//
+		// border-top: 2px solid $black;
+		opacity: 0;
+		pointer-events: none;
+		transform: translateY(100%);
+		transition: opacity 0.2s ease, transform 0.2s ease;
+		&_opened {
+			opacity: 1;
+			pointer-events: auto;
+			transform: none;
+		}
+		&__header {
+			@include flex(row, center);
+			padding-top: 16px;
+			margin-bottom: 24px;
+			& .close {
+				min-height: 20px;
+				min-width: 20px;
+				margin-left: auto;
+				display: grid;
+				place-items: center;
+				& svg {
+					width: 12px;
+					height: 12px;
+				}
+			}
+		}
+		&__title {
+			@include font(1.6rem, calc(20 / 16));
+			font-weight: 600;
+			color: $dark-300;
+			letter-spacing: 0.015em;
+		}
+		&__label {
+			width: 100%;
+			@include flex(row, center);
+			margin-bottom: 22px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+			& p {
+				color: $dark-600;
+				letter-spacing: 0.015em;
+				@include font(1.6rem, calc(20 / 16));
+				transform: translateY(1px);
+			}
+			& .radio {
+				width: 22px;
+				height: 22px;
+				margin-right: 9px;
+			}
+			& input[type='radio'] {
+				display: none;
+				&:checked + .radio {
+					background: $dark-600;
+					&::before {
+						content: '';
+						position: absolute;
+						top: 4px;
+						left: 50%;
+						width: 7px;
+						height: 10px;
+						border-bottom: 1px solid #fff;
+						border-right: 1px solid #fff;
+						transform: translateX(-50%) rotate(45deg);
+					}
+				}
+			}
+		}
+		&__block {
+			padding-bottom: 30px;
+			border-bottom: 0.5px solid rgba($dark-770, 0.5);
+		}
+	}
+	&-additional {
+		@include flex(column);
+		padding: 20px 0;
+		border-bottom: 0.5px solid rgba($dark-770, 0.5);
+		&__btn {
+			width: 100%;
+			text-align: left;
+			@include font(1.6rem, 1);
+			color: $dark-600;
+			letter-spacing: 0.015em;
+			padding: 0.9375em 0;
+			position: relative;
+			&::after {
+				@include after(0px, 14px, 7px);
+				background: icon('drop-light.svg') no-repeat 50% / cover;
+				transform: translateY(-50%) rotate(-90deg);
+			}
+		}
+	}
+	&-btn {
+		&-block {
+			margin-top: 50px;
+			& .btn {
+				width: 100%;
+				@include font(1.6rem, calc(24 / 16));
+				padding: 0.9375em 2em;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.filter {
+		&-modal {
+			display: flex;
+		}
+	}
+}

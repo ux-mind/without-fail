@@ -600,6 +600,38 @@ function handleFixedMenuHover() {
   }
 }
 
+function handleFilterModalMobile() {
+  const btn = document.querySelector('#filter-mobile-btn');
+  const modal = document.querySelector('#filter-modal-mobile');
+  const blocker = document.querySelector('#blocker');
+
+  if (modal && btn) {
+    const closeBtn = modal.querySelector('.close');
+
+    btn.addEventListener('click', () => {
+      modal.classList.add('filter-modal_opened');
+
+      document.documentElement.classList.add('is-locked');
+
+      if (blocker) {
+        blocker.classList.add('blocker_opened');
+      }
+    });
+
+    if (closeBtn) {
+      closeBtn.addEventListener('click', () => {
+        modal.classList.remove('filter-modal_opened');
+
+        document.documentElement.classList.remove('is-locked');
+
+        if (blocker) {
+          blocker.classList.remove('blocker_opened');
+        }
+      });
+    }
+  }
+}
+
 // Sliders
 handleHeroSlider();
 initCollectionSlider();
@@ -620,3 +652,4 @@ handleLikeBtns();
 handleSelect();
 handleMenuDrop();
 handleFixedMenuHover();
+handleFilterModalMobile();
