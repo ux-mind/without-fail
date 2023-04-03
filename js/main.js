@@ -604,6 +604,7 @@ function handleFilterModals(blocker, modal) {
   const additionalBtns = document.querySelectorAll('.filter-additional__btn');
   const backBtns = document.querySelectorAll('.filter-modal__back');
   const showBtns = document.querySelectorAll('.filter-btn-block__show');
+  const resetBtns = document.querySelectorAll('.filter-btn-block__reset');
 
   if (additionalBtns[0]) {
     additionalBtns.forEach((btn) => {
@@ -618,7 +619,7 @@ function handleFilterModals(blocker, modal) {
     });
   }
 
-  if (backBtns[0]) {
+  if (backBtns.length) {
     backBtns.forEach((btn) => {
       btn.addEventListener('click', (evt) => {
         const modal = evt.target.closest('.filter-form__additional');
@@ -651,6 +652,33 @@ function handleFilterModals(blocker, modal) {
 
         if (blocker) {
           blocker.classList.remove('blocker_opened');
+        }
+      });
+    });
+  }
+
+  if (resetBtns.length) {
+    resetBtns.forEach((btn) => {
+      const mainModal = document.querySelector('#filter-main');
+      const checkboxes = modal.querySelectorAll('input[type="checkbox"]');
+      const filterModal = document.querySelector('#filter-price');
+      const priceInputs = filterModal.querySelectorAll('input[type="number"]');
+
+      btn.addEventListener('click', () => {
+        if (mainModal) {
+          const defaultInput = mainModal.querySelector(
+            'input[value="price-down"]'
+          );
+
+          defaultInput.checked = true;
+        }
+
+        if (checkboxes.length) {
+          checkboxes.forEach((checkbox) => (checkbox.checked = false));
+        }
+
+        if (priceInputs.length) {
+          priceInputs.forEach((input) => (input.value = ''));
         }
       });
     });

@@ -4122,7 +4122,7 @@ a:hover, a:active {
   line-height: 1.5;
   padding: 0.9375em 2em;
 }
-.filter-btn-block__hide {
+.filter-btn-block__reset {
   width: 100%;
   font-size: 1.6rem;
   line-height: 1.5;

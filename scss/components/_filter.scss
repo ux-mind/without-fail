@@ -139,7 +139,7 @@
 				@include font(1.6rem, calc(24 / 16));
 				padding: 0.9375em 2em;
 			}
-			&__hide {
+			&__reset {
 				width: 100%;
 				@include font(1.6rem, calc(24 / 16));
 				color: $dark-600;
