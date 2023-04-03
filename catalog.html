@@ -883,9 +883,10 @@
 		</div>
 	</footer>
 	<div id="blocker" class="blocker"></div>
+	<div id="blocker-strong" class="blocker blocker_strong"></div>
 	<div id="filter-modal-mobile" class="filter-modal">
 		<form class="filter-form">
-			<div class="filter-form__main">
+			<div id="filter-main" class="filter-form__main">
 				<div class="container">
 					<div class="filter-modal__header">
 						<h3 class="title title_size-s filter-modal__title">Сортировать по</h3>
@@ -919,11 +920,193 @@
 					</div>
 					<div class="filter-additional">
 						<button type="button" data-id="filter-size" class="filter-additional__btn">Размер одежды</button>
-						<button type="button" data-id="filter-colors" class="filter-additional__btn">Цвета</button>
+						<button type="button" data-id="filter-color" class="filter-additional__btn">Цвета</button>
 						<button type="button" data-id="filter-price" class="filter-additional__btn">Цена</button>
 					</div>
 					<div class="filter-btn-block">
 						<button type="submit" class="btn btn-primary filter-btn-block__show">Показать</button>
+					</div>
+				</div>
+			</div>
+			<div id="filter-size" class="filter-form__additional">
+				<div class="container">
+					<div class="filter-modal__header">
+						<button type="button" class="filter-modal__back">
+							<svg xmlns="http://www.w3.org/2000/svg" width="8.066" height="15.107" viewBox="0 0 8.066 15.107">
+								<path id="path116" d="M0,13.693,6.859,6.846,0,0" transform="translate(7.359 14.4) rotate(180)"
+									fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="79.84"
+									stroke-width="1" fill-rule="evenodd" />
+							</svg>
+						</button>
+						<h3 class="title title_size-s filter-modal__title">Размер одежды</h3>
+						<button type="button" class="close" aria-label="close">
+							<svg xmlns="http://www.w3.org/2000/svg" width="11.435" height="11.314" viewBox="0 0 11.435 11.314">
+								<g id="Group_137" data-name="Group 137" transform="translate(-1167.919 -282.419)">
+									<line id="Line_15" data-name="Line 15" y2="15" transform="translate(1168.272 282.772) rotate(-45)"
+										fill="none" stroke="#b4b3b3" stroke-width="1" />
+									<line id="Line_16" data-name="Line 16" y2="15" transform="translate(1179 282.772) rotate(45)"
+										fill="none" stroke="#b4b3b3" stroke-width="1" />
+								</g>
+							</svg>
+						</button>
+					</div>
+					<ul class="filter-size">
+						<li class="filter-size__item">
+							<label class="filter-size__label">
+								<input type="checkbox" name="size" value="S">
+								<p class="filter-size__text">
+									S
+								</p>
+							</label>
+						</li>
+						<li class="filter-size__item">
+							<label class="filter-size__label">
+								<input type="checkbox" name="size" value="XS">
+								<p class="filter-size__text">
+									XS
+								</p>
+							</label>
+						</li>
+						<li class="filter-size__item">
+							<label class="filter-size__label">
+								<input type="checkbox" name="size" value="XS-S">
+								<p class="filter-size__text">
+									XS-S
+								</p>
+							</label>
+						</li>
+						<li class="filter-size__item">
+							<label class="filter-size__label">
+								<input type="checkbox" name="size" value="M">
+								<p class="filter-size__text">
+									M
+								</p>
+							</label>
+						</li>
+						<li class="filter-size__item">
+							<label class="filter-size__label">
+								<input type="checkbox" name="size" value="L">
+								<p class="filter-size__text">
+									L
+								</p>
+							</label>
+						</li>
+					</ul>
+					<div class="filter-btn-block">
+						<button type="submit" class="btn btn-primary filter-btn-block__show">Показать</button>
+						<button type="button" class="filter-btn-block__hide">Сбросить</button>
+					</div>
+				</div>
+			</div>
+			<div id="filter-color" class="filter-form__additional">
+				<div class="container">
+					<div class="filter-modal__header">
+						<button type="button" class="filter-modal__back">
+							<svg xmlns="http://www.w3.org/2000/svg" width="8.066" height="15.107" viewBox="0 0 8.066 15.107">
+								<path id="path116" d="M0,13.693,6.859,6.846,0,0" transform="translate(7.359 14.4) rotate(180)"
+									fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="79.84"
+									stroke-width="1" fill-rule="evenodd" />
+							</svg>
+						</button>
+						<h3 class="title title_size-s filter-modal__title">Цвета</h3>
+						<button type="button" class="close" aria-label="close">
+							<svg xmlns="http://www.w3.org/2000/svg" width="11.435" height="11.314" viewBox="0 0 11.435 11.314">
+								<g id="Group_137" data-name="Group 137" transform="translate(-1167.919 -282.419)">
+									<line id="Line_15" data-name="Line 15" y2="15" transform="translate(1168.272 282.772) rotate(-45)"
+										fill="none" stroke="#b4b3b3" stroke-width="1" />
+									<line id="Line_16" data-name="Line 16" y2="15" transform="translate(1179 282.772) rotate(45)"
+										fill="none" stroke="#b4b3b3" stroke-width="1" />
+								</g>
+							</svg>
+						</button>
+					</div>
+					<ul class="filter-size">
+						<li class="filter-size__item">
+							<label class="filter-size__label">
+								<div class="color" style="background: #000"></div>
+								<input type="checkbox" name="color" value="black">
+								<p class="filter-size__text">
+									Черный
+								</p>
+							</label>
+						</li>
+						<li class="filter-size__item">
+							<label class="filter-size__label">
+								<div class="color" style="background: #F2F2F2"></div>
+								<input type="checkbox" name="color" value="white">
+								<p class="filter-size__text">
+									Белый
+								</p>
+							</label>
+						</li>
+						<li class="filter-size__item">
+							<label class="filter-size__label">
+								<div class="color" style="background: #0D43BC"></div>
+								<input type="checkbox" name="color" value="blue">
+								<p class="filter-size__text">
+									Синий
+								</p>
+							</label>
+						</li>
+						<li class="filter-size__item">
+							<label class="filter-size__label">
+								<div class="color" style="background: #F0D712"></div>
+								<input type="checkbox" name="color" value="yellow">
+								<p class="filter-size__text">
+									Желтый
+								</p>
+							</label>
+						</li>
+						<li class="filter-size__item">
+							<label class="filter-size__label">
+								<div class="color" style="background: #F40646"></div>
+								<input type="checkbox" name="color" value="red">
+								<p class="filter-size__text">
+									Красный
+								</p>
+							</label>
+						</li>
+					</ul>
+					<div class="filter-btn-block">
+						<button type="submit" class="btn btn-primary filter-btn-block__show">Показать</button>
+						<button type="button" class="filter-btn-block__hide">Сбросить</button>
+					</div>
+				</div>
+			</div>
+			<div id="filter-price" class="filter-form__additional">
+				<div class="container">
+					<div class="filter-modal__header">
+						<button type="button" class="filter-modal__back">
+							<svg xmlns="http://www.w3.org/2000/svg" width="8.066" height="15.107" viewBox="0 0 8.066 15.107">
+								<path id="path116" d="M0,13.693,6.859,6.846,0,0" transform="translate(7.359 14.4) rotate(180)"
+									fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="79.84"
+									stroke-width="1" fill-rule="evenodd" />
+							</svg>
+						</button>
+						<h3 class="title title_size-s filter-modal__title">Цена</h3>
+						<button type="button" class="close" aria-label="close">
+							<svg xmlns="http://www.w3.org/2000/svg" width="11.435" height="11.314" viewBox="0 0 11.435 11.314">
+								<g id="Group_137" data-name="Group 137" transform="translate(-1167.919 -282.419)">
+									<line id="Line_15" data-name="Line 15" y2="15" transform="translate(1168.272 282.772) rotate(-45)"
+										fill="none" stroke="#b4b3b3" stroke-width="1" />
+									<line id="Line_16" data-name="Line 16" y2="15" transform="translate(1179 282.772) rotate(45)"
+										fill="none" stroke="#b4b3b3" stroke-width="1" />
+								</g>
+							</svg>
+						</button>
+					</div>
+					<div class="filter-price__wrapper">
+						<div class="filter-price">
+							<input type="number" name="price-from" value="" placeholder="от 9500">
+							<div>
+								<span class="divider"></span>
+							</div>
+							<input type="number" name="price-to" value="" placeholder="до 46000">
+						</div>
+					</div>
+					<div class="filter-btn-block">
+						<button type="submit" class="btn btn-primary filter-btn-block__show">Показать</button>
+						<button type="button" class="filter-btn-block__hide">Сбросить</button>
 					</div>
 				</div>
 			</div>

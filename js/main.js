@@ -600,13 +600,70 @@ function handleFixedMenuHover() {
   }
 }
 
+function handleFilterModals(blocker, modal) {
+  const additionalBtns = document.querySelectorAll('.filter-additional__btn');
+  const backBtns = document.querySelectorAll('.filter-modal__back');
+  const showBtns = document.querySelectorAll('.filter-btn-block__show');
+
+  if (additionalBtns[0]) {
+    additionalBtns.forEach((btn) => {
+      btn.addEventListener('click', (evt) => {
+        const id = evt.target.dataset.id;
+        const modal = document.querySelector(`#${id}`);
+
+        if (modal) {
+          modal.classList.add('modal_active');
+        }
+      });
+    });
+  }
+
+  if (backBtns[0]) {
+    backBtns.forEach((btn) => {
+      btn.addEventListener('click', (evt) => {
+        const modal = evt.target.closest('.filter-form__additional');
+
+        if (modal) {
+          modal.classList.remove('modal_active');
+        }
+      });
+    });
+  }
+
+  if (showBtns.length) {
+    showBtns.forEach((btn) => {
+      btn.addEventListener('click', (evt) => {
+        evt.preventDefault();
+
+        const additionalModals = document.querySelectorAll(
+          '.filter-form__additional'
+        );
+
+        if (additionalModals.length) {
+          additionalModals.forEach((modal) => {
+            modal.classList.remove('modal_active');
+          });
+        }
+
+        modal.classList.remove('filter-modal_opened');
+
+        document.documentElement.classList.remove('is-locked');
+
+        if (blocker) {
+          blocker.classList.remove('blocker_opened');
+        }
+      });
+    });
+  }
+}
+
 function handleFilterModalMobile() {
   const btn = document.querySelector('#filter-mobile-btn');
   const modal = document.querySelector('#filter-modal-mobile');
-  const blocker = document.querySelector('#blocker');
+  const blocker = document.querySelector('#blocker-strong');
 
   if (modal && btn) {
-    const closeBtn = modal.querySelector('.close');
+    const closeBtns = modal.querySelectorAll('.close');
 
     btn.addEventListener('click', () => {
       modal.classList.add('filter-modal_opened');
@@ -618,18 +675,32 @@ function handleFilterModalMobile() {
       }
     });
 
-    if (closeBtn) {
-      closeBtn.addEventListener('click', () => {
-        modal.classList.remove('filter-modal_opened');
+    if (closeBtns[0]) {
+      closeBtns.forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const additionalModals = document.querySelectorAll(
+            '.filter-form__additional'
+          );
 
-        document.documentElement.classList.remove('is-locked');
+          if (additionalModals.length) {
+            additionalModals.forEach((modal) => {
+              modal.classList.remove('modal_active');
+            });
+          }
 
-        if (blocker) {
-          blocker.classList.remove('blocker_opened');
-        }
+          modal.classList.remove('filter-modal_opened');
+
+          document.documentElement.classList.remove('is-locked');
+
+          if (blocker) {
+            blocker.classList.remove('blocker_opened');
+          }
+        });
       });
     }
   }
+
+  handleFilterModals(blocker, modal);
 }
 
 // Sliders

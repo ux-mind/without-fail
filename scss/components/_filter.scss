@@ -6,6 +6,21 @@
 		&__main {
 			position: relative;
 		}
+		&__additional {
+			background: $white;
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			left: 0;
+			bottom: 0;
+			transform: translateX(100%);
+			pointer-events: none;
+			transition: transform 0.2s;
+			&.modal_active {
+				pointer-events: auto;
+				transform: none;
+			}
+		}
 	}
 	&-modal {
 		display: none;
@@ -17,8 +32,6 @@
 		left: 0;
 		background: $white;
 		width: 100%;
-		//
-		// border-top: 2px solid $black;
 		opacity: 0;
 		pointer-events: none;
 		transform: translateY(100%);
@@ -31,7 +44,7 @@
 		&__header {
 			@include flex(row, center);
 			padding-top: 16px;
-			margin-bottom: 24px;
+			margin-bottom: 20px;
 			& .close {
 				min-height: 20px;
 				min-width: 20px;
@@ -43,6 +56,14 @@
 					height: 12px;
 				}
 			}
+		}
+		&__back {
+			width: 7px;
+			height: 14px;
+			display: grid;
+			place-items: center;
+			margin-right: 12px;
+			transform: translateY(-2px);
 		}
 		&__title {
 			@include font(1.6rem, calc(20 / 16));
@@ -113,10 +134,81 @@
 	&-btn {
 		&-block {
 			margin-top: 50px;
-			& .btn {
+			&__show {
 				width: 100%;
 				@include font(1.6rem, calc(24 / 16));
 				padding: 0.9375em 2em;
+			}
+			&__hide {
+				width: 100%;
+				@include font(1.6rem, calc(24 / 16));
+				color: $dark-600;
+				padding: 10px;
+				margin-top: 10px;
+				text-align: center;
+				letter-spacing: 0.015em;
+			}
+		}
+	}
+	&-size {
+		&__text {
+			position: relative;
+			margin: 0;
+			@include font(1.6rem, calc(24 / 16));
+			letter-spacing: 0.015em;
+			color: $dark-600;
+			flex-grow: 1;
+		}
+		&__item {
+			border-bottom: 0.5px solid rgba($dark-700, 0.2);
+		}
+		&__label {
+			padding: 11px 0 9px;
+			@include flex(row, center);
+			& .color {
+				width: 16px;
+				height: 16px;
+				border-radius: 50%;
+				margin-right: 11px;
+			}
+			& input[type='checkbox'] {
+				display: none;
+				&:checked + .filter-size__text {
+					&::after {
+						@include after(5px, 8.5px, 12.5px);
+						transform: translateY(calc(-50% - 3px)) rotate(45deg);
+						border-right: 1px solid $dark-300;
+						border-bottom: 1px solid $dark-300;
+					}
+				}
+			}
+		}
+	}
+	&-price {
+		display: flex;
+		& input {
+			width: calc(100% - 15px);
+			padding: 10px 7px 9px;
+			font-size: 1.6rem;
+			line-height: 1;
+			border: 0.5px solid rgba(119, 119, 119, 0.2);
+			border-radius: 2px;
+			&::placeholder {
+				@include font(1.6rem, 1);
+				letter-spacing: 0.015em;
+				color: #bbb;
+			}
+		}
+		& div {
+			width: 15px;
+			margin: 0 7.5px;
+			display: grid;
+			place-items: center;
+			flex-shrink: 0;
+			& .divider {
+				width: 100%;
+				height: 0.5px;
+				background: rgba($dark-770, 0.5);
 			}
 		}
 	}

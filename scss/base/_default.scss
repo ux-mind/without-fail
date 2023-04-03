@@ -139,7 +139,7 @@
 	height: 100%;
 	left: 0;
 	top: 0;
-	background: rgba($black, 0.15);
+	background: rgba($black, 0.26);
 	opacity: 0;
 	transition: opacity 0.3s;
 	pointer-events: none;
@@ -151,6 +151,8 @@
 
 @media screen and(max-width: 991px) {
 	.blocker {
-		z-index: 20;
+		&_strong {
+			z-index: 20;
+		}
 	}
 }
