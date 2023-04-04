@@ -20,6 +20,17 @@
 				pointer-events: auto;
 				transform: none;
 			}
+			& .container {
+				height: 100%;
+				@include flex(column);
+				padding-bottom: 20px;
+				& .filter-size,
+				& .filter-modal__header,
+				& .filter-btn-block,
+				& .filter-price__wrapper {
+					width: 100%;
+				}
+			}
 		}
 	}
 	&-modal {
@@ -94,7 +105,7 @@
 			& input[type='radio'] {
 				display: none;
 				&:checked + .radio {
-					background: $dark-600;
+					background: $dark-300;
 					&::before {
 						content: '';
 						position: absolute;
@@ -154,7 +165,7 @@
 	}
 	&-size {
 		overflow-y: auto;
-		max-height: 225px;
+		// max-height: 225px;
 		&__text {
 			position: relative;
 			margin: 0;

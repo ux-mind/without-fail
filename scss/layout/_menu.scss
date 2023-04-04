@@ -162,7 +162,7 @@
 
 @media screen and (max-width: 991px) {
 	.menu {
-		height: 100vh;
+		min-height: 100vh;
 		overflow-y: auto;
 		top: 0;
 		&-poster {
@@ -232,7 +232,7 @@
 			}
 			&_closed {
 				& + .menu-list {
-					animation: slideDownMenuDrop 0.3s ease 1 both;
+					animation: slideDownMenuDrop 0.32s ease 1 both;
 					display: block;
 				}
 			}
@@ -242,7 +242,7 @@
 					transform: translateY(-50%) rotate(180deg);
 				}
 				& + .menu-list {
-					animation: slideUpMenuDrop 0.3s ease 1 both;
+					animation: slideUpMenuDrop 0.32s ease 1 both;
 					display: block;
 				}
 			}
@@ -271,7 +271,7 @@
 
 @keyframes slideDownMenuDrop {
 	0% {
-		max-height: 180px;
+		max-height: 300px;
 		overflow-y: auto;
 		display: block;
 		padding-bottom: 24px;
@@ -293,7 +293,7 @@
 	}
 	to {
 		display: block;
-		max-height: 180px;
+		max-height: 300px;
 		overflow-y: auto;
 		padding-bottom: 24px;
 	}
