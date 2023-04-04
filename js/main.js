@@ -501,9 +501,23 @@ function handleMenu() {
   const menuBtn = document.querySelector('#catalog-btn');
   const menuCloseMobile = document.querySelector('#menu-close-mobile');
 
+  blocker.addEventListener('click', () => {
+    if (menu.classList.contains('menu_opened')) {
+      menu.classList.remove('menu_opened');
+
+      if (window.innerWidth <= 991) {
+        const htmlEl = document.documentElement;
+        htmlEl.classList.remove('is-locked');
+      }
+
+      blocker.classList.remove('blocker_opened');
+    }
+  });
+
   if (menuBtn && menu) {
     menuBtn.addEventListener('click', () => {
       menu.classList.toggle('menu_opened');
+      menuBtn.classList.toggle('menu_opened');
 
       if (window.innerWidth <= 991) {
         const htmlEl = document.documentElement;
@@ -519,6 +533,7 @@ function handleMenu() {
   if (menuCloseMobile) {
     menuCloseMobile.addEventListener('click', () => {
       menu.classList.remove('menu_opened');
+      menuBtn.classList.toggle('menu_opened');
 
       if (window.innerWidth <= 991) {
         const htmlEl = document.documentElement;
