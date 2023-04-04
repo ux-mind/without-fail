@@ -167,12 +167,11 @@
 						}
 						& span:first-child {
 							width: 24px;
-							transform: translateY(-50%) translateX(2px) rotate(45deg);
-							// transform: translateY(calc(-50% - 8px));
+							transform: translateY(-50%) translateX(-2px) rotate(45deg);
 						}
 						& span:last-child {
 							width: 24px;
-							transform: translateY(-50%) translateX(-2px) rotate(-45deg);
+							transform: translateY(-50%) translateX(-6px) rotate(-45deg);
 						}
 					}
 				}

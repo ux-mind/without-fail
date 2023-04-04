@@ -846,11 +846,11 @@ a:hover, a:active {
 }
 .header-nav__item_catalog.menu_opened .gamburger span:first-child {
   width: 24px;
-  transform: translateY(-50%) translateX(2px) rotate(45deg);
+  transform: translateY(-50%) translateX(-2px) rotate(45deg);
 }
 .header-nav__item_catalog.menu_opened .gamburger span:last-child {
   width: 24px;
-  transform: translateY(-50%) translateX(-2px) rotate(-45deg);
+  transform: translateY(-50%) translateX(-6px) rotate(-45deg);
 }
 .header-icons {
   padding-right: 14px;
