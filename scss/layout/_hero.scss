@@ -66,6 +66,8 @@
 			width: 20px;
 			height: 40px;
 			transition: transform 0.1s;
+			pointer-events: none;
+			will-change: transform;
 		}
 		&:hover {
 			& svg {

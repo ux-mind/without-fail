@@ -642,6 +642,8 @@ a:hover, a:active {
   pointer-events: none;
   opacity: 0;
   transform: translateY(15px);
+  pointer-events: none;
+  will-change: transform;
   transition: transform 0.2s, opacity 0.2s;
 }
 .select-block_small-font {
@@ -814,6 +816,7 @@ a:hover, a:active {
   width: 28px;
   height: 18px;
   margin-right: 20px;
+  transform: translateY(-1px);
 }
 .header-nav__item_catalog .gamburger span {
   display: inline-block;
@@ -824,6 +827,8 @@ a:hover, a:active {
   left: 0;
   transform: translateY(-50%);
   background: #fff;
+  will-change: transform;
+  backface-visibility: hidden;
   transition: 0.225s;
 }
 .header-nav__item_catalog .gamburger span:first-child {
@@ -838,15 +843,12 @@ a:hover, a:active {
 }
 .header-nav__item_catalog.menu_opened .gamburger span:nth-child(2) {
   transform: scale(0);
-  height: 1px;
 }
 .header-nav__item_catalog.menu_opened .gamburger span:first-child {
-  height: 1px;
   width: 24px;
   transform: translateY(-50%) translateX(2px) rotate(45deg);
 }
 .header-nav__item_catalog.menu_opened .gamburger span:last-child {
-  height: 1px;
   width: 24px;
   transform: translateY(-50%) translateX(-2px) rotate(-45deg);
 }
@@ -1004,6 +1006,8 @@ a:hover, a:active {
   width: 20px;
   height: 40px;
   transition: transform 0.1s;
+  pointer-events: none;
+  will-change: transform;
 }
 .hero .btn-prev:hover svg, .hero .btn-next:hover svg {
   transform: scale(1.05);
@@ -4001,6 +4005,8 @@ a:hover, a:active {
   bottom: 0;
   transform: translateX(100%);
   pointer-events: none;
+  will-change: transform;
+  backface-visibility: hidden;
   transition: transform 0.2s;
 }
 .filter-form__additional.modal_active {

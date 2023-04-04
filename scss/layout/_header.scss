@@ -135,6 +135,7 @@
 					width: 28px;
 					height: 18px;
 					margin-right: 20px;
+					transform: translateY(-1px);
 					& span {
 						display: inline-block;
 						position: absolute;
@@ -144,6 +145,8 @@
 						left: 0;
 						transform: translateY(-50%);
 						background: $white;
+						will-change: transform;
+						backface-visibility: hidden;
 						transition: 0.225s;
 					}
 					& span:first-child {
@@ -161,16 +164,13 @@
 					& .gamburger {
 						& span:nth-child(2) {
 							transform: scale(0);
-							height: 1px;
 						}
 						& span:first-child {
-							height: 1px;
 							width: 24px;
 							transform: translateY(-50%) translateX(2px) rotate(45deg);
 							// transform: translateY(calc(-50% - 8px));
 						}
 						& span:last-child {
-							height: 1px;
 							width: 24px;
 							transform: translateY(-50%) translateX(-2px) rotate(-45deg);
 						}
