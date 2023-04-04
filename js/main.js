@@ -505,8 +505,10 @@ function handleMenu() {
     menuBtn.addEventListener('click', () => {
       menu.classList.toggle('menu_opened');
 
-      // const htmlEl = document.documentElement;
-      // htmlEl.classList.toggle('is-locked');
+      if (window.innerWidth <= 991) {
+        const htmlEl = document.documentElement;
+        htmlEl.classList.toggle('is-locked');
+      }
 
       if (blocker) {
         blocker.classList.toggle('blocker_opened');
@@ -518,8 +520,10 @@ function handleMenu() {
     menuCloseMobile.addEventListener('click', () => {
       menu.classList.remove('menu_opened');
 
-      // const htmlEl = document.documentElement;
-      // htmlEl.classList.remove('is-locked');
+      if (window.innerWidth <= 991) {
+        const htmlEl = document.documentElement;
+        htmlEl.classList.remove('is-locked');
+      }
 
       if (blocker) {
         blocker.classList.remove('blocker_opened');
