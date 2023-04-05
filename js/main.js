@@ -56,8 +56,6 @@ function initCatalogSlider() {
           tabs.forEach((tab, idx) => {
             tab.addEventListener('mouseover', () => {
               swiper.slideTo(idx);
-
-              console.log(idx);
             });
           });
         }
@@ -751,6 +749,22 @@ function handleFilterModalMobile() {
   handleFilterModals(blocker, modal);
 }
 
+function closeSelectByClick() {
+  const selects = document.querySelectorAll('.select');
+
+  document.addEventListener('click', (evt) => {
+    const target = evt.target;
+
+    if (!selects) {
+      return;
+    }
+
+    if (!target.closest('.select') && !target.closest('.select-block')) {
+      selects.forEach((select) => select.classList.remove('select_opened'));
+    }
+  });
+}
+
 // Sliders
 handleHeroSlider();
 initCollectionSlider();
@@ -772,3 +786,4 @@ handleSelect();
 handleMenuDrop();
 handleFixedMenuHover();
 handleFilterModalMobile();
+closeSelectByClick();
