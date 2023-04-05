@@ -273,7 +273,7 @@ function createHeroSlides(slides) {
 
       if (slideData.type === 'video') {
         const slideInner = `
-						<video class="hero__video" loop="loop" preload="true" muted="muted" playsinline="playinline" ${
+						<video class="hero__video" loop="loop" preload="auto" muted="muted" playsinline="playinline" ${
               slideData.poster ? `poster="${slideData.poster}"` : ''
             }>
 							<source src="${slideData.link}" type="video/mp4">
@@ -510,6 +510,7 @@ function handleMenu() {
         htmlEl.classList.remove('is-locked');
       }
 
+      menuBtn.classList.remove('menu_opened');
       blocker.classList.remove('blocker_opened');
     }
   });
