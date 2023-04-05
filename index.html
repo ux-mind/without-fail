@@ -325,9 +325,186 @@
 	</header>
 	<main class="main home">
 		<section class="hero">
+			<script>
+				// function createHeroSlides(slides) {
+				// 	const wrapperEl = document.querySelector('.hero .swiper-wrapper');
+
+				// 	if (wrapperEl) {
+				// 		for (let i = 0; i < slides.length; i++) {
+				// 			const slideData = slides[i];
+
+				// 			if (!slideData) {
+				// 				return;
+				// 			}
+
+				// 			const slideEl = document.createElement('div');
+				// 			slideEl.classList.add('swiper-slide');
+				// 			slideEl.setAttribute(
+				// 				'data-swiper-autoplay',
+				// 				`${slideData.duration * 1000}`
+				// 			);
+
+				// 			if (slideData.type === 'video') {
+				// 				const slideInner = `
+				// 		<video class="hero__video" loop="loop" preload="auto" muted="muted" playsinline="playinline" ${slideData.poster ? `poster="${slideData.poster}"` : ''
+				// 					}>
+				// 			<source src="${slideData.link}" type="video/mp4">
+				// 		</video>
+				// 	`;
+
+				// 				slideEl.innerHTML = slideInner;
+				// 			}
+
+				// 			if (slideData.type === 'image') {
+				// 				const slideInner = `
+				// 		<img class="hero__img" src="${slideData.link.x1}" ${slideData.link.x2
+				// 						? `srcset="${slideData.link.x1} 1x, ${slideData.link.x2} 2x"`
+				// 						: ''
+				// 					} alt="hero image" />
+				// 		<div class="dark-layer"></div>
+				// 	`;
+
+				// 				slideEl.innerHTML = slideInner;
+				// 			}
+
+				// 			wrapperEl.append(slideEl);
+				// 		}
+				// 	}
+				// }
+
+				function handleHeroSliderPagination(slides) {
+					const paginationWrapper = document.querySelector('.hero .swiper-pagination');
+
+					if (paginationWrapper && paginationWrapper.children[0]) {
+						const bullets = Array.from(paginationWrapper.children);
+
+						for (let i = 0; i < slides.length; i++) {
+							const currentSlide = slides[i];
+							const currentBullet = bullets[i];
+
+							const slideDuration = currentSlide.duration;
+
+							const observer = new MutationObserver(function (mutations) {
+								mutations.forEach(function (mutation) {
+									const bullet = mutation.target;
+
+									if (bullet.matches('.swiper-pagination-bullet-active')) {
+										bullet.innerHTML = `<span class="bullet-bar" style="animation: pagination ${slideDuration}s linear forwards"></span>`;
+									} else if (bullet.matches('.swiper-pagination-bullet')) {
+										bullet.innerHTML = '';
+									}
+								});
+							});
+
+							observer.observe(currentBullet, { attributes: true });
+
+							bullets[
+								i
+							].innerHTML = `<span class="bullet-bar" style="animation: pagination ${slideDuration}s linear forwards"></span>`;
+						}
+					}
+				}
+
+				// Hero video play
+				function handleVideoPlay() {
+					const videoSlides = document.querySelectorAll('.hero-swiper .swiper-slide');
+
+					if (videoSlides[0]) {
+						const videos = Array.from(videoSlides).map((slide) =>
+							slide.querySelector('.hero__video')
+						);
+
+						const observer = new MutationObserver(function (mutations) {
+							mutations.forEach(function (mutation) {
+								const video = mutation.target.children[0];
+
+								if (video.matches('video')) {
+									video.currentTime = 0;
+									video.play();
+								}
+							});
+						});
+
+						videoSlides.forEach((slide) => {
+							observer.observe(slide, { attributes: true });
+						});
+					}
+				}
+
+				function handleHeroSlider() {
+					const HERO_SLIDES = [
+						{
+							type: 'video',
+							link: './assets/videos/banner.mov',
+							poster: './assets/images/outerwear.jpg',
+							duration: 10,
+						},
+						{
+							type: 'image',
+							link: {
+								x1: './assets/images/hero-image.png',
+								x2: './assets/images/hero-image@2x.png',
+							},
+							duration: 5,
+						},
+						{
+							type: 'video',
+							link: './assets/videos/banner.mov',
+							poster: './assets/images/outerwear.jpg',
+							duration: 10,
+						},
+					];
+
+					window.addEventListener('DOMContentLoaded', () => {
+						// createHeroSlides(HERO_SLIDES);
+
+						const swiper = new Swiper('.hero-swiper', {
+							loop: true,
+							speed: 1100,
+
+							// If we need pagination
+							pagination: {
+								el: '.hero-swiper .swiper-pagination',
+							},
+
+							// Navigation arrows
+							navigation: {
+								nextEl: '.hero-swiper .btn-next',
+								prevEl: '.hero-swiper .btn-prev',
+							},
+
+							autoplay: {
+								delay: 5000,
+								disableOnInteraction: false,
+							},
+						});
+
+						handleVideoPlay();
+						handleHeroSliderPagination(HERO_SLIDES);
+					});
+				}
+
+				handleHeroSlider();
+			</script>
 			<div class="swiper hero-swiper">
 				<div class="swiper-wrapper">
-					<!-- Load with js -->
+					<div class="swiper-slide" data-swiper-autoplay="10000">
+						<video class="hero__video" loop="loop" preload="auto" muted="muted" playsinline="playinline"
+							poster="./assets/images/outerwear.jpg">
+							<source src="./assets/videos/banner.mov" type="video/mp4">
+						</video>
+					</div>
+					<div class="swiper-slide" data-swiper-autoplay="5000">
+						<img class="hero__img" src="./assets/images/hero-image.png"
+							srcset="./assets/images/hero-image.png 1x, ./assets/images/hero-image@2x.png 2x" alt="hero image" />
+						<div class="dark-layer"></div>
+					</div>
+					<div class="swiper-slide" data-swiper-autoplay="10000">
+						<video class="hero__video" loop="loop" preload="auto" muted="muted" playsinline="playinline"
+							poster="./assets/images/outerwear.jpg">
+							<source src="./assets/videos/banner.mov" type="video/mp4">
+						</video>
+					</div>
 				</div>
 
 				<div class="swiper-pagination"></div>

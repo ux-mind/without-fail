@@ -766,7 +766,7 @@ function closeSelectByClick() {
 }
 
 // Sliders
-handleHeroSlider();
+// handleHeroSlider();
 initCollectionSlider();
 initCatalogSlider();
 handleProductSlider();
