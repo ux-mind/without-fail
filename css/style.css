@@ -1810,8 +1810,8 @@ a:hover, a:active {
 }
 .product-container__wrapper {
   display: grid;
-  grid-template-columns: calc(50% - 10px) calc(50% - 10px);
-  grid-gap: 20px;
+  grid-template-columns: calc(50% - 30px) calc(50% - 10px);
+  grid-gap: 40px;
   padding-bottom: 100px;
 }
 .product-swiper {
@@ -1934,10 +1934,14 @@ a:hover, a:active {
   display: grid;
   place-items: center;
 }
-.product-slide video, .product-slide img {
-  border-radius: 2px;
+.product-slide video {
   width: 100%;
   height: 100%;
+  border-radius: 2px;
+  object-fit: cover;
+}
+.product-slide img {
+  border-radius: 2px;
   object-fit: cover;
 }
 .product-slide .play-btn {
@@ -3316,7 +3320,6 @@ a:hover, a:active {
   opacity: 0.75;
 }
 .catalog-article__img {
-  height: 485px;
   position: relative;
   margin-bottom: 24px;
 }
