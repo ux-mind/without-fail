@@ -1,0 +1,97 @@
+.submit-message {
+	width: 100%;
+	margin: auto 0;
+}
+
+.message {
+	&-body {
+		@include flex(column, center, space-between);
+	}
+	&-footer {
+		width: 100%;
+	}
+	&-wrapper {
+		padding: 120px 0;
+		@include flex(column, center);
+	}
+	&-title {
+		margin-bottom: 8px;
+		font-weight: 600;
+		@include font(4.4rem, calc(60 / 44));
+		letter-spacing: 0.05em;
+	}
+	&-subtitle {
+		margin-bottom: 22px;
+		max-width: 420px;
+		& p {
+			margin: 0;
+			@include font(1.8rem, calc(26 / 18));
+			letter-spacing: 0.015em;
+			color: $dark-600;
+			text-align: center;
+		}
+	}
+	&-number {
+		margin-bottom: 44px;
+		& p {
+			@include font(1.8rem, calc(20 / 18));
+			letter-spacing: 0.015em;
+			font-weight: 600;
+			color: $dark-300;
+		}
+	}
+	&-back {
+		color: $dark-300;
+		padding: 0.925em 2.36em 0.803em;
+		letter-spacing: 0.05em;
+		border: 1.5px solid $dark-300;
+		&__wrapper {
+			margin-bottom: 24px;
+		}
+	}
+	&-bottom {
+		max-width: 230px;
+		text-align: center;
+		& p {
+			@include font(1.6rem, calc(24 / 16));
+			color: #bcbcbc;
+		}
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.message {
+		&-wrapper {
+			padding: 85px 0;
+		}
+		&-svg {
+			& svg {
+				width: 40px;
+				height: 40px;
+			}
+		}
+		&-title {
+			@include font(3.6rem, calc(49 / 36));
+			margin-bottom: 10px;
+		}
+		&-subtitle,
+		&-number,
+		&-bottom {
+			& p {
+				@include font(1.4rem, calc(20 / 14));
+			}
+		}
+		&-subtitle {
+			margin-bottom: 15px;
+		}
+		&-number {
+			margin-bottom: 38px;
+		}
+		&-back {
+			padding: 1.2em 2.36em 1.1em;
+			&__wrapper {
+				margin-bottom: 18px;
+			}
+		}
+	}
+}

@@ -1561,7 +1561,7 @@ a:hover, a:active {
 }
 @media screen and (max-width: 991px) {
   .menu {
-    min-height: 100vh;
+    height: 100vh;
     overflow-y: auto;
     top: 0;
   }
@@ -2460,6 +2460,107 @@ a:hover, a:active {
   .text-block strong {
     font-size: 1.4rem;
     line-height: 1.5714285714;
+  }
+}
+.submit-message {
+  width: 100%;
+  margin: auto 0;
+}
+
+.message-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.message-footer {
+  width: 100%;
+}
+.message-wrapper {
+  padding: 120px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.message-title {
+  margin-bottom: 8px;
+  font-weight: 600;
+  font-size: 4.4rem;
+  line-height: 1.3636363636;
+  letter-spacing: 0.05em;
+}
+.message-subtitle {
+  margin-bottom: 22px;
+  max-width: 420px;
+}
+.message-subtitle p {
+  margin: 0;
+  font-size: 1.8rem;
+  line-height: 1.4444444444;
+  letter-spacing: 0.015em;
+  color: #666;
+  text-align: center;
+}
+.message-number {
+  margin-bottom: 44px;
+}
+.message-number p {
+  font-size: 1.8rem;
+  line-height: 1.1111111111;
+  letter-spacing: 0.015em;
+  font-weight: 600;
+  color: #333;
+}
+.message-back {
+  color: #333;
+  padding: 0.925em 2.36em 0.803em;
+  letter-spacing: 0.05em;
+  border: 1.5px solid #333;
+}
+.message-back__wrapper {
+  margin-bottom: 24px;
+}
+.message-bottom {
+  max-width: 230px;
+  text-align: center;
+}
+.message-bottom p {
+  font-size: 1.6rem;
+  line-height: 1.5;
+  color: #bcbcbc;
+}
+
+@media screen and (max-width: 767px) {
+  .message-wrapper {
+    padding: 85px 0;
+  }
+  .message-svg svg {
+    width: 40px;
+    height: 40px;
+  }
+  .message-title {
+    font-size: 3.6rem;
+    line-height: 1.3611111111;
+    margin-bottom: 10px;
+  }
+  .message-subtitle p, .message-number p, .message-bottom p {
+    font-size: 1.4rem;
+    line-height: 1.4285714286;
+  }
+  .message-subtitle {
+    margin-bottom: 15px;
+  }
+  .message-number {
+    margin-bottom: 38px;
+  }
+  .message-back {
+    padding: 1.2em 2.36em 1.1em;
+  }
+  .message-back__wrapper {
+    margin-bottom: 18px;
   }
 }
 .collection {
