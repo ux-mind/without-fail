@@ -1588,6 +1588,7 @@ a:hover, a:active {
     border: none;
     grid-template-columns: 100%;
     padding-top: 75px;
+    padding-bottom: 120px;
   }
   .menu-content .close-btn {
     display: inline-block;
@@ -1935,12 +1936,14 @@ a:hover, a:active {
   place-items: center;
 }
 .product-slide video {
-  width: 100%;
-  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
   border-radius: 2px;
   object-fit: cover;
 }
 .product-slide img {
+  max-width: 100%;
+  max-height: 100%;
   border-radius: 2px;
   object-fit: cover;
 }
