@@ -765,6 +765,28 @@ function closeSelectByClick() {
   });
 }
 
+function handleOpderSubmit() {
+  const form = document.querySelector('#order-form');
+
+  if (form) {
+    form.addEventListener('submit', (evt) => {
+      evt.preventDefault();
+
+      console.log(window.location.href);
+
+      const location = window.location.href;
+
+      let newLocation = location.replace('https://', '');
+
+      newLocation = newLocation.split('/')[0];
+
+      newLocation = `https://${newLocation}/submit-message.html`;
+
+      window.location.href = newLocation;
+    });
+  }
+}
+
 // Sliders
 // handleHeroSlider();
 initCollectionSlider();
@@ -787,3 +809,4 @@ handleMenuDrop();
 handleFixedMenuHover();
 handleFilterModalMobile();
 closeSelectByClick();
+handleOpderSubmit();
