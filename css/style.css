@@ -2684,6 +2684,15 @@ a:hover, a:active {
   font-weight: 600;
 }
 
+@media screen and (max-width: 1200px) {
+  .collection-info {
+    padding-top: 8px;
+  }
+  .collection-info__title {
+    font-size: 2.8rem;
+    margin-bottom: 14px;
+  }
+}
 @media screen and (max-width: 991px) {
   .collection {
     margin-bottom: 40px;
@@ -2792,6 +2801,25 @@ a:hover, a:active {
   color: #666;
 }
 
+@media screen and (max-width: 1200px) {
+  .exclusive-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+  }
+  .exclusive-content__img {
+    margin-bottom: auto;
+  }
+  .exclusive-content .title {
+    font-size: 2.8rem;
+    margin-bottom: 2px;
+  }
+  .exclusive-content__text {
+    margin-bottom: 24px;
+  }
+}
 @media screen and (max-width: 991px) {
   .exclusive {
     margin-bottom: 40px;

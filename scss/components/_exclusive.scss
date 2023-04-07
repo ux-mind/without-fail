@@ -38,6 +38,24 @@
 	}
 }
 
+@media screen and (max-width: 1200px) {
+	.exclusive {
+		&-content {
+			@include flex(column);
+			&__img {
+				margin-bottom: auto;
+			}
+			& .title {
+				font-size: 2.8rem;
+				margin-bottom: 2px;
+			}
+			&__text {
+				margin-bottom: 24px;
+			}
+		}
+	}
+}
+
 @media screen and (max-width: 991px) {
 	.exclusive {
 		margin-bottom: 40px;

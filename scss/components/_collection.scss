@@ -96,6 +96,18 @@
 	}
 }
 
+@media screen and (max-width: 1200px) {
+	.collection {
+		&-info {
+			padding-top: 8px;
+			&__title {
+				font-size: 2.8rem;
+				margin-bottom: 14px;
+			}
+		}
+	}
+}
+
 @media screen and (max-width: 991px) {
 	.collection {
 		margin-bottom: 40px;
