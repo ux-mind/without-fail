@@ -354,6 +354,26 @@
 	}
 }
 
+@media screen and (max-width: 1200px) {
+	.product {
+		&-container {
+			&__wrapper {
+				grid-template-columns: calc(60% - 20px) calc(40% - 20px);
+				& .select {
+					min-width: 100%;
+				}
+			}
+		}
+		&-content {
+			&__size {
+				&-select {
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+
 @media screen and (max-width: 991px) {
 	.product {
 		&-swiper {

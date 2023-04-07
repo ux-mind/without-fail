@@ -209,7 +209,7 @@
 			max-width: 100%;
 		}
 		&-aside {
-			min-width: 250px;
+			// min-width: 250px;
 		}
 		&-article {
 			flex-grow: 0;
@@ -218,7 +218,7 @@
 		}
 		&-content {
 			&__wrapper {
-				max-width: calc(100% - 250px - 60px);
+				max-width: calc(75% - 30px);
 				flex-grow: 0;
 			}
 		}
