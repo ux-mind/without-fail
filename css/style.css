@@ -60,6 +60,8 @@ button, textarea, input, select {
   box-shadow: none;
   border-radius: 0;
   color: #222;
+}
+button *, textarea *, input *, select * {
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -112,7 +114,6 @@ p {
 }
 
 a {
-  -webkit-tap-highlight-color: transparent;
   color: #fff;
   text-decoration: none;
 }
