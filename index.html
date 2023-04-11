@@ -479,9 +479,10 @@
 
 			<script>
 				function handleVideoLoad() {
+					const hero = document.querySelector('.hero');
 					const heroSwiper = document.querySelector('.hero-swiper');
 
-					if (heroSwiper) {
+					if (heroSwiper && hero) {
 						const firstVideo = heroSwiper.querySelector('video');
 
 						if (firstVideo) {
@@ -492,7 +493,7 @@
 									return;
 								}
 
-								heroSwiper.classList.add('active');
+								hero.classList.add('active');
 								playEventTriggered = true;
 							});
 						}
