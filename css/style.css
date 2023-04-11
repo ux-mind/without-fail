@@ -948,16 +948,13 @@ a:hover, a:active {
 }
 .hero-swiper {
   max-height: 100%;
-  opacity: 0;
-  transition: opacity 0.3s;
-  will-change: opacity;
-  backface-visibility: hidden;
+  display: none;
 }
 .hero-swiper .swiper-slide {
   background: #f7f7f7;
 }
 .hero-swiper.active {
-  opacity: 1;
+  display: block;
 }
 .hero__img {
   width: 100%;

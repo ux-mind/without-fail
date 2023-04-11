@@ -5,15 +5,17 @@
 	margin-bottom: 93px;
 	&-swiper {
 		max-height: 100%;
-		opacity: 0;
-		transition: opacity 0.3s;
-		will-change: opacity;
-		backface-visibility: hidden;
+		// opacity: 0;
+		// transition: opacity 0.3s;
+		// will-change: opacity;
+		// backface-visibility: hidden;
+		display: none;
 		& .swiper-slide {
 			background: #f7f7f7;
 		}
 		&.active {
-			opacity: 1;
+			display: block;
+			// opacity: 1;
 		}
 	}
 	&__img {
