@@ -36,6 +36,9 @@ b,
 strong {
 	font-weight: bold;
 }
+* {
+	-webkit-tap-highlight-color: transparent;
+}
 body {
 	min-height: 100vh;
 	font-family: $font;
@@ -46,9 +49,6 @@ body {
 	height: 100%;
 	background: $white;
 	margin: 0;
-	& * {
-		-webkit-tap-highlight-color: transparent;
-	}
 }
 button {
 	font-family: $font;

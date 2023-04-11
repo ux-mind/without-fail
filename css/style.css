@@ -33,6 +33,10 @@ strong {
   font-weight: bold;
 }
 
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
 body {
   min-height: 100vh;
   font-family: "Mont", Arial, sans-serif;
@@ -60,9 +64,6 @@ button, textarea, input, select {
   box-shadow: none;
   border-radius: 0;
   color: #222;
-}
-button *, textarea *, input *, select * {
-  -webkit-tap-highlight-color: transparent;
 }
 
 input {
