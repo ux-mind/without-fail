@@ -408,6 +408,22 @@
 				max-width: calc(100% - ((100% - 528px) / 2));
 				margin-right: 0;
 			}
+			&__link {
+				&:hover {
+					& .product-recommendations__product,
+					& .product-recommendations__price {
+						opacity: 1;
+					}
+				}
+			}
+		}
+		&-slide {
+			& .play-btn {
+				opacity: 0.8;
+				&.playing {
+					opacity: 0 !important;
+				}
+			}
 		}
 		&-content {
 			&__btns {

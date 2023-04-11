@@ -60,6 +60,7 @@ button, textarea, input, select {
   box-shadow: none;
   border-radius: 0;
   color: #222;
+  -webkit-tap-highlight-color: transparent;
 }
 
 input {
@@ -111,6 +112,7 @@ p {
 }
 
 a {
+  -webkit-tap-highlight-color: transparent;
   color: #fff;
   text-decoration: none;
 }
@@ -1603,6 +1605,9 @@ a:hover, a:active {
     grid-template-columns: 100%;
     grid-gap: 0;
   }
+  .menu-content__wrapper a:hover {
+    opacity: 1;
+  }
   .menu-content__contacts {
     grid-column: 1/2;
     padding: 0 10px;
@@ -1626,7 +1631,12 @@ a:hover, a:active {
     line-height: 1.5;
     text-align: left;
     padding: 15px 10px 13px;
-    color: #666;
+    color: #333;
+    background: #fff;
+  }
+  .menu-drop:hover, .menu-drop:active {
+    opacity: 1;
+    background: #fff;
   }
   .menu-drop::after {
     content: "";
@@ -1643,7 +1653,7 @@ a:hover, a:active {
     display: block;
   }
   .menu-drop_opened {
-    color: #333;
+    color: #666;
   }
   .menu-drop_opened::after {
     transform: translateY(-50%) rotate(180deg);
@@ -2212,6 +2222,15 @@ a:hover, a:active {
     max-width: calc(100% - (100% - 528px) / 2);
     margin-right: 0;
   }
+  .product-recommendations__link:hover .product-recommendations__product, .product-recommendations__link:hover .product-recommendations__price {
+    opacity: 1;
+  }
+  .product-slide .play-btn {
+    opacity: 0.8;
+  }
+  .product-slide .play-btn.playing {
+    opacity: 0 !important;
+  }
   .product-content__btns {
     display: grid;
     grid-template-columns: 100%;
@@ -2738,6 +2757,9 @@ a:hover, a:active {
     width: 100%;
     margin-right: 0;
   }
+  .collection-item:hover .collection-item__name, .collection-item:hover .collection-item__price {
+    opacity: 1;
+  }
   .collection-swiper__prev, .collection-swiper__next {
     display: none;
   }
@@ -2785,7 +2807,7 @@ a:hover, a:active {
   display: none;
 }
 .exclusive-content__img {
-  margin-bottom: 60px;
+  margin-bottom: 45px;
 }
 .exclusive-content__img img {
   border-radius: 2px;
@@ -3482,6 +3504,9 @@ a:hover, a:active {
   }
   .catalog-article__img .like-btn {
     display: flex;
+  }
+  .catalog-article__link:hover p, .catalog-article__link:hover .catalog-article__price {
+    opacity: 1;
   }
   .catalog-swiper .swiper-pagination {
     display: none;

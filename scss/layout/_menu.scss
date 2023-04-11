@@ -200,6 +200,9 @@
 				border-top: 0.5px solid rgba($dark-700, 0.2);
 				grid-template-columns: 100%;
 				grid-gap: 0;
+				& a:hover {
+					opacity: 1;
+				}
 			}
 			&__contacts {
 				grid-column: 1 / 2;
@@ -226,7 +229,13 @@
 			@include font(1.6rem, calc(24 / 16));
 			text-align: left;
 			padding: 15px 10px 13px;
-			color: $dark-600;
+			color: $dark-300;
+			background: $white;
+			&:hover,
+			&:active {
+				opacity: 1;
+				background: $white;
+			}
 			&::after {
 				@include after(10px, 12px, 6px);
 				background: icon('drop.svg') no-repeat 50% / cover;
@@ -238,7 +247,7 @@
 				}
 			}
 			&_opened {
-				color: $dark-300;
+				color: $dark-600;
 				&::after {
 					transform: translateY(-50%) rotate(180deg);
 				}

@@ -109,10 +109,12 @@ function handleProductVideos(swiper) {
 
           if (isVideoPlaying) {
             playBtn.classList.add('paused');
+            playBtn.classList.remove('playing');
 
             video.pause();
           } else {
             playBtn.classList.remove('paused');
+            playBtn.classList.add('playing');
 
             video.play();
           }

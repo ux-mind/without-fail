@@ -263,6 +263,14 @@
 					display: flex;
 				}
 			}
+			&__link {
+				&:hover {
+					& p,
+					& .catalog-article__price {
+						opacity: 1;
+					}
+				}
+			}
 		}
 		&-swiper {
 			& .swiper-pagination {

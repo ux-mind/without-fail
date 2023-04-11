@@ -62,6 +62,7 @@ button {
 	box-shadow: none;
 	border-radius: 0;
 	color: $font-color;
+	-webkit-tap-highlight-color: transparent;
 }
 select {
 	@extend button;
@@ -109,6 +110,7 @@ p {
 	margin: 0;
 }
 a {
+	-webkit-tap-highlight-color: transparent;
 	color: $white;
 	text-decoration: none;
 	&:hover,

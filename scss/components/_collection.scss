@@ -154,6 +154,14 @@
 			width: 100%;
 			margin-right: 0;
 		}
+		&-item {
+			&:hover {
+				& .collection-item__name,
+				& .collection-item__price {
+					opacity: 1;
+				}
+			}
+		}
 		&-swiper {
 			&__prev,
 			&__next {
