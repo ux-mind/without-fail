@@ -4,18 +4,18 @@
 	height: calc(720 / 1600 * 100vw);
 	margin-bottom: 93px;
 	display: none;
-	&.active {
-		display: block;
-		// opacity: 1;
-	}
 	&-swiper {
 		max-height: 100%;
-		// opacity: 0;
-		// transition: opacity 0.3s;
-		// will-change: opacity;
-		// backface-visibility: hidden;
+		opacity: 0;
+		transition: opacity 0.3s;
+		will-change: opacity;
+		backface-visibility: hidden;
 		& .swiper-slide {
 			background: #f7f7f7;
+		}
+		&.active {
+			// display: block;
+			opacity: 1;
 		}
 	}
 	&__img {
