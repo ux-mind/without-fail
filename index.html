@@ -476,6 +476,32 @@
 					</svg>
 				</button>
 			</div>
+
+			<script>
+				function handleVideoLoad() {
+					const heroSwiper = document.querySelector('.hero-swiper');
+
+					if (heroSwiper) {
+						const firstVideo = heroSwiper.querySelector('video');
+
+						if (firstVideo) {
+							let playEventTriggered = false;
+
+							firstVideo.addEventListener('canplaythrough', () => {
+								if (playEventTriggered) {
+									return;
+								}
+
+								heroSwiper.classList.add('active');
+								playEventTriggered = true;
+							});
+						}
+					}
+				}
+
+				handleVideoLoad();
+			</script>
+
 			<div class="hero-banner">
 				<h1 class="title title_size-l hero-banner__title">Весна-Лето ‘23</h1>
 				<p>Новая коллекция</p>
