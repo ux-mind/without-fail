@@ -959,6 +959,59 @@ a:hover, a:active {
 .hero-swiper.active {
   opacity: 1;
 }
+.hero .loader {
+  z-index: 6;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 1;
+  pointer-events: none;
+  will-change: opacity;
+  transition: opacity 0.3s;
+}
+.hero .loader.loaded {
+  opacity: 0;
+}
+.hero .loader-wrapper {
+  position: relative;
+}
+.hero .loader .outer {
+  width: 80px;
+  height: 80px;
+  padding: 16px;
+  border-radius: 50%;
+}
+.hero .loader .inner {
+  height: 48px;
+  width: 48px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.hero .loader-percent {
+  font-size: 20;
+  line-height: 1.4;
+  color: #333;
+}
+.hero .loader circle {
+  fill: none;
+  stroke: #333;
+  stroke-width: 12px;
+  stroke-dasharray: 280;
+  stroke-dashoffset: 120;
+  transform: rotate(0deg);
+}
+.hero .loader svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: svgLoading 1s linear infinite;
+}
 .hero__img {
   width: 100%;
   height: 100%;
@@ -1059,6 +1112,11 @@ a:hover, a:active {
   transform: translateX(-100%);
 }
 
+@keyframes svgLoading {
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
 @keyframes pagination {
   from {
     transform: translateX(-100%);
