@@ -976,15 +976,9 @@ a:hover, a:active {
 .hero .loader-wrapper {
   position: relative;
 }
-.hero .loader .outer {
-  width: 80px;
-  height: 80px;
-  padding: 16px;
-  border-radius: 50%;
-}
 .hero .loader .inner {
-  height: 48px;
-  width: 48px;
+  height: 30px;
+  width: 30px;
   border-radius: 50%;
   display: flex;
   flex-direction: row;
@@ -1000,8 +994,8 @@ a:hover, a:active {
 .hero .loader circle {
   fill: none;
   stroke: #333;
-  stroke-width: 12px;
-  stroke-dasharray: 280;
+  stroke-width: 5px;
+  stroke-dasharray: 240;
   stroke-dashoffset: 120;
   transform: rotate(0deg);
 }

@@ -33,15 +33,9 @@
 		&-wrapper {
 			position: relative;
 		}
-		& .outer {
-			width: 80px;
-			height: 80px;
-			padding: 16px;
-			border-radius: 50%;
-		}
 		& .inner {
-			height: 48px;
-			width: 48px;
+			height: 30px;
+			width: 30px;
 			border-radius: 50%;
 			@include flex(row, center, center);
 		}
@@ -52,8 +46,8 @@
 		& circle {
 			fill: none;
 			stroke: $dark-300;
-			stroke-width: 12px;
-			stroke-dasharray: 280;
+			stroke-width: 5px;
+			stroke-dasharray: 240;
 			stroke-dashoffset: 120;
 			transform: rotate(0deg);
 			// animation: circle 1s linear infinite;
