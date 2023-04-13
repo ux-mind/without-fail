@@ -157,6 +157,7 @@
 		&-item {
 			&:hover,
 			&:active {
+				opacity: 1;
 				& .collection-item__name,
 				& .collection-item__price {
 					opacity: 1;

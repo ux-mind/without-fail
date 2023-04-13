@@ -2824,6 +2824,9 @@ a:hover, a:active {
     width: 100%;
     margin-right: 0;
   }
+  .collection-item:hover, .collection-item:active {
+    opacity: 1;
+  }
   .collection-item:hover .collection-item__name, .collection-item:hover .collection-item__price, .collection-item:active .collection-item__name, .collection-item:active .collection-item__price {
     opacity: 1;
   }
