@@ -1010,7 +1010,7 @@ a:hover, a:active {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  animation: svgLoading 1s linear infinite;
+  animation: svgLoading 0.8s linear infinite;
 }
 .hero__img {
   width: 100%;
