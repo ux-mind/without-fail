@@ -155,7 +155,8 @@
 			margin-right: 0;
 		}
 		&-item {
-			&:hover {
+			&:hover,
+			&:active {
 				& .collection-item__name,
 				& .collection-item__price {
 					opacity: 1;
