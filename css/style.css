@@ -4113,6 +4113,9 @@ a:hover, a:active {
   .order-list__product {
     grid-row: 1/6;
   }
+  .order-list__product:hover {
+    opacity: 1;
+  }
   .order-list__product-count.desktop {
     display: none;
   }
