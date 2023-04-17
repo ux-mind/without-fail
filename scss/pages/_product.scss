@@ -12,6 +12,8 @@
 		max-height: 690px;
 		position: relative;
 		margin: 0;
+		border-radius: 2px;
+		overflow: hidden;
 		& .swiper-pagination {
 			display: none;
 		}
