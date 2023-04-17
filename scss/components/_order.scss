@@ -134,6 +134,9 @@
 		&-row {
 			@include flex(column);
 			max-width: 350px;
+			&:first-child {
+				flex-grow: 1;
+			}
 			&__header {
 				width: 100%;
 				@include flex(row, center, space-between);

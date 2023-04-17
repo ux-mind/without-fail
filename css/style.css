@@ -360,6 +360,7 @@ a:hover, a:active {
   background: #333;
   letter-spacing: 0.05em;
   border-radius: 2px;
+  text-align: center;
 }
 .btn-primary:hover {
   background: #444;
@@ -3885,6 +3886,9 @@ a:hover, a:active {
   align-items: flex-start;
   flex-wrap: nowrap;
   max-width: 350px;
+}
+.order-form-row:first-child {
+  flex-grow: 1;
 }
 .order-form-row__header {
   width: 100%;
