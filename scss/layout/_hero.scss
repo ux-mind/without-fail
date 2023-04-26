@@ -10,16 +10,19 @@
 		will-change: opacity;
 		backface-visibility: hidden;
 		& .swiper-slide {
+			height: auto;
 			background: #f7f7f7;
 			position: relative;
 			overflow: hidden;
-			max-height: 630px;
 			& .hero-banner {
 				position: absolute;
 				top: calc(50% - 30px);
 				left: 50%;
 				transform: translateX(calc(-50%));
 			}
+		}
+		& .swiper-wrapper {
+			height: calc(720 / 1600 * 100vw);
 		}
 		&.active {
 			// display: block;

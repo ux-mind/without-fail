@@ -98,7 +98,7 @@
 		}
 	}
 	&-content {
-		@include flex(row, stretch, space-between, wrap);
+		@include flex(row, stretch, flex-start, wrap);
 		grid-column-gap: 30px;
 		grid-row-gap: 58px;
 		margin-bottom: 37px;

@@ -955,16 +955,19 @@ a:hover, a:active {
   backface-visibility: hidden;
 }
 .hero-swiper .swiper-slide {
+  height: auto;
   background: #f7f7f7;
   position: relative;
   overflow: hidden;
-  max-height: 630px;
 }
 .hero-swiper .swiper-slide .hero-banner {
   position: absolute;
   top: calc(50% - 30px);
   left: 50%;
   transform: translateX(-50%);
+}
+.hero-swiper .swiper-wrapper {
+  height: 45vw;
 }
 .hero-swiper.active {
   opacity: 1;
@@ -3421,7 +3424,7 @@ a:hover, a:active {
 .catalog-content {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: stretch;
   flex-wrap: wrap;
   grid-column-gap: 30px;
