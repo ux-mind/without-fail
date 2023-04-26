@@ -1151,6 +1151,9 @@ a:hover, a:active {
     height: 2.5px;
     margin: 0;
   }
+  .hero-swiper .swiper-wrapper {
+    min-height: 560px;
+  }
   .hero-banner__title {
     font-size: 3.6rem;
     letter-spacing: 0.1em;

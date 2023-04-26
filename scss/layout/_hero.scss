@@ -224,6 +224,9 @@
 				height: 2.5px;
 				margin: 0;
 			}
+			& .swiper-wrapper {
+				min-height: 560px;
+			}
 		}
 		&-banner {
 			&__title {
