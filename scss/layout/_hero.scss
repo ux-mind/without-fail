@@ -11,6 +11,15 @@
 		backface-visibility: hidden;
 		& .swiper-slide {
 			background: #f7f7f7;
+			position: relative;
+			overflow: hidden;
+			max-height: 630px;
+			& .hero-banner {
+				position: absolute;
+				top: calc(50% - 30px);
+				left: 50%;
+				transform: translateX(calc(-50%));
+			}
 		}
 		&.active {
 			// display: block;

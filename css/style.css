@@ -956,6 +956,15 @@ a:hover, a:active {
 }
 .hero-swiper .swiper-slide {
   background: #f7f7f7;
+  position: relative;
+  overflow: hidden;
+  max-height: 630px;
+}
+.hero-swiper .swiper-slide .hero-banner {
+  position: absolute;
+  top: calc(50% - 30px);
+  left: 50%;
+  transform: translateX(-50%);
 }
 .hero-swiper.active {
   opacity: 1;
