@@ -49,7 +49,15 @@ body {
   margin: 0;
 }
 
-button, textarea, input, select {
+header button, header textarea, header input, header select,
+footer button,
+footer textarea,
+footer input,
+footer select,
+main button,
+main textarea,
+main input,
+main select {
   font-family: "Mont", Arial, sans-serif;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -66,14 +74,20 @@ button, textarea, input, select {
   color: #222;
 }
 
-input {
+header input,
+footer input,
+main input {
   cursor: text;
   padding: 0 15px;
 }
 
 /* Chrome, Safari, Edge, Opera */
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
+header input::-webkit-outer-spin-button,
+header input::-webkit-inner-spin-button,
+footer input::-webkit-outer-spin-button,
+footer input::-webkit-inner-spin-button,
+main input::-webkit-outer-spin-button,
+main input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
@@ -83,7 +97,9 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 
-textarea {
+header textarea,
+footer textarea,
+main textarea {
   cursor: text;
   resize: none;
 }
@@ -92,7 +108,9 @@ svg {
   overflow: visible;
 }
 
-img {
+header img,
+footer img,
+main img {
   display: block;
   max-width: 100%;
   height: auto;
@@ -530,7 +548,19 @@ a:hover, a:active {
   border: 1px solid rgba(119, 119, 119, 0.3);
   min-height: 35px;
 }
-.count-input__wrapper button[data-count=decrement], .count-input__wrapper select[data-count=decrement], .count-input__wrapper input[data-count=decrement], .count-input__wrapper textarea[data-count=decrement] {
+.count-input__wrapper button[data-count=decrement], .count-input__wrapper header select[data-count=decrement], header .count-input__wrapper select[data-count=decrement],
+.count-input__wrapper footer select[data-count=decrement],
+footer .count-input__wrapper select[data-count=decrement],
+.count-input__wrapper main select[data-count=decrement],
+main .count-input__wrapper select[data-count=decrement], .count-input__wrapper header input[data-count=decrement], header .count-input__wrapper input[data-count=decrement],
+.count-input__wrapper footer input[data-count=decrement],
+footer .count-input__wrapper input[data-count=decrement],
+.count-input__wrapper main input[data-count=decrement],
+main .count-input__wrapper input[data-count=decrement], .count-input__wrapper header textarea[data-count=decrement], header .count-input__wrapper textarea[data-count=decrement],
+.count-input__wrapper footer textarea[data-count=decrement],
+footer .count-input__wrapper textarea[data-count=decrement],
+.count-input__wrapper main textarea[data-count=decrement],
+main .count-input__wrapper textarea[data-count=decrement] {
   font-size: 16px;
   flex-shrink: 0;
   width: 28px;
@@ -539,7 +569,19 @@ a:hover, a:active {
   display: grid;
   touch-action: manipulation;
 }
-.count-input__wrapper button[data-count=decrement] span, .count-input__wrapper select[data-count=decrement] span, .count-input__wrapper input[data-count=decrement] span, .count-input__wrapper textarea[data-count=decrement] span {
+.count-input__wrapper button[data-count=decrement] span, .count-input__wrapper header select[data-count=decrement] span, header .count-input__wrapper select[data-count=decrement] span,
+.count-input__wrapper footer select[data-count=decrement] span,
+footer .count-input__wrapper select[data-count=decrement] span,
+.count-input__wrapper main select[data-count=decrement] span,
+main .count-input__wrapper select[data-count=decrement] span, .count-input__wrapper header input[data-count=decrement] span, header .count-input__wrapper input[data-count=decrement] span,
+.count-input__wrapper footer input[data-count=decrement] span,
+footer .count-input__wrapper input[data-count=decrement] span,
+.count-input__wrapper main input[data-count=decrement] span,
+main .count-input__wrapper input[data-count=decrement] span, .count-input__wrapper header textarea[data-count=decrement] span, header .count-input__wrapper textarea[data-count=decrement] span,
+.count-input__wrapper footer textarea[data-count=decrement] span,
+footer .count-input__wrapper textarea[data-count=decrement] span,
+.count-input__wrapper main textarea[data-count=decrement] span,
+main .count-input__wrapper textarea[data-count=decrement] span {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -548,7 +590,19 @@ a:hover, a:active {
   background: #777;
   transform: translate(-50%, -50%);
 }
-.count-input__wrapper button[data-count=increment], .count-input__wrapper select[data-count=increment], .count-input__wrapper input[data-count=increment], .count-input__wrapper textarea[data-count=increment] {
+.count-input__wrapper button[data-count=increment], .count-input__wrapper header select[data-count=increment], header .count-input__wrapper select[data-count=increment],
+.count-input__wrapper footer select[data-count=increment],
+footer .count-input__wrapper select[data-count=increment],
+.count-input__wrapper main select[data-count=increment],
+main .count-input__wrapper select[data-count=increment], .count-input__wrapper header input[data-count=increment], header .count-input__wrapper input[data-count=increment],
+.count-input__wrapper footer input[data-count=increment],
+footer .count-input__wrapper input[data-count=increment],
+.count-input__wrapper main input[data-count=increment],
+main .count-input__wrapper input[data-count=increment], .count-input__wrapper header textarea[data-count=increment], header .count-input__wrapper textarea[data-count=increment],
+.count-input__wrapper footer textarea[data-count=increment],
+footer .count-input__wrapper textarea[data-count=increment],
+.count-input__wrapper main textarea[data-count=increment],
+main .count-input__wrapper textarea[data-count=increment] {
   font-size: 16px;
   flex-shrink: 0;
   width: 28px;
@@ -558,7 +612,19 @@ a:hover, a:active {
   padding: 9px;
   touch-action: manipulation;
 }
-.count-input__wrapper button[data-count=increment] span, .count-input__wrapper select[data-count=increment] span, .count-input__wrapper input[data-count=increment] span, .count-input__wrapper textarea[data-count=increment] span {
+.count-input__wrapper button[data-count=increment] span, .count-input__wrapper header select[data-count=increment] span, header .count-input__wrapper select[data-count=increment] span,
+.count-input__wrapper footer select[data-count=increment] span,
+footer .count-input__wrapper select[data-count=increment] span,
+.count-input__wrapper main select[data-count=increment] span,
+main .count-input__wrapper select[data-count=increment] span, .count-input__wrapper header input[data-count=increment] span, header .count-input__wrapper input[data-count=increment] span,
+.count-input__wrapper footer input[data-count=increment] span,
+footer .count-input__wrapper input[data-count=increment] span,
+.count-input__wrapper main input[data-count=increment] span,
+main .count-input__wrapper input[data-count=increment] span, .count-input__wrapper header textarea[data-count=increment] span, header .count-input__wrapper textarea[data-count=increment] span,
+.count-input__wrapper footer textarea[data-count=increment] span,
+footer .count-input__wrapper textarea[data-count=increment] span,
+.count-input__wrapper main textarea[data-count=increment] span,
+main .count-input__wrapper textarea[data-count=increment] span {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -567,7 +633,19 @@ a:hover, a:active {
   background: #777;
   transform: translate(-50%, -50%);
 }
-.count-input__wrapper button[data-count=increment] span:first-child, .count-input__wrapper select[data-count=increment] span:first-child, .count-input__wrapper input[data-count=increment] span:first-child, .count-input__wrapper textarea[data-count=increment] span:first-child {
+.count-input__wrapper button[data-count=increment] span:first-child, .count-input__wrapper header select[data-count=increment] span:first-child, header .count-input__wrapper select[data-count=increment] span:first-child,
+.count-input__wrapper footer select[data-count=increment] span:first-child,
+footer .count-input__wrapper select[data-count=increment] span:first-child,
+.count-input__wrapper main select[data-count=increment] span:first-child,
+main .count-input__wrapper select[data-count=increment] span:first-child, .count-input__wrapper header input[data-count=increment] span:first-child, header .count-input__wrapper input[data-count=increment] span:first-child,
+.count-input__wrapper footer input[data-count=increment] span:first-child,
+footer .count-input__wrapper input[data-count=increment] span:first-child,
+.count-input__wrapper main input[data-count=increment] span:first-child,
+main .count-input__wrapper input[data-count=increment] span:first-child, .count-input__wrapper header textarea[data-count=increment] span:first-child, header .count-input__wrapper textarea[data-count=increment] span:first-child,
+.count-input__wrapper footer textarea[data-count=increment] span:first-child,
+footer .count-input__wrapper textarea[data-count=increment] span:first-child,
+.count-input__wrapper main textarea[data-count=increment] span:first-child,
+main .count-input__wrapper textarea[data-count=increment] span:first-child {
   transform: translate(-50%, -50%) rotate(90deg);
 }
 
@@ -1920,7 +1998,7 @@ a:hover, a:active {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: stretch;
+  align-items: center;
   flex-wrap: nowrap;
 }
 .product-swiper__prev {
@@ -1983,7 +2061,6 @@ a:hover, a:active {
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
-  max-height: 682px;
   overflow-y: auto;
   padding: 4px;
 }
@@ -3468,7 +3545,7 @@ a:hover, a:active {
 }
 .catalog-article__img .new-item {
   position: absolute;
-  bottom: 8px;
+  top: 8px;
   left: 12px;
   text-transform: uppercase;
   font-size: 1.8rem;

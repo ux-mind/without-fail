@@ -50,7 +50,9 @@ body {
 	background: $white;
 	margin: 0;
 }
-button {
+header button,
+footer button,
+main button {
 	font-family: $font;
 	-webkit-appearance: none;
 	-moz-appearance: none;
@@ -66,17 +68,25 @@ button {
 	border-radius: 0;
 	color: $font-color;
 }
-select {
+header select,
+footer select,
+main select {
 	@extend button;
 }
-input {
+header input,
+footer input,
+main input {
 	@extend button;
 	cursor: text;
 	padding: 0 15px;
 }
 /* Chrome, Safari, Edge, Opera */
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
+header input::-webkit-outer-spin-button,
+header input::-webkit-inner-spin-button,
+footer input::-webkit-outer-spin-button,
+footer input::-webkit-inner-spin-button,
+main input::-webkit-outer-spin-button,
+main input::-webkit-inner-spin-button {
 	-webkit-appearance: none;
 	margin: 0;
 }
@@ -85,7 +95,9 @@ input::-webkit-inner-spin-button {
 input[type='number'] {
 	-moz-appearance: textfield;
 }
-textarea {
+header textarea,
+footer textarea,
+main textarea {
 	@extend button;
 	cursor: text;
 	resize: none;
@@ -93,7 +105,9 @@ textarea {
 svg {
 	overflow: visible;
 }
-img {
+header img,
+footer img,
+main img {
 	display: block;
 	max-width: 100%;
 	height: auto;
