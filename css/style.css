@@ -57,7 +57,8 @@ footer select,
 main button,
 main textarea,
 main input,
-main select {
+main select,
+.filter-modal button {
   font-family: "Mont", Arial, sans-serif;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -341,7 +342,6 @@ a:hover, a:active {
   }
 }
 #bx_incl_area_5_4 {
-  max-width: 100%;
   overflow: hidden;
 }
 
@@ -408,7 +408,16 @@ a:hover, a:active {
 .btn-transparent:active, .btn-transparent:focus {
   opacity: 0.7;
 }
+.btn-filter-reset {
+  width: 100%;
+  margin-top: 30px;
+}
 
+@media screen and (max-width: 991px) {
+  .catalog-aside .btn-filter-reset {
+    display: none;
+  }
+}
 @media screen and (max-width: 768px) {
   .btn {
     font-size: 1.4rem;
@@ -4371,6 +4380,41 @@ main .count-input__wrapper textarea[data-count=increment] span:first-child {
   pointer-events: auto;
   transform: none;
 }
+.filter-modal .filter-additional__btn {
+  width: 100%;
+  text-align: left;
+  font-size: 1.6rem;
+  line-height: 1;
+  color: #666;
+  letter-spacing: 0.015em;
+  padding: 0.9375em 0;
+  position: relative;
+}
+.filter-modal .filter-btn-block {
+  margin-top: 50px;
+}
+.filter-modal .filter-btn-block__show {
+  width: 100%;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  padding: 0.9375em 2em;
+  display: inline-block;
+  color: #fff;
+  background: #333;
+  letter-spacing: 0.05em;
+  border-radius: 2px;
+  text-align: center;
+}
+.filter-modal .filter-btn-block__reset {
+  width: 100%;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  color: #666;
+  padding: 10px;
+  margin-top: 10px;
+  text-align: center;
+  letter-spacing: 0.015em;
+}
 .filter-modal__header {
   display: flex;
   flex-direction: row;
@@ -4486,25 +4530,6 @@ main .count-input__wrapper textarea[data-count=increment] span:first-child {
   transform: translateY(-50%);
   background: url("../assets/icons/drop-light.svg") no-repeat 50%/cover;
   transform: translateY(-50%) rotate(-90deg);
-}
-.filter-btn-block {
-  margin-top: 50px;
-}
-.filter-btn-block__show {
-  width: 100%;
-  font-size: 1.6rem;
-  line-height: 1.5;
-  padding: 0.9375em 2em;
-}
-.filter-btn-block__reset {
-  width: 100%;
-  font-size: 1.6rem;
-  line-height: 1.5;
-  color: #666;
-  padding: 10px;
-  margin-top: 10px;
-  text-align: center;
-  letter-spacing: 0.015em;
 }
 .filter-size {
   overflow-y: auto;

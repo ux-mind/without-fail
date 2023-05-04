@@ -52,7 +52,8 @@ body {
 }
 header button,
 footer button,
-main button {
+main button,
+.filter-modal button {
 	font-family: $font;
 	-webkit-appearance: none;
 	-moz-appearance: none;

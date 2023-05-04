@@ -33,6 +33,22 @@
 			opacity: 0.7;
 		}
 	}
+	&-filter {
+		&-reset {
+			width: 100%;
+			margin-top: 30px;
+		}
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.catalog-aside .btn {
+		&-filter {
+			&-reset {
+				display: none;
+			}
+		}
+	}
 }
 
 @media screen and (max-width: 768px) {
