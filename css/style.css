@@ -340,6 +340,11 @@ a:hover, a:active {
     z-index: 20;
   }
 }
+#bx_incl_area_5_4 {
+  max-width: 100%;
+  overflow: hidden;
+}
+
 @font-face {
   font-family: "Mont";
   src: url("../assets/fonts/Mont-Regular.woff") format("woff"), url("../assets/fonts/Mont-Regular.woff2") format("woff2");
@@ -3545,6 +3550,7 @@ main .count-input__wrapper textarea[data-count=increment] span:first-child {
 }
 .catalog-article__img .new-item {
   position: absolute;
+  z-index: 2;
   top: 8px;
   left: 12px;
   text-transform: uppercase;

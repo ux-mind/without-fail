@@ -154,6 +154,7 @@
 			}
 			& .new-item {
 				position: absolute;
+				z-index: 2;
 				top: 8px;
 				left: 12px;
 				text-transform: uppercase;
