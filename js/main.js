@@ -789,6 +789,38 @@ function handleOpderSubmit() {
   }
 }
 
+// handle Size Table
+function handleSizeTable() {
+  const htmlEl = document.documentElement;
+  const modal = document.querySelector('#size-table');
+  const btn = document.querySelector('#size-btn');
+  const blocker = document.querySelector('#blocker');
+
+  const closeBtn = modal.querySelector('.close-btn');
+
+  if (modal && btn) {
+    btn.addEventListener('click', () => {
+      modal.classList.add('opened');
+      htmlEl.classList.add('is-locked');
+
+      if (blocker) {
+        blocker.classList.add('blocker_opened');
+      }
+    });
+  }
+
+  if (closeBtn) {
+    closeBtn.addEventListener('click', () => {
+      modal.classList.remove('opened');
+      htmlEl.classList.remove('is-locked');
+
+      if (blocker) {
+        blocker.classList.remove('blocker_opened');
+      }
+    });
+  }
+}
+
 // Sliders
 // handleHeroSlider();
 initCollectionSlider();
@@ -812,3 +844,4 @@ handleFixedMenuHover();
 handleFilterModalMobile();
 closeSelectByClick();
 handleOpderSubmit();
+handleSizeTable();
