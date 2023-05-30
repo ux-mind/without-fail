@@ -133,6 +133,21 @@
 			}
 		}
 	}
+	&-contacts {
+		&__social {
+			@include flex(row, center, flex-start, wrap);
+			gap: 21px;
+			margin-bottom: 25px;
+			& a {
+				@include flex(row, center);
+				gap: 7px;
+				color: $dark-300;
+				& svg {
+					transform: translateY(-2px);
+				}
+			}
+		}
+	}
 }
 
 @media screen and (max-width: 991px) {
@@ -162,6 +177,12 @@
 						margin-bottom: 0;
 					}
 				}
+			}
+		}
+		&-contacts {
+			&__social {
+				margin-bottom: 15px;
+				gap: 12px;
 			}
 		}
 		&-form {

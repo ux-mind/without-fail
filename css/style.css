@@ -1426,6 +1426,27 @@ main .count-input__wrapper textarea[data-count=increment] span:first-child {
 .footer-social-block__item:hover span {
   color: #666;
 }
+.footer-contacts__social {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 21px;
+  margin-bottom: 25px;
+}
+.footer-contacts__social a {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 7px;
+  color: #333;
+}
+.footer-contacts__social a svg {
+  transform: translateY(-2px);
+}
 
 @media screen and (max-width: 991px) {
   .footer {
@@ -1454,6 +1475,10 @@ main .count-input__wrapper textarea[data-count=increment] span:first-child {
   }
   .footer-social-block__item:last-child {
     margin-bottom: 0;
+  }
+  .footer-contacts__social {
+    margin-bottom: 15px;
+    gap: 12px;
   }
   .footer-form {
     margin: 0;
@@ -1653,6 +1678,26 @@ main .count-input__wrapper textarea[data-count=increment] span:first-child {
   letter-spacing: 0.02em;
   font-weight: 600;
 }
+.menu-contacts__social {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 21px;
+  margin-top: 27px;
+}
+.menu-contacts__social a {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 7px;
+}
+.menu-contacts__social a svg {
+  transform: translateY(-2px);
+}
 .menu-poster {
   display: flex;
   flex-direction: row;
@@ -1780,7 +1825,7 @@ main .count-input__wrapper textarea[data-count=increment] span:first-child {
   .menu-content__contacts {
     grid-column: 1/2;
     padding: 0 10px;
-    padding-top: 22px;
+    padding-top: 40px;
   }
   .menu-content__links {
     padding: 22px 0;

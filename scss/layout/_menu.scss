@@ -82,6 +82,18 @@
 				font-weight: 600;
 			}
 		}
+		&__social {
+			@include flex(row, center);
+			gap: 21px;
+			margin-top: 27px;
+			& a {
+				@include flex(row, center);
+				gap: 7px;
+				& svg {
+					transform: translateY(-2px);
+				}
+			}
+		}
 	}
 	&-poster {
 		@include flex(row, center, flex-end);
@@ -207,7 +219,7 @@
 			&__contacts {
 				grid-column: 1 / 2;
 				padding: 0 10px;
-				padding-top: 22px;
+				padding-top: 40px;
 			}
 			&__links {
 				padding: 22px 0;
